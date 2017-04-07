@@ -1,0 +1,13 @@
+{
+  "generator-angular-library": {
+    "githubUsername": "mattlewis92",
+    "githubRepoName": "angularx-flatpickr",
+    "npmModuleName": "angularx-flatpickr",
+    "moduleGlobal": "angularxFlatpickr",
+    "ngModuleName": "FlatpickrModule",
+    "selectorPrefix": "mwl",
+    "projectTitle": "angularx flatpickr",
+    "projectDescription": "An angular 2.0+ wrapper for flatpickr",
+    "authorName": "Matt Lewis"
+  }
+}
