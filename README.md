@@ -32,7 +32,7 @@ npm install --save angularx-flatpickr
 Then include in your apps module:
 
 ```typescript
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
@@ -48,7 +48,14 @@ Finally use in one of your apps components:
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<hello-world></hello-world>'
+  template: `
+    <input 
+      type="text" 
+      mwlFlatpickr 
+      [(ngModel)]="selectedDate" 
+      [altInput]="true" 
+      [convertModelValue]="true">
+  `
 })
 export class MyComponent {}
 ```
