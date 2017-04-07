@@ -1,7 +1,7 @@
 {
   "name": "angularx-flatpickr",
   "version": "0.0.0",
-  "description": "An angular 2.0+ wrapper for flatpickr",
+  "description": "An angular 4.0+ wrapper for flatpickr",
   "main": "./bundles/angularx-flatpickr.umd.js",
   "module": "./index.js",
   "typings": "./index.d.ts",
@@ -32,7 +32,10 @@
   },
   "keywords": [
     "angular2",
-    "angular"
+    "angular",
+    "angular4",
+    "flatpickr",
+    "datepicker"
   ],
   "author": "Matt Lewis",
   "license": "MIT",
@@ -94,7 +97,7 @@
     "zone.js": "^0.8.4"
   },
   "peerDependencies": {
-    "@angular/core": ">=2.0.0 <5.0.0"
+    "@angular/core": "^4.0.0"
   },
   "config": {
     "commitizen": {

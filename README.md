@@ -20,7 +20,7 @@ https://mattlewis92.github.io/angularx-flatpickr/
 
 ## About
 
-An angular 2.0+ wrapper for flatpickr
+An angular 4.0+ wrapper for flatpickr
 
 ## Installation
 
