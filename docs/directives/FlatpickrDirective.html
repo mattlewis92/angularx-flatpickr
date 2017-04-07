@@ -1,0 +1,1439 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angularx-flatpickr documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angularx-flatpickr documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">angularx-flatpickr documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <span class="fa fa-archive"></span>
+                            <span>Modules</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            ></span>
+                        </a>
+                        <ul class="links collapse in"
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/FlatpickrModule.html" >FlatpickrModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-directives-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/FlatpickrDirective.html"  class="active" >FlatpickrDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-injectables-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/FlatpickrDefaults.html" >FlatpickrDefaults</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/FlatPickrDayCreateOutputOptions.html" >FlatPickrDayCreateOutputOptions</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/FlatPickrOutputOptions.html" >FlatPickrOutputOptions</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">angularx-flatpickr documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <span class="fa fa-archive"></span>
+                                   <span>Modules</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   ></span>
+                               </a>
+                               <ul class="links collapse in"
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/FlatpickrModule.html" >FlatpickrModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#directives-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/FlatpickrDirective.html"  class="active" >FlatpickrDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#injectables-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/FlatpickrDefaults.html" >FlatpickrDefaults</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/FlatPickrDayCreateOutputOptions.html" >FlatPickrDayCreateOutputOptions</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/FlatPickrOutputOptions.html" >FlatPickrOutputOptions</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>FlatpickrDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/flatpickr.directive.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">selector</td>
+                        <td class="col-md-9"><code>[mwlFlatpickr]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+                <h3 id="inputs">Inputs</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>allowInput</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Allows the user to enter a date directly input the input field. By default, direct entry is disabled.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>altFormat</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Exactly the same as date format, but for the altInput field.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>altInput</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Show the user a readable date (as per altFormat), but return something totally different to the server.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>altInputClass</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>This class will be added to the input element created by the altInput option.<br>Note that <code>altInput</code> already inherits classes from the original input.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>appendTo</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Instead of <code>body</code>, appends the calendar to the specified node instead.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>HTMLElement</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>clickOpens</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Whether clicking on the input should open the picker.<br>You could disable this if you wish to open the calendar manually <code>with.open()</code>.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>convertModelValue</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the <code>mode</code></p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>dateFormat</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>A string of characters which are used to define how the date will be displayed in the input box.<br>The supported characters are defined in the table below.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>disable</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>DisableEnableDate[]</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>disableMobile</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Set disableMobile to true to always use the non-native picker.<br>By default, Flatpickr utilizes native datetime widgets unless certain options (e.g. disable) are used.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>enable</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>See <a href="https://chmln.github.io/flatpickr/examples/#disabling-all-dates-except-select-few">enabling dates</a>.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>DisableEnableDate[]</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>enableSeconds</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Enables seconds in the time picker.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>enableTime</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Enables time picker.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>getWeek</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>You may override the function that extracts the week numbers from a Date by supplying a getWeek function.<br>It takes in a date as a parameter and should return a corresponding string that you want to appear left of every week.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>(date: Date) &#x3D;&gt; string</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>hourIncrement</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Adjusts the step for the hour input (incl. scrolling).</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>number</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>inline</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Displays the calendar inline.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>locale</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>The locale object or string to use for the locale.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string | object</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>maxDate</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>The maximum date that a user can pick to (inclusive).</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string | Date</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>minDate</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>The minimum date that a user can start picking from (inclusive).</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string | Date</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>minuteIncrement</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Adjusts the step for the minute input (incl. scrolling).</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>number</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>mode</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Select a single date, multiple dates or a date range.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>&quot;single&quot; | &quot;multiple&quot; | &quot;range&quot;</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>nextArrow</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>HTML for the arrow icon, used to switch months.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>ngModel</code>
+                                </td>
+                                <td class="col-md-10">
+                                      <p>
+                                        <em>Type:</em>    <code>string | Date | Date[] | { from: Date; to: Date; }</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>noCalendar</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Hides the day selection in calendar. Use it along with <code>enableTime</code> to create a time picker.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>parseDate</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Function that expects a date string and must return a Date object.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>(str: string) &#x3D;&gt; Date</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>plugins</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Array of plugin instances to use.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>any[]</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>prevArrow</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>HTML for the left arrow icon.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>string</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>shorthandCurrentMonth</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Show the month using the shorthand version (ie, Sep instead of September).</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>static</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Position the calendar inside the wrapper and next to the input element. (Leave <code>false</code> unless you know what you&#39;re doing).</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>time24hr</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Displays time picker in 24 hour mode without AM/PM selection when enabled.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>utc</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>When true, dates will parsed, formatted, and displayed in UTC.<br>It&#39;s recommended that date strings contain the timezone, but not necessary.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>weekNumbers</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Enables display of week numbers in calendar.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>wrap</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Custom elements and input groups.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code>boolean</code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="outputs">Outputs</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrChange</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered when the user selects a date, or changes the time on a selected date.</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrClose</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered when the calendar is closed.</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrDayCreate</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Take full control of every date cell with this output</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrMonthChange</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered when the month is changed, either by the user or programmatically.</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrOpen</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered when the calendar is opened.</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrReady</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered once the calendar is in a ready state</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrValueUpdate</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered when the input value is updated with a new date string.</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>flatpickrYearChange</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Gets triggered when the year is changed, either by the user or programmatically.</p>
+</div>
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;FlatPickrOutputOptions&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>ngModelChange</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <em><code>$event</code> type:</em>    <code>EventEmitter&lt;NgModelValue&gt;</code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor(elm: <a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank" >ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html" >FlatpickrDefaults</a>)</code>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
+
+
+
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import { Directive, ElementRef, AfterViewInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from &#x27;@angular/core&#x27;;
+import { FlatpickrDefaults, DisableEnableDate } from &#x27;./flatpickr-defaults.service&#x27;;
+import * as Flatpickr from &#x27;flatpickr&#x27;;
+
+export interface FlatPickrOutputOptions {
+  selectedDates: Date[];
+  dateString: string;
+  instance: Flatpickr;
+}
+
+export interface FlatPickrDayCreateOutputOptions extends FlatPickrOutputOptions {
+  dayElement: HTMLElement;
+}
+
+export type NgModelValue &#x3D; Date | Date[] | {from: Date, to: Date};
+
+@Directive({
+  selector: &#x27;[mwlFlatpickr]&#x27;
+})
+export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
+
+  /**
+   * Exactly the same as date format, but for the altInput field.
+   */
+  @Input() altFormat: string;
+
+  /**
+   * 	Show the user a readable date (as per altFormat), but return something totally different to the server.
+   */
+  @Input() altInput: boolean;
+
+  /**
+   * This class will be added to the input element created by the altInput option.
+   * Note that &#x60;altInput&#x60; already inherits classes from the original input.
+   */
+  @Input() altInputClass: string;
+
+  /**
+   * Allows the user to enter a date directly input the input field. By default, direct entry is disabled.
+   */
+  @Input() allowInput: boolean;
+
+  /**
+   * Instead of &#x60;body&#x60;, appends the calendar to the specified node instead.
+   */
+  @Input() appendTo: HTMLElement;
+
+  /**
+   * Whether clicking on the input should open the picker.
+   * You could disable this if you wish to open the calendar manually &#x60;with.open()&#x60;.
+   */
+  @Input() clickOpens: boolean;
+
+  /**
+   * A string of characters which are used to define how the date will be displayed in the input box.
+   * The supported characters are defined in the table below.
+   */
+  @Input() dateFormat: string;
+
+  /**
+   * See &lt;a href&#x3D;&quot;https://chmln.github.io/flatpickr/examples/#disabling-specific-dates&quot;&gt;disabling dates&lt;/a&gt;.
+   */
+  @Input() disable: DisableEnableDate[];
+
+  /**
+   * Set disableMobile to true to always use the non-native picker.
+   * By default, Flatpickr utilizes native datetime widgets unless certain options (e.g. disable) are used.
+   */
+  @Input() disableMobile: boolean;
+
+  /**
+   * See &lt;a href&#x3D;&quot;https://chmln.github.io/flatpickr/examples/#disabling-all-dates-except-select-few&quot;&gt;enabling dates&lt;/a&gt;.
+   */
+  @Input() enable: DisableEnableDate[];
+
+  /**
+   * Enables time picker.
+   */
+  @Input() enableTime: boolean;
+
+  /**
+   * Enables seconds in the time picker.
+   */
+  @Input() enableSeconds: boolean;
+
+  /**
+   * Adjusts the step for the hour input (incl. scrolling).
+   */
+  @Input() hourIncrement: number;
+
+  /**
+   * Displays the calendar inline.
+   */
+  @Input() inline: boolean;
+
+  /**
+   * The maximum date that a user can pick to (inclusive).
+   */
+  @Input() maxDate: string | Date;
+
+  /**
+   * The minimum date that a user can start picking from (inclusive).
+   */
+  @Input() minDate: string | Date;
+
+  /**
+   * Adjusts the step for the minute input (incl. scrolling).
+   */
+  @Input() minuteIncrement: number;
+
+  /**
+   * Select a single date, multiple dates or a date range.
+   */
+  @Input() mode: &#x27;single&#x27; | &#x27;multiple&#x27; | &#x27;range&#x27;;
+
+  /**
+   * HTML for the arrow icon, used to switch months.
+   */
+  @Input() nextArrow: string;
+
+  /**
+   * Hides the day selection in calendar. Use it along with &#x60;enableTime&#x60; to create a time picker.
+   */
+  @Input() noCalendar: boolean;
+
+  /**
+   * Function that expects a date string and must return a Date object.
+   */
+  @Input() parseDate: (str: string) &#x3D;&gt; Date;
+
+  /**
+   * HTML for the left arrow icon.
+   */
+  @Input() prevArrow: string;
+
+  /**
+   * Show the month using the shorthand version (ie, Sep instead of September).
+   */
+  @Input() shorthandCurrentMonth: boolean;
+
+  /**
+   * Position the calendar inside the wrapper and next to the input element. (Leave &#x60;false&#x60; unless you know what you&#x27;re doing).
+   */
+  @Input() static: boolean;
+
+  /**
+   * Displays time picker in 24 hour mode without AM/PM selection when enabled.
+   */
+  @Input() time24hr: boolean;
+
+  /**
+   * When true, dates will parsed, formatted, and displayed in UTC.
+   * It&#x27;s recommended that date strings contain the timezone, but not necessary.
+   */
+  @Input() utc: boolean;
+
+  /**
+   * Enables display of week numbers in calendar.
+   */
+  @Input() weekNumbers: boolean;
+
+  /**
+   * You may override the function that extracts the week numbers from a Date by supplying a getWeek function.
+   * It takes in a date as a parameter and should return a corresponding string that you want to appear left of every week.
+   */
+  @Input() getWeek: (date: Date) &#x3D;&gt; string;
+
+  /**
+   * Custom elements and input groups.
+   */
+  @Input() wrap: boolean;
+
+  /**
+   * Array of plugin instances to use.
+   */
+  @Input() plugins: any[];
+
+  /**
+   * The locale object or string to use for the locale.
+   */
+  @Input() locale: object | string;
+
+  /**
+   * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the &#x60;mode&#x60;
+   */
+  @Input() convertModelValue: boolean;
+
+  /**
+   * @hidden
+   */
+  @Input() ngModel: NgModelValue | string;
+
+  /**
+   * @hidden
+   */
+  @Output() ngModelChange: EventEmitter&lt;NgModelValue&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered once the calendar is in a ready state
+   */
+  @Output() flatpickrReady: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered when the user selects a date, or changes the time on a selected date.
+   */
+  @Output() flatpickrChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered when the input value is updated with a new date string.
+   */
+  @Output() flatpickrValueUpdate: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered when the calendar is opened.
+   */
+  @Output() flatpickrOpen: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered when the calendar is closed.
+   */
+  @Output() flatpickrClose: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered when the month is changed, either by the user or programmatically.
+   */
+  @Output() flatpickrMonthChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Gets triggered when the year is changed, either by the user or programmatically.
+   */
+  @Output() flatpickrYearChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+
+  /**
+   * Take full control of every date cell with this output
+   */
+  @Output() flatpickrDayCreate: EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt; &#x3D; new EventEmitter();
+
+  private instance: Flatpickr;
+
+  constructor(private elm: ElementRef, private defaults: FlatpickrDefaults) {}
+
+  ngAfterViewInit(): void {
+
+    let defaultDate: NgModelValue | string &#x3D; this.ngModel;
+
+    if (this.mode &#x3D;&#x3D;&#x3D; &#x27;range&#x27; &amp;&amp; typeof defaultDate &#x3D;&#x3D;&#x3D; &#x27;object&#x27; &amp;&amp; !(defaultDate instanceof Date) &amp;&amp; !Array.isArray(defaultDate)) {
+      defaultDate &#x3D; &#x60;${defaultDate.from.toISOString()} to ${defaultDate.to.toISOString()}&#x60;;
+    }
+
+    const options: any &#x3D; {
+      altFormat: this.altFormat,
+      altInput: this.altInput,
+      altInputClass: this.altInputClass,
+      allowInput: this.allowInput,
+      appendTo: this.appendTo,
+      clickOpens: this.clickOpens,
+      dateFormat: this.dateFormat,
+      defaultDate,
+      disable: this.disable,
+      disableMobile: this.disableMobile,
+      enable: this.enable,
+      enableTime: this.enableTime,
+      enableSeconds: this.enableSeconds,
+      hourIncrement: this.hourIncrement,
+      inline: this.inline,
+      maxDate: this.maxDate,
+      minDate: this.minDate,
+      minuteIncrement: this.minuteIncrement,
+      mode: this.mode,
+      nextArrow: this.nextArrow,
+      noCalendar: this.noCalendar,
+      parseDate: this.parseDate,
+      prevArrow: this.prevArrow,
+      shorthandCurrentMonth: this.shorthandCurrentMonth,
+      static: this.static,
+      time24hr: this.time24hr,
+      utc: this.utc,
+      weekNumbers: this.weekNumbers,
+      getWeek: this.getWeek,
+      wrap: this.wrap,
+      plugins: this.plugins,
+      onChange: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrChange.emit({selectedDates, dateString, instance});
+      },
+      onOpen: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrOpen.emit({selectedDates, dateString, instance});
+      },
+      onClose: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrClose.emit({selectedDates, dateString, instance});
+      },
+      onMonthChange: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrMonthChange.emit({selectedDates, dateString, instance});
+      },
+      onYearChange: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrYearChange.emit({selectedDates, dateString, instance});
+      },
+      onReady: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrReady.emit({selectedDates, dateString, instance});
+      },
+      onValueUpdate: (selectedDates: Date[], dateString: string, instance: Flatpickr) &#x3D;&gt; {
+        this.flatpickrValueUpdate.emit({selectedDates, dateString, instance});
+      },
+      onDayCreate: (selectedDates: Date[], dateString: string, instance: Flatpickr, dayElement: HTMLElement) &#x3D;&gt; {
+        this.flatpickrDayCreate.emit({selectedDates, dateString, instance, dayElement});
+      }
+    };
+    if (this.locale) { // workaround warning from flatpickr
+      options.locale &#x3D; this.locale;
+    }
+    Object.keys(options).forEach(key &#x3D;&gt; {
+      if (typeof options[key] &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+        options[key] &#x3D; this.defaults[key];
+      }
+    });
+    options.time_24hr &#x3D; options.time24hr;
+    this.instance &#x3D; new Flatpickr(this.elm.nativeElement, options);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+
+    if (this.instance) {
+      for (const inputKey in changes) {
+        this.instance.set(inputKey, this[inputKey]);
+      }
+    }
+
+    if (changes.ngModel &amp;&amp; this.convertModelValue) {
+      setTimeout(() &#x3D;&gt; {
+        if (typeof this.ngModel &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+          switch (this.mode) {
+
+            case &#x27;multiple&#x27;:
+              const dates: Date[] &#x3D; this.ngModel.split(&#x27;; &#x27;).map(str &#x3D;&gt; new Date(str));
+              this.ngModelChange.emit(dates);
+              break;
+
+            case &#x27;range&#x27;:
+              const [from, to] &#x3D; this.ngModel.split(&#x27; to &#x27;).map(str &#x3D;&gt; new Date(str));
+              this.ngModelChange.emit({from, to});
+              break;
+
+            case &#x27;single&#x27;:
+            default:
+              this.ngModelChange.emit(new Date(this.ngModel));
+              break;
+          }
+
+        }
+      });
+    }
+
+  }
+
+  ngOnDestroy(): void {
+    this.instance.destroy();
+  }
+
+}</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>
