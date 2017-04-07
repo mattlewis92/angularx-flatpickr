@@ -43,6 +43,7 @@ describe('mwl-flatpickr directive', () => {
   }
 
   let clock: sinon.SinonFakeTimers;
+  const timezoneOffset: number = new Date().getTimezoneOffset() * 60 * 1000;
   beforeEach(() => {
     clock = sinon.useFakeTimers(new Date('2017-04-06').getTime());
   });
@@ -179,7 +180,7 @@ describe('mwl-flatpickr directive', () => {
   it('should call the flatpickrChange output', done => {
     const fixture: ComponentFixture<TestComponent> = TestBed.createComponent(TestComponent);
     fixture.componentInstance.events.filter(({name}) => name === 'change').take(1).subscribe(({event}) => {
-      expect(event.selectedDates).to.deep.equal([new Date('2017-03-31T23:00:00.000Z')]);
+      expect(event.selectedDates[0].getTime()).to.deep.equal(new Date('2017-04-01').getTime() + timezoneOffset);
       expect(event.dateString).to.deep.equal('2017-04-01');
       expect(event.instance instanceof Flatpickr).to.be.true;
       done();
@@ -194,7 +195,7 @@ describe('mwl-flatpickr directive', () => {
   it('should call the flatpickrClose output', done => {
     const fixture: ComponentFixture<TestComponent> = TestBed.createComponent(TestComponent);
     fixture.componentInstance.events.filter(({name}) => name === 'close').take(1).subscribe(({event}) => {
-      expect(event.selectedDates).to.deep.equal([new Date('2017-03-31T23:00:00.000Z')]);
+      expect(event.selectedDates[0].getTime()).to.deep.equal(new Date('2017-04-01').getTime() + timezoneOffset);
       expect(event.dateString).to.deep.equal('2017-04-01');
       expect(event.instance instanceof Flatpickr).to.be.true;
       done();
