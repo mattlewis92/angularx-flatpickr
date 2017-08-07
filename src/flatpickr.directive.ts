@@ -1,4 +1,4 @@
-import { Directive, ElementRef, AfterViewInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
+import { Directive, ElementRef, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { FlatpickrDefaults, DisableEnableDate } from './flatpickr-defaults.service';
 import * as Flatpickr from 'flatpickr';
 
@@ -17,7 +17,7 @@ export type NgModelValue = Date | Date[] | {from: Date, to: Date};
 @Directive({
   selector: '[mwlFlatpickr]'
 })
-export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
+export class FlatpickrDirective implements OnInit, OnChanges, OnDestroy {
 
   /**
    * Exactly the same as date format, but for the altInput field.
@@ -239,7 +239,7 @@ export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
 
   constructor(private elm: ElementRef, private defaults: FlatpickrDefaults) {}
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
 
     let defaultDate: NgModelValue | string = this.ngModel;
 
