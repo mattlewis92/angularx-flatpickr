@@ -32,7 +32,13 @@ export default config => {
           test: /\.ts$/,
           loader: 'tslint-loader',
           exclude: /node_modules/,
-          enforce: 'pre'
+          enforce: 'pre',
+          options: {
+            tslint: {
+              emitErrors: config.singleRun,
+              failOnHint: config.singleRun
+            }
+          }
         }, {
           test: /\.ts$/,
           loader: 'awesome-typescript-loader',
@@ -49,14 +55,6 @@ export default config => {
           filename: null,
           test: /\.(ts|js)($|\?)/i
         }),
-        new webpack.LoaderOptionsPlugin({
-          options: {
-            tslint: {
-              emitErrors: config.singleRun,
-              failOnHint: false
-            }
-          }
-        }),
         new webpack.ContextReplacementPlugin(
           /angular(\\|\/)core(\\|\/)@angular/,
           path.join(__dirname, 'src')
@@ -70,6 +68,10 @@ export default config => {
       fixWebpackSourcePaths: true
     },
 
+    mime: {
+      'text/x-typescript': ['ts']
+    },
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
@@ -81,17 +83,7 @@ export default config => {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
-
-    phantomjsLauncher: {
-      // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
-      exitOnResourceError: true
-    },
-
-    browserConsoleLogOptions: {
-      terminal: true,
-      level: 'log'
-    }
+    browsers: ['ChromeHeadless']
 
   });
 
