@@ -118,6 +118,6 @@
     }
   },
   "dependencies": {
-    "flatpickr": "2.4.8"
+    "flatpickr": "^3.0.7"
   }
 }

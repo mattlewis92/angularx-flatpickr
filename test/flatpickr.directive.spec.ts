@@ -9,9 +9,25 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs/Subject';
-import * as Flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
+
+function triggerDomEvent(
+  eventType: string,
+  target: HTMLElement | Element,
+  eventData: object = {}
+) {
+  const event: Event = document.createEvent('Event');
+  Object.assign(event, eventData);
+  event.initEvent(eventType, true, true);
+  target.dispatchEvent(event);
+}
+
+function clickFlatpickerDate(target: HTMLElement | Element) {
+  triggerDomEvent('mousedown', target, {
+    which: 1
+  });
+}
 
 @Component({
   template: `
@@ -111,7 +127,9 @@ describe('mwl-flatpickr directive', () => {
       );
       input.click();
       const instance: any = document.body.querySelector('.flatpickr-calendar');
-      instance.querySelector('.flatpickr-day:not(.prevMonthDay)')['click']();
+      clickFlatpickerDate(
+        instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
+      );
       expect(input.value).to.equal('2017-04-01');
     });
 
@@ -263,7 +281,6 @@ describe('mwl-flatpickr directive', () => {
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
-          expect(event.instance instanceof Flatpickr).to.equal(true);
           done();
         });
       fixture.detectChanges();
@@ -281,7 +298,6 @@ describe('mwl-flatpickr directive', () => {
             new Date('2017-04-01').getTime() + timezoneOffset
           );
           expect(event.dateString).to.deep.equal('2017-04-01');
-          expect(event.instance instanceof Flatpickr).to.equal(true);
           done();
         });
       fixture.detectChanges();
@@ -290,7 +306,9 @@ describe('mwl-flatpickr directive', () => {
       );
       input.click();
       const instance: any = document.body.querySelector('.flatpickr-calendar');
-      instance.querySelector('.flatpickr-day:not(.prevMonthDay)')['click']();
+      clickFlatpickerDate(
+        instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
+      );
     });
 
     it('should call the flatpickrClose output', done => {
@@ -305,7 +323,6 @@ describe('mwl-flatpickr directive', () => {
             new Date('2017-04-01').getTime() + timezoneOffset
           );
           expect(event.dateString).to.deep.equal('2017-04-01');
-          expect(event.instance instanceof Flatpickr).to.equal(true);
           done();
         });
       fixture.detectChanges();
@@ -314,7 +331,9 @@ describe('mwl-flatpickr directive', () => {
       );
       input.click();
       const instance: any = document.body.querySelector('.flatpickr-calendar');
-      instance.querySelector('.flatpickr-day:not(.prevMonthDay)')['click']();
+      clickFlatpickerDate(
+        instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
+      );
     });
 
     it('should call the flatpickrMonthChange output', done => {
@@ -327,7 +346,6 @@ describe('mwl-flatpickr directive', () => {
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
-          expect(event.instance instanceof Flatpickr).to.equal(true);
           done();
         });
       fixture.detectChanges();
@@ -336,7 +354,7 @@ describe('mwl-flatpickr directive', () => {
       );
       input.click();
       const instance: any = document.body.querySelector('.flatpickr-calendar');
-      instance.querySelector('.flatpickr-prev-month')['click']();
+      clickFlatpickerDate(instance.querySelector('.flatpickr-prev-month'));
     });
 
     it('should call the flatpickrYearChange output', done => {
@@ -349,7 +367,6 @@ describe('mwl-flatpickr directive', () => {
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
-          expect(event.instance instanceof Flatpickr).to.equal(true);
           done();
         });
       fixture.detectChanges();
@@ -358,7 +375,9 @@ describe('mwl-flatpickr directive', () => {
       );
       input.click();
       const instance: any = document.body.querySelector('.flatpickr-calendar');
-      instance.querySelector('.flatpickr-current-month .arrowUp')['click']();
+      clickFlatpickerDate(
+        instance.querySelector('.flatpickr-current-month .arrowUp')
+      );
     });
 
     it('should call the flatpickrDayCreate output', done => {
@@ -371,7 +390,6 @@ describe('mwl-flatpickr directive', () => {
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
-          expect(event.instance instanceof Flatpickr).to.equal(true);
           expect(event.dayElement.outerHTML).to.equal(
             '<span class="flatpickr-day prevMonthDay" ' +
               'aria-label="March 26, 2017" tabindex="-1">26</span>'

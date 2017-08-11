@@ -15,7 +15,7 @@ import {
   FlatpickrDefaults,
   DisableEnableDate
 } from './flatpickr-defaults.service';
-import * as Flatpickr from 'flatpickr';
+import * as flatpickr from 'flatpickr';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export interface FlatPickrOutputOptions {
@@ -173,12 +173,6 @@ export class FlatpickrDirective
   @Input() time24hr: boolean;
 
   /**
-   * When true, dates will parsed, formatted, and displayed in UTC.
-   * It's recommended that date strings contain the timezone, but not necessary.
-   */
-  @Input() utc: boolean;
-
-  /**
    * Enables display of week numbers in calendar.
    */
   @Input() weekNumbers: boolean;
@@ -301,7 +295,6 @@ export class FlatpickrDirective
       shorthandCurrentMonth: this.shorthandCurrentMonth,
       static: this.static,
       time24hr: this.time24hr,
-      utc: this.utc,
       weekNumbers: this.weekNumbers,
       getWeek: this.getWeek,
       wrap: this.wrap,
@@ -363,7 +356,7 @@ export class FlatpickrDirective
       }
     });
     options.time_24hr = options.time24hr;
-    this.instance = new Flatpickr(this.elm.nativeElement, options);
+    this.instance = flatpickr(this.elm.nativeElement, options);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
