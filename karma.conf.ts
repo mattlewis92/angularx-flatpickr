@@ -1,5 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
+import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 export default config => {
 
@@ -41,8 +42,11 @@ export default config => {
           }
         }, {
           test: /\.ts$/,
-          loader: 'awesome-typescript-loader',
-          exclude: /node_modules/
+          loader: 'ts-loader',
+          exclude: /node_modules/,
+          options: {
+            transpileOnly: true
+          }
         }, {
           test: /src\/.+\.ts$/,
           exclude: /(node_modules|\.spec\.ts$)/,
@@ -59,6 +63,11 @@ export default config => {
           /angular(\\|\/)core(\\|\/)@angular/,
           path.join(__dirname, 'src')
         ),
+        new ForkTsCheckerWebpackPlugin({
+          watch: ['./src', './test'],
+          formatter: 'codeframe',
+          async: !config.singleRun
+        }),
         ...(config.singleRun ? [new webpack.NoEmitOnErrorsPlugin()] : [])
       ]
     },
