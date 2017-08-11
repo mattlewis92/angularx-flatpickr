@@ -1,24 +1,48 @@
-import { Directive, ElementRef, AfterViewInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
-import { FlatpickrDefaults, DisableEnableDate } from './flatpickr-defaults.service';
-import * as Flatpickr from 'flatpickr';
+import {
+  Directive,
+  ElementRef,
+  AfterViewInit,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  SimpleChanges,
+  OnDestroy,
+  forwardRef,
+  HostListener
+} from '@angular/core';
+import {
+  FlatpickrDefaults,
+  DisableEnableDate
+} from './flatpickr-defaults.service';
+import * as flatpickr from 'flatpickr';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
   dateString: string;
-  instance: Flatpickr;
+  instance: any;
 }
 
-export interface FlatPickrDayCreateOutputOptions extends FlatPickrOutputOptions {
+export interface FlatPickrDayCreateOutputOptions
+  extends FlatPickrOutputOptions {
   dayElement: HTMLElement;
 }
 
-export type NgModelValue = Date | Date[] | {from: Date, to: Date};
+export type NgModelValue = Date | Date[] | { from: Date; to: Date };
+
+export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() => FlatpickrDirective), //tslint:disable-line
+  multi: true
+};
 
 @Directive({
-  selector: '[mwlFlatpickr]'
+  selector: '[mwlFlatpickr]',
+  providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR]
 })
-export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
-
+export class FlatpickrDirective
+  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
   /**
    * Exactly the same as date format, but for the altInput field.
    */
@@ -149,12 +173,6 @@ export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
   @Input() time24hr: boolean;
 
   /**
-   * When true, dates will parsed, formatted, and displayed in UTC.
-   * It's recommended that date strings contain the timezone, but not necessary.
-   */
-  @Input() utc: boolean;
-
-  /**
    * Enables display of week numbers in calendar.
    */
   @Input() weekNumbers: boolean;
@@ -186,67 +204,70 @@ export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
   @Input() convertModelValue: boolean;
 
   /**
-   * @hidden
-   */
-  @Input() ngModel: NgModelValue | string;
-
-  /**
-   * @hidden
-   */
-  @Output() ngModelChange: EventEmitter<NgModelValue> = new EventEmitter();
-
-  /**
    * Gets triggered once the calendar is in a ready state
    */
-  @Output() flatpickrReady: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrReady: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Gets triggered when the user selects a date, or changes the time on a selected date.
    */
-  @Output() flatpickrChange: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrChange: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Gets triggered when the input value is updated with a new date string.
    */
-  @Output() flatpickrValueUpdate: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrValueUpdate: EventEmitter<
+    FlatPickrOutputOptions
+  > = new EventEmitter();
 
   /**
    * Gets triggered when the calendar is opened.
    */
-  @Output() flatpickrOpen: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrOpen: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Gets triggered when the calendar is closed.
    */
-  @Output() flatpickrClose: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrClose: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Gets triggered when the month is changed, either by the user or programmatically.
    */
-  @Output() flatpickrMonthChange: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrMonthChange: EventEmitter<
+    FlatPickrOutputOptions
+  > = new EventEmitter();
 
   /**
    * Gets triggered when the year is changed, either by the user or programmatically.
    */
-  @Output() flatpickrYearChange: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrYearChange: EventEmitter<
+    FlatPickrOutputOptions
+  > = new EventEmitter();
 
   /**
    * Take full control of every date cell with this output
    */
-  @Output() flatpickrDayCreate: EventEmitter<FlatPickrDayCreateOutputOptions> = new EventEmitter();
+  @Output()
+  flatpickrDayCreate: EventEmitter<
+    FlatPickrDayCreateOutputOptions
+  > = new EventEmitter();
 
-  private instance: Flatpickr;
+  private instance: any;
+
+  private initialValue: any;
+
+  onChangeFn: (value: any) => void = () => {}; // tslint:disable-line
 
   constructor(private elm: ElementRef, private defaults: FlatpickrDefaults) {}
 
   ngAfterViewInit(): void {
-
-    let defaultDate: NgModelValue | string = this.ngModel;
-
-    if (this.mode === 'range' && typeof defaultDate === 'object' && !(defaultDate instanceof Date) && !Array.isArray(defaultDate)) {
-      defaultDate = `${defaultDate.from.toISOString()} to ${defaultDate.to.toISOString()}`;
-    }
-
     const options: any = {
       altFormat: this.altFormat,
       altInput: this.altInput,
@@ -255,13 +276,13 @@ export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
       appendTo: this.appendTo,
       clickOpens: this.clickOpens,
       dateFormat: this.dateFormat,
-      defaultDate,
       disable: this.disable,
       disableMobile: this.disableMobile,
       enable: this.enable,
       enableTime: this.enableTime,
       enableSeconds: this.enableSeconds,
       hourIncrement: this.hourIncrement,
+      defaultDate: this.initialValue,
       inline: this.inline,
       maxDate: this.maxDate,
       minDate: this.minDate,
@@ -274,85 +295,121 @@ export class FlatpickrDirective implements AfterViewInit, OnChanges, OnDestroy {
       shorthandCurrentMonth: this.shorthandCurrentMonth,
       static: this.static,
       time24hr: this.time24hr,
-      utc: this.utc,
       weekNumbers: this.weekNumbers,
       getWeek: this.getWeek,
       wrap: this.wrap,
       plugins: this.plugins,
-      onChange: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrChange.emit({selectedDates, dateString, instance});
+      onChange: (selectedDates: Date[], dateString: string, instance: any) => {
+        this.flatpickrChange.emit({ selectedDates, dateString, instance });
       },
-      onOpen: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrOpen.emit({selectedDates, dateString, instance});
+      onOpen: (selectedDates: Date[], dateString: string, instance: any) => {
+        this.flatpickrOpen.emit({ selectedDates, dateString, instance });
       },
-      onClose: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrClose.emit({selectedDates, dateString, instance});
+      onClose: (selectedDates: Date[], dateString: string, instance: any) => {
+        this.flatpickrClose.emit({ selectedDates, dateString, instance });
       },
-      onMonthChange: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrMonthChange.emit({selectedDates, dateString, instance});
+      onMonthChange: (
+        selectedDates: Date[],
+        dateString: string,
+        instance: any
+      ) => {
+        this.flatpickrMonthChange.emit({ selectedDates, dateString, instance });
       },
-      onYearChange: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrYearChange.emit({selectedDates, dateString, instance});
+      onYearChange: (
+        selectedDates: Date[],
+        dateString: string,
+        instance: any
+      ) => {
+        this.flatpickrYearChange.emit({ selectedDates, dateString, instance });
       },
-      onReady: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrReady.emit({selectedDates, dateString, instance});
+      onReady: (selectedDates: Date[], dateString: string, instance: any) => {
+        this.flatpickrReady.emit({ selectedDates, dateString, instance });
       },
-      onValueUpdate: (selectedDates: Date[], dateString: string, instance: Flatpickr) => {
-        this.flatpickrValueUpdate.emit({selectedDates, dateString, instance});
+      onValueUpdate: (
+        selectedDates: Date[],
+        dateString: string,
+        instance: any
+      ) => {
+        this.flatpickrValueUpdate.emit({ selectedDates, dateString, instance });
       },
-      onDayCreate: (selectedDates: Date[], dateString: string, instance: Flatpickr, dayElement: HTMLElement) => {
-        this.flatpickrDayCreate.emit({selectedDates, dateString, instance, dayElement});
+      onDayCreate: (
+        selectedDates: Date[],
+        dateString: string,
+        instance: any,
+        dayElement: HTMLElement
+      ) => {
+        this.flatpickrDayCreate.emit({
+          selectedDates,
+          dateString,
+          instance,
+          dayElement
+        });
       }
     };
-    if (this.locale) { // workaround warning from flatpickr
+    if (this.locale) {
+      // workaround warning from flatpickr
       options.locale = this.locale;
     }
     Object.keys(options).forEach(key => {
       if (typeof options[key] === 'undefined') {
-        options[key] = this.defaults[key];
+        options[key] = (this as any).defaults[key];
       }
     });
     options.time_24hr = options.time24hr;
-    this.instance = new Flatpickr(this.elm.nativeElement, options);
+    this.instance = flatpickr(this.elm.nativeElement, options);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-
     if (this.instance) {
-      for (const inputKey in changes) {
-        this.instance.set(inputKey, this[inputKey]);
-      }
-    }
-
-    if (changes.ngModel && this.convertModelValue) {
-      setTimeout(() => {
-        if (typeof this.ngModel === 'string') {
-          switch (this.mode) {
-
-            case 'multiple':
-              const dates: Date[] = this.ngModel.split('; ').map(str => new Date(str));
-              this.ngModelChange.emit(dates);
-              break;
-
-            case 'range':
-              const [from, to] = this.ngModel.split(' to ').map(str => new Date(str));
-              this.ngModelChange.emit({from, to});
-              break;
-
-            case 'single':
-            default:
-              this.ngModelChange.emit(new Date(this.ngModel));
-              break;
-          }
-
-        }
+      Object.keys(changes).forEach(inputKey => {
+        this.instance.set(inputKey, (this as any)[inputKey]);
       });
     }
-
   }
 
   ngOnDestroy(): void {
     this.instance.destroy();
   }
 
+  writeValue(value: any): void {
+    let convertedValue: any = value;
+    if (this.convertModelValue && this.mode === 'range' && value) {
+      convertedValue = [value.from, value.to];
+    }
+
+    if (this.instance) {
+      this.instance.setDate(convertedValue);
+    } else {
+      // flatpickr hasn't been initialised yet, store the value for later use
+      this.initialValue = convertedValue;
+    }
+  }
+
+  registerOnChange(fn: any): void {
+    this.onChangeFn = fn;
+  }
+
+  registerOnTouched(fn: any): void {} // tslint:disable-line
+
+  @HostListener('change')
+  inputChanged(): void {
+    const value: string = this.elm.nativeElement.value;
+    if (this.convertModelValue && typeof value === 'string') {
+      switch (this.mode) {
+        case 'multiple':
+          const dates: Date[] = value.split('; ').map(str => new Date(str));
+          this.onChangeFn(dates);
+          break;
+
+        case 'range':
+          const [from, to] = value.split(' to ').map(str => new Date(str));
+          this.onChangeFn({ from, to });
+          break;
+
+        case 'single':
+        default:
+          this.onChangeFn(new Date(value));
+      }
+    }
+  }
 }

@@ -33,10 +33,12 @@ Then include in your apps module:
 
 ```typescript
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
   imports: [
+    FormsModule,
     FlatpickrModule.forRoot()
   ]
 })
@@ -77,18 +79,18 @@ https://mattlewis92.github.io/angularx-flatpickr/docs/
 ## Development
 
 ### Prepare your environment
-* Install [Node.js](http://nodejs.org/) and [yarn](https://yarnpkg.com/en/docs/install)
-* Install local dev dependencies: `yarn` while current directory is this repo
+* Install [Node.js](http://nodejs.org/) and npm
+* Install local dev dependencies: `npm install` while current directory is this repo
 
 ### Development server
-Run `yarn start` to start a development server on port 8000 with auto reload + tests.
+Run `npm start` to start a development server on port 8000 with auto reload + tests.
 
 ### Testing
-Run `yarn test` to run tests once or `yarn run test:watch` to continually run tests.
+Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
 
 ### Release
 ```bash
-yarn run release
+npm run release
 ```
 
 ## License

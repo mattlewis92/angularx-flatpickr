@@ -30,7 +30,7 @@ export default {
       enforce: 'pre'
     }, {
       test: /\.ts$/,
-      loader: 'awesome-typescript-loader',
+      loader: 'ts-loader',
       exclude: /node_modules/
     }]
   },

@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
 
-export type DisableEnableDate = string | Date | {from: Date | string, to: Date | string} | ((date: Date) => boolean);
+export type DisableEnableDate =
+  | string
+  | Date
+  | { from: Date | string; to: Date | string }
+  | ((date: Date) => boolean);
+
+// tslint:disable no-inferrable-types
 
 export interface FlatpickrDefaultsInterface {
-
   /**
    * Exactly the same as date format, but for the altInput field.
    */
@@ -169,12 +174,10 @@ export interface FlatpickrDefaultsInterface {
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`
    */
   convertModelValue?: boolean;
-
 }
 
 @Injectable()
 export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
-
   /**
    * Exactly the same as date format, but for the altInput field.
    */
@@ -340,5 +343,4 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`
    */
   convertModelValue: boolean = false;
-
 }

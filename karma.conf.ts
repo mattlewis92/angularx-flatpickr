@@ -1,7 +1,8 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
+import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
-export default config => {
+export default (config: any) => {
 
   config.set({
 
@@ -10,7 +11,7 @@ export default config => {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -32,11 +33,20 @@ export default config => {
           test: /\.ts$/,
           loader: 'tslint-loader',
           exclude: /node_modules/,
-          enforce: 'pre'
+          enforce: 'pre',
+          options: {
+            tslint: {
+              emitErrors: config.singleRun,
+              failOnHint: config.singleRun
+            }
+          }
         }, {
           test: /\.ts$/,
-          loader: 'awesome-typescript-loader',
-          exclude: /node_modules/
+          loader: 'ts-loader',
+          exclude: /node_modules/,
+          options: {
+            transpileOnly: true
+          }
         }, {
           test: /src\/.+\.ts$/,
           exclude: /(node_modules|\.spec\.ts$)/,
@@ -49,18 +59,15 @@ export default config => {
           filename: null,
           test: /\.(ts|js)($|\?)/i
         }),
-        new webpack.LoaderOptionsPlugin({
-          options: {
-            tslint: {
-              emitErrors: config.singleRun,
-              failOnHint: false
-            }
-          }
-        }),
         new webpack.ContextReplacementPlugin(
           /angular(\\|\/)core(\\|\/)@angular/,
           path.join(__dirname, 'src')
         ),
+        new ForkTsCheckerWebpackPlugin({
+          watch: ['./src', './test'],
+          formatter: 'codeframe',
+          async: !config.singleRun
+        }),
         ...(config.singleRun ? [new webpack.NoEmitOnErrorsPlugin()] : [])
       ]
     },
@@ -70,10 +77,19 @@ export default config => {
       fixWebpackSourcePaths: true
     },
 
+    mime: {
+      'text/x-typescript': ['ts']
+    },
+
+    mochaReporter: {
+      showDiff: true,
+      output: 'autowatch'
+    },
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'coverage-istanbul'],
+    reporters: ['mocha', 'coverage-istanbul'],
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
@@ -81,17 +97,7 @@ export default config => {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
-
-    phantomjsLauncher: {
-      // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
-      exitOnResourceError: true
-    },
-
-    browserConsoleLogOptions: {
-      terminal: true,
-      level: 'log'
-    }
+    browsers: ['ChromeHeadless']
 
   });
 
