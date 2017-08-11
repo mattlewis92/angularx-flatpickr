@@ -105,6 +105,6 @@
     }
   },
   "dependencies": {
-    "flatpickr": "^2.4.8"
+    "flatpickr": "2.4.8"
   }
 }
