@@ -33,10 +33,12 @@ Then include in your apps module:
 
 ```typescript
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
   imports: [
+    FormsModule,
     FlatpickrModule.forRoot()
   ]
 })

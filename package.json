@@ -97,7 +97,8 @@
     "zone.js": "^0.8.4"
   },
   "peerDependencies": {
-    "@angular/core": "^4.0.0"
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0"
   },
   "config": {
     "commitizen": {
