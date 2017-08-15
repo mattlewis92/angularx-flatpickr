@@ -409,9 +409,9 @@ export class FlatpickrDirective
         case 'single':
         default:
           this.onChangeFn(new Date(value));
-      } else {
-        this.onChangeFn(value);
       }
+    } else {
+      this.onChangeFn(value);
     }
   }
 }
