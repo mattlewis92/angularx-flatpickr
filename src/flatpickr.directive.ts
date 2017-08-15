@@ -411,6 +411,7 @@ export class FlatpickrDirective
           this.onChangeFn(new Date(value));
       } else {
         this.onChangeFn(value);
+      }
     }
   }
 }
