@@ -391,7 +391,7 @@ export class FlatpickrDirective
 
   registerOnTouched(fn: any): void {} // tslint:disable-line
 
-  @HostListener('change')
+  @HostListener('input')
   inputChanged(): void {
     const value: string = this.elm.nativeElement.value;
     if (this.convertModelValue && typeof value === 'string') {
