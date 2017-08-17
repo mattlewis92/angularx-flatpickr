@@ -410,6 +410,8 @@ export class FlatpickrDirective
         default:
           this.onChangeFn(new Date(value));
       }
+    } else {
+      this.onChangeFn(value);
     }
   }
 }
