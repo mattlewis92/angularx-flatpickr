@@ -42,7 +42,7 @@ function clickFlatpickerDate(target: HTMLElement | Element) {
       [convertModelValue]="convertModelValue"
       (flatpickrReady)="events.next({name: 'ready', event: $event})"
       (flatpickrValueUpdate)="events.next({name: 'valueUpdate', event: $event})"
-      (flatpickrChange)="events.next({name: 'change', event: $event})"
+      (flatpickrChange)="events.next({name: 'input', event: $event})"
       (flatpickrOpen)="events.next({name: 'open', event: $event})"
       (flatpickrClose)="events.next({name: 'close', event: $event})"
       (flatpickrMonthChange)="events.next({name: 'monthChange', event: $event})"
@@ -167,7 +167,7 @@ describe('mwl-flatpickr directive', () => {
         fixture.detectChanges();
         const input: DebugElement = fixture.debugElement.query(By.css('input'));
         input.nativeElement.value = '2017-04-01';
-        input.triggerEventHandler('change', []);
+        input.triggerEventHandler('input', { target: input.nativeElement });
         expect(fixture.componentInstance.modelValue).to.deep.equal(
           new Date('2017-04-01')
         );
@@ -182,7 +182,7 @@ describe('mwl-flatpickr directive', () => {
         fixture.detectChanges();
         const input: DebugElement = fixture.debugElement.query(By.css('input'));
         input.nativeElement.value = '2017-04-01; 2017-04-02';
-        input.triggerEventHandler('change', []);
+        input.triggerEventHandler('input', { target: input.nativeElement });
         expect(fixture.componentInstance.modelValue).to.deep.equal([
           new Date('2017-04-01'),
           new Date('2017-04-02')
@@ -198,7 +198,7 @@ describe('mwl-flatpickr directive', () => {
         fixture.detectChanges();
         const input: DebugElement = fixture.debugElement.query(By.css('input'));
         input.nativeElement.value = '2017-04-01 to 2017-04-02';
-        input.triggerEventHandler('change', []);
+        input.triggerEventHandler('input', { target: input.nativeElement });
         expect(fixture.componentInstance.modelValue).to.deep.equal({
           from: new Date('2017-04-01'),
           to: new Date('2017-04-02')
@@ -269,6 +269,21 @@ describe('mwl-flatpickr directive', () => {
         );
         expect(input.value).to.equal('2017-04-01 to 2017-04-02');
       });
+
+      it('should update the model value when convertModelValue is false', () => {
+        const fixture: ComponentFixture<
+          NgModelComponent
+        > = TestBed.createComponent(NgModelComponent);
+        fixture.componentInstance.convertModelValue = false;
+        fixture.componentInstance.mode = 'single';
+        fixture.detectChanges();
+        const input: DebugElement = fixture.debugElement.query(By.css('input'));
+        input.nativeElement.value = '2017-04-01';
+        input.triggerEventHandler('input', { target: input.nativeElement });
+        expect(fixture.componentInstance.modelValue).to.deep.equal(
+          '2017-04-01'
+        );
+      });
     });
 
     it('should call the flatpickrReady output', done => {
@@ -291,7 +306,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'change')
+        .filter(({ name }) => name === 'input')
         .take(1)
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
@@ -443,7 +458,7 @@ describe('mwl-flatpickr directive', () => {
       fixture.detectChanges();
       const input: DebugElement = fixture.debugElement.query(By.css('input'));
       input.nativeElement.value = '2017-04-01';
-      input.triggerEventHandler('change', []);
+      input.triggerEventHandler('input', { target: input.nativeElement });
       expect(fixture.componentInstance.form.value).to.deep.equal({
         date: new Date('2017-04-01')
       });

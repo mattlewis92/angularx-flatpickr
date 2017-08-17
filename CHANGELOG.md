@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.0...v2.0.1) (2017-08-17)
+
+
+### Bug Fixes
+
+* update model value even if convertModelValue is false ([cd5374a](https://github.com/mattlewis92/angularx-flatpickr/commit/cd5374a))
+* use input event instead of change event to detect flatpicker changes ([fc6f751](https://github.com/mattlewis92/angularx-flatpickr/commit/fc6f751))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v1.0.0...v2.0.0) (2017-08-11)
 
