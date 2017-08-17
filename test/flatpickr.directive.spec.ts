@@ -269,6 +269,21 @@ describe('mwl-flatpickr directive', () => {
         );
         expect(input.value).to.equal('2017-04-01 to 2017-04-02');
       });
+
+      it('should update the model value when convertModelValue is false', () => {
+        const fixture: ComponentFixture<
+          NgModelComponent
+        > = TestBed.createComponent(NgModelComponent);
+        fixture.componentInstance.convertModelValue = false;
+        fixture.componentInstance.mode = 'single';
+        fixture.detectChanges();
+        const input: DebugElement = fixture.debugElement.query(By.css('input'));
+        input.nativeElement.value = '2017-04-01';
+        input.triggerEventHandler('change', { target: input.nativeElement });
+        expect(fixture.componentInstance.modelValue).to.deep.equal(
+          '2017-04-01'
+        );
+      });
     });
 
     it('should call the flatpickrReady output', done => {
