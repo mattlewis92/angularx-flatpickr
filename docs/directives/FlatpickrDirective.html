@@ -2187,7 +2187,7 @@ export class FlatpickrDirective
 
   registerOnTouched(fn: any): void {} // tslint:disable-line
 
-  @HostListener(&#x27;change&#x27;)
+  @HostListener(&#x27;input&#x27;)
   inputChanged(): void {
     const value: string &#x3D; this.elm.nativeElement.value;
     if (this.convertModelValue &amp;&amp; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
@@ -2206,6 +2206,8 @@ export class FlatpickrDirective
         default:
           this.onChangeFn(new Date(value));
       }
+    } else {
+      this.onChangeFn(value);
     }
   }
 }
