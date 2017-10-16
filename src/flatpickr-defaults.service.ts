@@ -202,7 +202,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * Instead of `body`, appends the calendar to the specified node instead.
    */
-  appendTo: HTMLElement = null;
+  appendTo: HTMLElement = undefined;
 
   /**
    * Whether clicking on the input should open the picker.
