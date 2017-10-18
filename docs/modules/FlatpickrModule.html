@@ -416,7 +416,7 @@
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Declarations<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#declarations-anchor" target="_blank"><span class="fa fa-info-circle"></span></a></h3>
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
                                 <a href="../directives/FlatpickrDirective.html">FlatpickrDirective</a>
@@ -424,7 +424,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>Exports<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#exports-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
                                     <a href="../directives/FlatpickrDirective.html" >FlatpickrDirective</a>
@@ -443,10 +443,9 @@ import {
   FlatpickrDefaults,
   FlatpickrDefaultsInterface
 } from &#x27;./flatpickr-defaults.service&#x27;;
+import { FLATPICKR } from &#x27;./flatpickr.token&#x27;;
 
-export const USER_DEFAULTS: InjectionToken&lt;string&gt; &#x3D; new InjectionToken(
-  &#x27;flatpickr defaults&#x27;
-);
+export const USER_DEFAULTS &#x3D; new InjectionToken(&#x27;flatpickr defaults&#x27;);
 
 export function defaultsFactory(
   userDefaults: FlatpickrDefaultsInterface
@@ -462,11 +461,16 @@ export function defaultsFactory(
 })
 export class FlatpickrModule {
   static forRoot(
+    flatpickr: any,
     userDefaults: FlatpickrDefaultsInterface &#x3D; {}
   ): ModuleWithProviders {
     return {
       ngModule: FlatpickrModule,
       providers: [
+        {
+          provide: FLATPICKR,
+          useValue: flatpickr
+        },
         {
           provide: USER_DEFAULTS,
           useValue: userDefaults

@@ -417,6 +417,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >FlatPickrOutputOptions</a></code>
+            </p>
+
         <section>
             <h3 id="index">Index</h3>
             <table class="table table-sm table-bordered index-table">
@@ -448,7 +455,7 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="dayElement"></a>
-                                        <b>dayElement</b>
+                                        <span class="name"><b>dayElement</b><a href="#dayElement"><span class="fa fa-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -470,7 +477,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/flatpickr.directive.ts:29</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/flatpickr.directive.ts:30</a></div>
                                         </td>
                                     </tr>
 
@@ -492,14 +499,15 @@
   SimpleChanges,
   OnDestroy,
   forwardRef,
-  HostListener
+  HostListener,
+  Inject
 } from &#x27;@angular/core&#x27;;
 import {
   FlatpickrDefaults,
   DisableEnableDate
 } from &#x27;./flatpickr-defaults.service&#x27;;
-import * as flatpickr from &#x27;flatpickr&#x27;;
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
+import { FLATPICKR } from &#x27;./flatpickr.token&#x27;;
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -748,7 +756,11 @@ export class FlatpickrDirective
 
   onChangeFn: (value: any) &#x3D;&gt; void &#x3D; () &#x3D;&gt; {}; // tslint:disable-line
 
-  constructor(private elm: ElementRef, private defaults: FlatpickrDefaults) {}
+  constructor(
+    private elm: ElementRef,
+    private defaults: FlatpickrDefaults,
+    @Inject(FLATPICKR) private flatpickr: any
+  ) {}
 
   ngAfterViewInit(): void {
     const options: any &#x3D; {
@@ -839,7 +851,7 @@ export class FlatpickrDirective
       }
     });
     options.time_24hr &#x3D; options.time24hr;
-    this.instance &#x3D; flatpickr(this.elm.nativeElement, options);
+    this.instance &#x3D; this.flatpickr(this.elm.nativeElement, options);
   }
 
   ngOnChanges(changes: SimpleChanges): void {

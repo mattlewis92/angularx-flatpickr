@@ -409,11 +409,12 @@
 <pre class="line-numbers"><code class="language-typescript">import { NgModule } from &#39;&#64;angular/core&#39;;
 import { FormsModule } from &#39;&#64;angular/forms&#39;;
 import { FlatpickrModule } from &#39;angularx-flatpickr&#39;;
+import * as flatpickr from &#39;flatpickr&#39;;
 
 &#64;NgModule({
   imports: [
     FormsModule,
-    FlatpickrModule.forRoot()
+    FlatpickrModule.forRoot(flatpickr)
   ]
 })
 export class MyModule {}</code></pre><p>Finally use in one of your apps components:</p>

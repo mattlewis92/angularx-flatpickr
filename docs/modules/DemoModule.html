@@ -416,7 +416,7 @@
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Declarations<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#declarations-anchor" target="_blank"><span class="fa fa-info-circle"></span></a></h3>
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
                                 <a href="../components/DemoComponent.html">DemoComponent</a>
@@ -440,12 +440,13 @@
         <pre class="line-numbers"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
-import { FlatpickrModule } from &#x27;../src&#x27;;
+import * as flatpickr from &#x27;flatpickr&#x27;;
 import { DemoComponent } from &#x27;./demo.component&#x27;;
+import { FlatpickrModule } from &#x27;../src&#x27;;
 
 @NgModule({
   declarations: [DemoComponent],
-  imports: [BrowserModule, FormsModule, FlatpickrModule.forRoot()],
+  imports: [BrowserModule, FormsModule, FlatpickrModule.forRoot(flatpickr)],
   bootstrap: [DemoComponent]
 })
 export class DemoModule {}
