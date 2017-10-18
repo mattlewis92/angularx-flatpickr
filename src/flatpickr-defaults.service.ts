@@ -202,7 +202,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * Instead of `body`, appends the calendar to the specified node instead.
    */
-  appendTo: HTMLElement = null;
+  appendTo: HTMLElement = undefined;
 
   /**
    * Whether clicking on the input should open the picker.
@@ -255,12 +255,12 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * The maximum date that a user can pick to (inclusive).
    */
-  maxDate: string | Date = null;
+  maxDate: string | Date = undefined;
 
   /**
    * The minimum date that a user can start picking from (inclusive).
    */
-  minDate: string | Date = null;
+  minDate: string | Date = undefined;
 
   /**
    * Adjusts the step for the minute input (incl. scrolling).

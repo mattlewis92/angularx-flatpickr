@@ -9,7 +9,8 @@
     "strict": true,
     "lib": ["es2015", "dom"],
     "skipLibCheck": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "noImplicitAny": false
   },
   "include": [
     "src/**/*",
@@ -18,6 +19,6 @@
     "custom-typings.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules/**/*"
   ]
 }

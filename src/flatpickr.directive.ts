@@ -9,14 +9,15 @@ import {
   SimpleChanges,
   OnDestroy,
   forwardRef,
-  HostListener
+  HostListener,
+  Inject
 } from '@angular/core';
 import {
   FlatpickrDefaults,
   DisableEnableDate
 } from './flatpickr-defaults.service';
-import * as flatpickr from 'flatpickr';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { FLATPICKR } from './flatpickr.token';
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -265,7 +266,11 @@ export class FlatpickrDirective
 
   onChangeFn: (value: any) => void = () => {}; // tslint:disable-line
 
-  constructor(private elm: ElementRef, private defaults: FlatpickrDefaults) {}
+  constructor(
+    private elm: ElementRef,
+    private defaults: FlatpickrDefaults,
+    @Inject(FLATPICKR) private flatpickr: any
+  ) {}
 
   ngAfterViewInit(): void {
     const options: any = {
@@ -356,7 +361,7 @@ export class FlatpickrDirective
       }
     });
     options.time_24hr = options.time24hr;
-    this.instance = flatpickr(this.elm.nativeElement, options);
+    this.instance = this.flatpickr(this.elm.nativeElement, options);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
