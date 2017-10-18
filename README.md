@@ -35,11 +35,12 @@ Then include in your apps module:
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
+import * as flatpickr from 'flatpickr';
 
 @NgModule({
   imports: [
     FormsModule,
-    FlatpickrModule.forRoot()
+    FlatpickrModule.forRoot(flatpickr)
   ]
 })
 export class MyModule {}

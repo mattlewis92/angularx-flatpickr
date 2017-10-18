@@ -9,6 +9,7 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs/Subject';
+import * as flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 
@@ -103,7 +104,7 @@ describe('mwl-flatpickr directive', () => {
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        FlatpickrModule.forRoot({
+        FlatpickrModule.forRoot(flatpickr, {
           altInputClass: 'foo'
         })
       ],
@@ -249,7 +250,7 @@ describe('mwl-flatpickr directive', () => {
         const input: HTMLInputElement = fixture.nativeElement.querySelector(
           'input'
         );
-        expect(input.value).to.equal('2017-04-01; 2017-04-02');
+        expect(input.value).to.equal('2017-04-01, 2017-04-02');
       });
 
       it('should hydrate the initial value when passing a date range', async () => {
