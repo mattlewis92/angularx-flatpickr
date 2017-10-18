@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0) (2017-10-18)
+
+
+### Bug Fixes
+
+* support latest flatpickr ([b66000d](https://github.com/mattlewis92/angularx-flatpickr/commit/b66000d))
+
+
+### Features
+
+* upgrade flatpickr to v4 ([0fa4335](https://github.com/mattlewis92/angularx-flatpickr/commit/0fa4335)), closes [#4](https://github.com/mattlewis92/angularx-flatpickr/issues/4) [#5](https://github.com/mattlewis92/angularx-flatpickr/issues/5)
+
+
+### BREAKING CHANGES
+
+* flatpickr is now a peer dependency of this module. You must now add it as an
+explicit dependency, import it and pass it to the first argument of `FlatpickrModule.forRoot`
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.0...v2.0.1) (2017-08-17)
 
