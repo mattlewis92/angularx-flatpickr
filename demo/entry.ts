@@ -1,3 +1,4 @@
+import 'flatpickr/dist/flatpickr.css';
 import 'core-js';
 import 'zone.js/dist/zone';
 import { enableProdMode } from '@angular/core';

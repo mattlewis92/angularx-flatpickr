@@ -24,6 +24,9 @@ export default {
       options: {
         transpileOnly: true
       }
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
     }]
   },
   resolve: {
