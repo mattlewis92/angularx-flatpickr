@@ -269,7 +269,7 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    @Inject(FLATPICKR) private flatpickr: any
+    @Inject(FLATPICKR) private flatpickr
   ) {}
 
   ngAfterViewInit(): void {

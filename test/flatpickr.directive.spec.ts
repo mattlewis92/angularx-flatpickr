@@ -12,6 +12,7 @@ import { Subject } from 'rxjs/Subject';
 import * as flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
+import { FLATPICKR } from '../src';
 
 function triggerDomEvent(
   eventType: string,
@@ -104,9 +105,15 @@ describe('mwl-flatpickr directive', () => {
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        FlatpickrModule.forRoot(flatpickr, {
-          altInputClass: 'foo'
-        })
+        FlatpickrModule.forRoot(
+          {
+            provide: FLATPICKR,
+            useValue: flatpickr
+          },
+          {
+            altInputClass: 'foo'
+          }
+        )
       ],
       declarations: [NgModelComponent, ReactiveFormsComponent]
     });

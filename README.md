@@ -26,21 +26,29 @@ An angular 4.0+ wrapper for flatpickr
 
 Install through npm:
 ```
-npm install --save angularx-flatpickr
+npm install --save flatpickr angularx-flatpickr
 ```
 
 Then include in your apps module:
 
 ```typescript
+import 'flatpickr/dist/flatpickr.css'; // you may need to adjust the css import depending on your build tool
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FlatpickrModule } from 'angularx-flatpickr';
+import { FlatpickrModule, FLATPICKR } from 'angularx-flatpickr';
 import * as flatpickr from 'flatpickr';
+
+export function flatpickrFactory() {
+  return flatpickr;
+}
 
 @NgModule({
   imports: [
     FormsModule,
-    FlatpickrModule.forRoot(flatpickr)
+    FlatpickrModule.forRoot({
+      provide: FLATPICKR,
+      useFactory: flatpickrFactory
+    })
   ]
 })
 export class MyModule {}
