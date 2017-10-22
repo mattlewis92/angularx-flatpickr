@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0) (2017-10-22)
+
+
+### Bug Fixes
+
+* **aot:** allow the lib to compile with aot ([12c76e8](https://github.com/mattlewis92/angularx-flatpickr/commit/12c76e8)), closes [#7](https://github.com/mattlewis92/angularx-flatpickr/issues/7)
+
+
+### BREAKING CHANGES
+
+* **aot:** the value you pass to the forRoot method for flatpickr has changed. The new signature is:
+
+```
+import { NgModule } from '@angular/core';
+import * as flatpickr from 'flatpickr';
+import { FlatpickrModule, FLATPICKR } from 'angularx-flatpickr';
+
+export function flatpickrFactory() {
+  return flatpickr;
+}
+
+@NgModule({
+  imports: [
+    FlatpickrModule.forRoot({
+      provide: FLATPICKR,
+      useFactory: flatpickrFactory
+    })
+  ]
+})
+class MyModule {}
+```
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0) (2017-10-18)
 
