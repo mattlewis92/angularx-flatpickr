@@ -385,7 +385,33 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>All notable changes to this project will be documented in this file. See <a href="https://github.com/conventional-changelog/standard-version">standard-version</a> for commit guidelines.</p>
-<p><a name="3.0.0"></a></p>
+<p><a name="4.0.0"></a></p>
+<h1 id="-4-0-0-https-github-com-mattlewis92-angularx-flatpickr-compare-v3-0-0-v4-0-0-2017-10-22-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0">4.0.0</a> (2017-10-22)</h1>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li><strong>aot:</strong> allow the lib to compile with aot (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/12c76e8">12c76e8</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/7">#7</a></li>
+</ul>
+<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<ul>
+<li><strong>aot:</strong> the value you pass to the forRoot method for flatpickr has changed. The new signature is:</li>
+</ul>
+<pre class="line-numbers"><code class="language-none">import { NgModule } from &#39;&#64;angular/core&#39;;
+import * as flatpickr from &#39;flatpickr&#39;;
+import { FlatpickrModule, FLATPICKR } from &#39;angularx-flatpickr&#39;;
+
+export function flatpickrFactory() {
+  return flatpickr;
+}
+
+&#64;NgModule({
+  imports: [
+    FlatpickrModule.forRoot({
+      provide: FLATPICKR,
+      useFactory: flatpickrFactory
+    })
+  ]
+})
+class MyModule {}</code></pre><p><a name="3.0.0"></a></p>
 <h1 id="-3-0-0-https-github-com-mattlewis92-angularx-flatpickr-compare-v2-0-1-v3-0-0-2017-10-18-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0">3.0.0</a> (2017-10-18)</h1>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>

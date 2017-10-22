@@ -442,11 +442,22 @@ import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import * as flatpickr from &#x27;flatpickr&#x27;;
 import { DemoComponent } from &#x27;./demo.component&#x27;;
-import { FlatpickrModule } from &#x27;../src&#x27;;
+import { FlatpickrModule, FLATPICKR } from &#x27;../src&#x27;;
+
+export function flatpickrFactory() {
+  return flatpickr;
+}
 
 @NgModule({
   declarations: [DemoComponent],
-  imports: [BrowserModule, FormsModule, FlatpickrModule.forRoot(flatpickr)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    FlatpickrModule.forRoot({
+      provide: FLATPICKR,
+      useFactory: flatpickrFactory
+    })
+  ],
   bootstrap: [DemoComponent]
 })
 export class DemoModule {}

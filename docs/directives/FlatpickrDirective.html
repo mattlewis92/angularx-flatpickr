@@ -657,7 +657,7 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <code>constructor(elm: <a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank">ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html">FlatpickrDefaults</a>, flatpickr: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                                    <code>constructor(elm: <a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank">ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html">FlatpickrDefaults</a>, flatpickr: )</code>
                                 </td>
                             </tr>
                                     <tr>
@@ -701,7 +701,6 @@
                                                             <tr>
                                                               <td>flatpickr</td>
                                                               <td>
-                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                                               </td>
                                                               <td>
                                                               </td>
@@ -2263,7 +2262,7 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    @Inject(FLATPICKR) private flatpickr: any
+    @Inject(FLATPICKR) private flatpickr
   ) {}
 
   ngAfterViewInit(): void {

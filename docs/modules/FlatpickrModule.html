@@ -437,13 +437,17 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { NgModule, ModuleWithProviders, InjectionToken } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import {
+  NgModule,
+  ModuleWithProviders,
+  InjectionToken,
+  Provider
+} from &#x27;@angular/core&#x27;;
 import { FlatpickrDirective } from &#x27;./flatpickr.directive&#x27;;
 import {
   FlatpickrDefaults,
   FlatpickrDefaultsInterface
 } from &#x27;./flatpickr-defaults.service&#x27;;
-import { FLATPICKR } from &#x27;./flatpickr.token&#x27;;
 
 export const USER_DEFAULTS &#x3D; new InjectionToken(&#x27;flatpickr defaults&#x27;);
 
@@ -461,16 +465,13 @@ export function defaultsFactory(
 })
 export class FlatpickrModule {
   static forRoot(
-    flatpickr: any,
+    flatpickr: Provider,
     userDefaults: FlatpickrDefaultsInterface &#x3D; {}
   ): ModuleWithProviders {
     return {
       ngModule: FlatpickrModule,
       providers: [
-        {
-          provide: FLATPICKR,
-          useValue: flatpickr
-        },
+        flatpickr,
         {
           provide: USER_DEFAULTS,
           useValue: userDefaults
