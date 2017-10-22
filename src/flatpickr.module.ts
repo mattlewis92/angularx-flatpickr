@@ -1,10 +1,14 @@
-import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
+import {
+  NgModule,
+  ModuleWithProviders,
+  InjectionToken,
+  Provider
+} from '@angular/core';
 import { FlatpickrDirective } from './flatpickr.directive';
 import {
   FlatpickrDefaults,
   FlatpickrDefaultsInterface
 } from './flatpickr-defaults.service';
-import { FLATPICKR } from './flatpickr.token';
 
 export const USER_DEFAULTS = new InjectionToken('flatpickr defaults');
 
@@ -22,16 +26,13 @@ export function defaultsFactory(
 })
 export class FlatpickrModule {
   static forRoot(
-    flatpickr: any,
+    flatpickr: Provider,
     userDefaults: FlatpickrDefaultsInterface = {}
   ): ModuleWithProviders {
     return {
       ngModule: FlatpickrModule,
       providers: [
-        {
-          provide: FLATPICKR,
-          useValue: flatpickr
-        },
+        flatpickr,
         {
           provide: USER_DEFAULTS,
           useValue: userDefaults
