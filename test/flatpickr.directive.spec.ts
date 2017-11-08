@@ -91,9 +91,10 @@ class ReactiveFormsComponent {
 
 describe('mwl-flatpickr directive', () => {
   let clock: sinon.SinonFakeTimers;
-  const timezoneOffset: number = new Date().getTimezoneOffset() * 60 * 1000;
+  let timezoneOffset: number;
   beforeEach(() => {
     clock = sinon.useFakeTimers(new Date('2017-04-06').getTime());
+    timezoneOffset = new Date().getTimezoneOffset() * 60 * 1000;
   });
 
   afterEach(() => {
