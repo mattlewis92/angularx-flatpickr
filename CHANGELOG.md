@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.0...v4.0.1) (2017-11-08)
+
+
+### Bug Fixes
+
+* allow angular 5 peer dependency ([684395e](https://github.com/mattlewis92/angularx-flatpickr/commit/684395e))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0) (2017-10-22)
 

@@ -1,6 +1,6 @@
 {
   "name": "angularx-flatpickr",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "An angular 4.0+ wrapper for flatpickr",
   "main": "./bundles/angularx-flatpickr.umd.js",
   "module": "./index.js",
