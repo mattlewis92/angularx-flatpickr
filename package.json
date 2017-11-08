@@ -112,8 +112,8 @@
     "zone.js": "^0.8.18"
   },
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
+    "@angular/core": ">=4.0.0 <6.0.0",
+    "@angular/forms": ">=4.0.0 <6.0.0",
     "flatpickr": "^4.0.5"
   },
   "config": {
