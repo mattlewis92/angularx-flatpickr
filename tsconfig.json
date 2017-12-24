@@ -13,12 +13,12 @@
     "noImplicitAny": false
   },
   "include": [
-    "src/**/*",
-    "test/**/*",
-    "demo/**/*",
+    "src",
+    "test",
+    "demo",
     "custom-typings.d.ts"
   ],
   "exclude": [
-    "node_modules/**/*"
+    "node_modules"
   ]
 }

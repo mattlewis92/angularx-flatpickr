@@ -30,8 +30,6 @@ export interface FlatPickrDayCreateOutputOptions
   dayElement: HTMLElement;
 }
 
-export type NgModelValue = Date | Date[] | { from: Date; to: Date };
-
 export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => FlatpickrDirective), //tslint:disable-line
