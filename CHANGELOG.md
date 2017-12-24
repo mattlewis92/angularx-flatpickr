@@ -8,15 +8,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* auto import flatpickr ([dd78238](https://github.com/mattlewis92/angularx-flatpickr/commit/dd78238))
 * upgrade to angular 5 ([d764610](https://github.com/mattlewis92/angularx-flatpickr/commit/d764610))
 
 
 ### BREAKING CHANGES
 
 * Angular 5 or higher is now required to use this package
-* the first argument passed to `FlatpickrModule.forRoot` is now the default options
-object, instead of the flatpickr provider which was removed
 
 
 
