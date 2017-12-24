@@ -60,7 +60,7 @@ export default (config: any) => {
           test: /\.(ts|js)($|\?)/i
         }),
         new webpack.ContextReplacementPlugin(
-          /angular(\\|\/)core(\\|\/)@angular/,
+          /angular(\\|\/)core(\\|\/)esm5/,
           path.join(__dirname, 'src')
         ),
         new ForkTsCheckerWebpackPlugin({
