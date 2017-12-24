@@ -22,10 +22,7 @@ export default {
       loader: 'ts-loader',
       exclude: /node_modules/,
       options: {
-        transpileOnly: true,
-        compilerOptions: {
-          module: 'es2015'
-        }
+        transpileOnly: true
       }
     }, {
       test: /\.css$/,

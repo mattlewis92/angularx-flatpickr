@@ -45,19 +45,13 @@ export default (config: any) => {
           loader: 'ts-loader',
           exclude: /node_modules/,
           options: {
-            transpileOnly: true,
-            compilerOptions: {
-              module: 'es2015'
-            }
+            transpileOnly: true
           }
         }, {
           test: /src\/.+\.ts$/,
           exclude: /(node_modules|\.spec\.ts$)/,
           loader: 'istanbul-instrumenter-loader',
-          enforce: 'post',
-          options: {
-            esModules: true
-          }
+          enforce: 'post'
         }]
       },
       plugins: [

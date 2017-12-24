@@ -35,12 +35,20 @@ Then include in your apps module:
 import 'flatpickr/dist/flatpickr.css'; // you may need to adjust the css import depending on your build tool
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FlatpickrModule } from 'angularx-flatpickr';
+import { FlatpickrModule, FLATPICKR } from 'angularx-flatpickr';
+import * as flatpickr from 'flatpickr';
+
+export function flatpickrFactory() {
+  return flatpickr;
+}
 
 @NgModule({
   imports: [
     FormsModule,
-    FlatpickrModule.forRoot()
+    FlatpickrModule.forRoot({
+      provide: FLATPICKR,
+      useFactory: flatpickrFactory
+    })
   ]
 })
 export class MyModule {}

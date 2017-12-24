@@ -14,8 +14,10 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs/Subject';
+import * as flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
+import { FLATPICKR } from '../src';
 
 function triggerDomEvent(
   eventType: string,
@@ -109,17 +111,23 @@ describe('mwl-flatpickr directive', () => {
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        FlatpickrModule.forRoot({
-          altInputClass: 'foo'
-        })
+        FlatpickrModule.forRoot(
+          {
+            provide: FLATPICKR,
+            useValue: flatpickr
+          },
+          {
+            altInputClass: 'foo'
+          }
+        )
       ],
       declarations: [NgModelComponent, ReactiveFormsComponent]
     });
-    Array.from(document.body.querySelectorAll('.flatpickr-calendar')).forEach(
-      instance => {
-        instance.parentNode.removeChild(instance);
-      }
-    );
+    Array.from(
+      document.body.querySelectorAll('.flatpickr-calendar')
+    ).forEach(instance => {
+      instance.parentNode.removeChild(instance);
+    });
   });
 
   describe('non reactive forms', () => {

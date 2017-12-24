@@ -26,11 +26,13 @@ export function defaultsFactory(
 })
 export class FlatpickrModule {
   static forRoot(
+    flatpickr: Provider,
     userDefaults: FlatpickrDefaultsInterface = {}
   ): ModuleWithProviders {
     return {
       ngModule: FlatpickrModule,
       providers: [
+        flatpickr,
         {
           provide: USER_DEFAULTS,
           useValue: userDefaults
