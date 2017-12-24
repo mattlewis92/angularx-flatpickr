@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.1...v5.0.0) (2017-12-24)
+
+
+### Features
+
+* auto import flatpickr ([dd78238](https://github.com/mattlewis92/angularx-flatpickr/commit/dd78238))
+* upgrade to angular 5 ([d764610](https://github.com/mattlewis92/angularx-flatpickr/commit/d764610))
+
+
+### BREAKING CHANGES
+
+* Angular 5 or higher is now required to use this package
+* the first argument passed to `FlatpickrModule.forRoot` is now the default options
+object, instead of the flatpickr provider which was removed
+
+
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.0...v4.0.1) (2017-11-08)
 

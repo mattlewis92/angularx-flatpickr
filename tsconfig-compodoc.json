@@ -1,20 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "lib": ["es2015", "dom"]
-  },
+  "extends": "./tsconfig.json",
   "include": [
-    "src"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "demo",
     "test",
     "karma.conf.ts",
-    "webpack.config.ts",
-    "webpack.config.umd.ts"
+    "webpack.config.ts"
   ]
 }
