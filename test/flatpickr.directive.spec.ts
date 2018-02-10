@@ -18,6 +18,7 @@ import flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 import { FLATPICKR } from '../src';
+import { filter, take } from 'rxjs/operators';
 
 function triggerDomEvent(
   eventType: string,
@@ -305,8 +306,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'ready')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'ready'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
@@ -320,8 +320,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'input')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'input'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
             new Date('2017-04-01').getTime() + timezoneOffset
@@ -345,8 +344,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'close')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'close'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
             new Date('2017-04-01').getTime() + timezoneOffset
@@ -372,8 +370,7 @@ describe('mwl-flatpickr directive', () => {
           NgModelComponent
         > = TestBed.createComponent(NgModelComponent);
         fixture.componentInstance.events
-          .filter(({ name }) => name === 'monthChange')
-          .take(1)
+          .pipe(filter(({ name }) => name === 'monthChange'), take(1))
           .subscribe(({ event }) => {
             expect(event.selectedDates).to.deep.equal([]);
             expect(event.dateString).to.deep.equal('');
@@ -397,8 +394,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'yearChange')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'yearChange'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
@@ -420,8 +416,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'dayCreate')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'dayCreate'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
@@ -444,8 +439,7 @@ describe('mwl-flatpickr directive', () => {
       > = TestBed.createComponent(NgModelComponent);
       let instance: any;
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'ready')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'ready'), take(1))
         .subscribe(({ event }) => {
           instance = event.instance;
         });
