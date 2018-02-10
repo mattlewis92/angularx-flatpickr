@@ -51,7 +51,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 [altInput]="true"
                 [convertModelValue]="true"
                 [enableTime]="true"
-                dateFormat="Y-m-d H:i">
+                dateFormat="Y-m-dTH:i">
               NgModel value: {{ dateTimeValue }}
             </div>
           </div>
