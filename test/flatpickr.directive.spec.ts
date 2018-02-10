@@ -14,7 +14,7 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs/Subject';
-import * as flatpickr from 'flatpickr';
+import flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 import { FLATPICKR } from '../src';
@@ -123,11 +123,11 @@ describe('mwl-flatpickr directive', () => {
       ],
       declarations: [NgModelComponent, ReactiveFormsComponent]
     });
-    Array.from(
-      document.body.querySelectorAll('.flatpickr-calendar')
-    ).forEach(instance => {
-      instance.parentNode.removeChild(instance);
-    });
+    Array.from(document.body.querySelectorAll('.flatpickr-calendar')).forEach(
+      instance => {
+        instance.parentNode.removeChild(instance);
+      }
+    );
   });
 
   describe('non reactive forms', () => {
