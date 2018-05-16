@@ -12,22 +12,26 @@ export default {
     filename: IS_PROD ? '[name]-[chunkhash].js' : '[name].js'
   },
   module: {
-    rules: [{
-      test: /\.ts$/,
-      loader: 'tslint-loader',
-      exclude: /node_modules/,
-      enforce: 'pre'
-    }, {
-      test: /\.ts$/,
-      loader: 'ts-loader',
-      exclude: /node_modules/,
-      options: {
-        transpileOnly: true
+    rules: [
+      {
+        test: /\.ts$/,
+        loader: 'tslint-loader',
+        exclude: /node_modules/,
+        enforce: 'pre'
+      },
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        options: {
+          transpileOnly: true
+        }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader'
-    }]
+    ]
   },
   resolve: {
     extensions: ['.ts', '.js']
