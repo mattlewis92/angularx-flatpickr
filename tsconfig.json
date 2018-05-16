@@ -10,8 +10,7 @@
     "lib": ["es2015", "dom"],
     "skipLibCheck": true,
     "strictNullChecks": false,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true
+    "noImplicitAny": false
   },
   "include": [
     "src",
