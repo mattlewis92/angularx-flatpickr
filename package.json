@@ -22,12 +22,6 @@
     "codecov": "cat coverage/lcov.info | codecov",
     "precommit": "pretty-quick --staged"
   },
-  "lint-staged": {
-    "{demo,src,test}/**/*.ts": [
-      "npm run prettier",
-      "git add"
-    ]
-  },
   "ngPackage": {
     "lib": {
       "entryFile": "src/index.ts"
