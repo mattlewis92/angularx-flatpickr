@@ -374,7 +374,8 @@
 import { NgModule } from &#39;&#64;angular/core&#39;;
 import { FormsModule } from &#39;&#64;angular/forms&#39;;
 import { FlatpickrModule, FLATPICKR } from &#39;angularx-flatpickr&#39;;
-import * as flatpickr from &#39;flatpickr&#39;;
+// make sure &quot;allowSyntheticDefaultImports&quot;: true is set in your tsconfig.json
+import flatpickr from &#39;flatpickr&#39;;
 
 export function flatpickrFactory() {
   return flatpickr;

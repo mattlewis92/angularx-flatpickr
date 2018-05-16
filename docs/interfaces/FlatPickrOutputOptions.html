@@ -442,7 +442,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/flatpickr.directive.ts:24</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/flatpickr.directive.ts:25</a></div>
                                         </td>
                                     </tr>
 
@@ -475,7 +475,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/flatpickr.directive.ts:25</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/flatpickr.directive.ts:26</a></div>
                                         </td>
                                     </tr>
 
@@ -508,7 +508,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/flatpickr.directive.ts:23</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/flatpickr.directive.ts:24</a></div>
                                         </td>
                                     </tr>
 
@@ -531,7 +531,8 @@
   OnDestroy,
   forwardRef,
   HostListener,
-  Inject
+  Inject,
+  Renderer2
 } from &#x27;@angular/core&#x27;;
 import {
   FlatpickrDefaults,
@@ -559,7 +560,11 @@ export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any &#x3D; {
 
 @Directive({
   selector: &#x27;[mwlFlatpickr]&#x27;,
-  providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR]
+  providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR],
+  host: {
+    // tslint:disable-line use-host-property-decorator
+    &#x27;(blur)&#x27;: &#x27;onTouchedFn()&#x27;
+  }
 })
 export class FlatpickrDirective
   implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
@@ -785,9 +790,12 @@ export class FlatpickrDirective
 
   onChangeFn: (value: any) &#x3D;&gt; void &#x3D; () &#x3D;&gt; {}; // tslint:disable-line
 
+  onTouchedFn &#x3D; () &#x3D;&gt; {};
+
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
+    private renderer: Renderer2,
     @Inject(FLATPICKR) private flatpickr
   ) {}
 
@@ -913,7 +921,13 @@ export class FlatpickrDirective
     this.onChangeFn &#x3D; fn;
   }
 
-  registerOnTouched(fn: any): void {} // tslint:disable-line
+  registerOnTouched(fn: () &#x3D;&gt; void): void {
+    this.onTouchedFn &#x3D; fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.renderer.setProperty(this.elm.nativeElement, &#x27;disabled&#x27;, isDisabled);
+  }
 
   @HostListener(&#x27;input&#x27;)
   inputChanged(): void {
