@@ -38,7 +38,11 @@ export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
 
 @Directive({
   selector: '[mwlFlatpickr]',
-  providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR]
+  providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR],
+  host: {
+    // tslint:disable-line use-host-property-decorator
+    '(blur)': 'onTouchedFn()'
+  }
 })
 export class FlatpickrDirective
   implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
@@ -264,6 +268,8 @@ export class FlatpickrDirective
 
   onChangeFn: (value: any) => void = () => {}; // tslint:disable-line
 
+  onTouchedFn = () => {};
+
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
@@ -392,7 +398,9 @@ export class FlatpickrDirective
     this.onChangeFn = fn;
   }
 
-  registerOnTouched(fn: any): void {} // tslint:disable-line
+  registerOnTouched(fn: () => void): void {
+    this.onTouchedFn = fn;
+  }
 
   @HostListener('input')
   inputChanged(): void {

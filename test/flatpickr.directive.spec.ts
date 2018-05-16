@@ -477,5 +477,24 @@ describe('mwl-flatpickr directive', () => {
         date: new Date('2017-04-01')
       });
     });
+
+    it('should mark the input as touched', async () => {
+      const fixture: ComponentFixture<
+        ReactiveFormsComponent
+      > = TestBed.createComponent(ReactiveFormsComponent);
+      fixture.componentInstance.convertModelValue = true;
+      fixture.componentInstance.mode = 'single';
+      fixture.detectChanges();
+      await fixture.whenStable();
+      expect(fixture.componentInstance.form.controls.date.touched).to.equal(
+        false
+      );
+      const input: DebugElement = fixture.debugElement.query(By.css('input'));
+      input.triggerEventHandler('blur', {});
+      fixture.detectChanges();
+      expect(fixture.componentInstance.form.controls.date.touched).to.equal(
+        true
+      );
+    });
   });
 });
