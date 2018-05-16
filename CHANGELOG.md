@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.0...v5.0.1) (2018-05-16)
+
+
+### Bug Fixes
+
+* mark the form control when touched ([d3c783e](https://github.com/mattlewis92/angularx-flatpickr/commit/d3c783e))
+* mark the input as disabled when used with reactive forms ([2c1122c](https://github.com/mattlewis92/angularx-flatpickr/commit/2c1122c)), closes [#15](https://github.com/mattlewis92/angularx-flatpickr/issues/15)
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.1...v5.0.0) (2017-12-24)
 
