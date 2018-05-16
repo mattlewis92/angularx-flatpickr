@@ -20,8 +20,7 @@
     "postrelease": "npm run build:clean && npm run gh-pages",
     "commitmsg": "validate-commit-msg",
     "codecov": "cat coverage/lcov.info | codecov",
-    "prettier": "prettier --write",
-    "precommit": "lint-staged"
+    "precommit": "pretty-quick --staged"
   },
   "lint-staged": {
     "{demo,src,test}/**/*.ts": [
@@ -90,10 +89,10 @@
     "karma-mocha-reporter": "^2.2.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.9",
-    "lint-staged": "^6.1.0",
     "mocha": "^5.0.0",
     "ng-packagr": "^2.0.0",
     "prettier": "^1.10.2",
+    "pretty-quick": "^1.4.1",
     "rxjs": "^5.5.6",
     "sinon": "^4.2.2",
     "sinon-chai": "^2.14.0",
