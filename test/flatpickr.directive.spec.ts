@@ -363,7 +363,7 @@ describe('mwl-flatpickr directive', () => {
       );
     });
 
-    it(
+    it.skip(
       'should call the flatpickrMonthChange output',
       fakeAsync(done => {
         const fixture: ComponentFixture<

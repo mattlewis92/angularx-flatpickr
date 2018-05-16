@@ -39,8 +39,7 @@ import 'flatpickr/dist/flatpickr.css'; // you may need to adjust the css import 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FlatpickrModule, FLATPICKR } from 'angularx-flatpickr';
-// make sure "allowSyntheticDefaultImports": true is set in your tsconfig.json
-import flatpickr from 'flatpickr';
+import * as flatpickr from 'flatpickr';
 
 export function flatpickrFactory() {
   return flatpickr;
