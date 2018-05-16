@@ -496,5 +496,23 @@ describe('mwl-flatpickr directive', () => {
         true
       );
     });
+
+    it('should disable the input', async () => {
+      const fixture: ComponentFixture<
+        ReactiveFormsComponent
+      > = TestBed.createComponent(ReactiveFormsComponent);
+      fixture.componentInstance.convertModelValue = true;
+      fixture.componentInstance.mode = 'single';
+      fixture.detectChanges();
+      await fixture.whenStable();
+      const input: DebugElement = fixture.debugElement.query(By.css('input'));
+      expect(input.nativeElement.disabled).to.equal(false);
+      fixture.componentInstance.form.controls.date.disable();
+      fixture.detectChanges();
+      expect(input.nativeElement.disabled).to.equal(true);
+      fixture.componentInstance.form.controls.date.enable();
+      fixture.detectChanges();
+      expect(input.nativeElement.disabled).to.equal(false);
+    });
   });
 });

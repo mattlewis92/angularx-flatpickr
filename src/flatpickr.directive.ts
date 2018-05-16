@@ -10,7 +10,8 @@ import {
   OnDestroy,
   forwardRef,
   HostListener,
-  Inject
+  Inject,
+  Renderer2
 } from '@angular/core';
 import {
   FlatpickrDefaults,
@@ -273,6 +274,7 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
+    private renderer: Renderer2,
     @Inject(FLATPICKR) private flatpickr
   ) {}
 
@@ -400,6 +402,10 @@ export class FlatpickrDirective
 
   registerOnTouched(fn: () => void): void {
     this.onTouchedFn = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.renderer.setProperty(this.elm.nativeElement, 'disabled', isDisabled);
   }
 
   @HostListener('input')
