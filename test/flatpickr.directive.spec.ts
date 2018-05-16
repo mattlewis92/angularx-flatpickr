@@ -14,10 +14,11 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs/Subject';
-import * as flatpickr from 'flatpickr';
+import flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 import { FLATPICKR } from '../src';
+import { filter, take } from 'rxjs/operators';
 
 function triggerDomEvent(
   eventType: string,
@@ -123,11 +124,11 @@ describe('mwl-flatpickr directive', () => {
       ],
       declarations: [NgModelComponent, ReactiveFormsComponent]
     });
-    Array.from(
-      document.body.querySelectorAll('.flatpickr-calendar')
-    ).forEach(instance => {
-      instance.parentNode.removeChild(instance);
-    });
+    Array.from(document.body.querySelectorAll('.flatpickr-calendar')).forEach(
+      instance => {
+        instance.parentNode.removeChild(instance);
+      }
+    );
   });
 
   describe('non reactive forms', () => {
@@ -305,8 +306,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'ready')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'ready'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
@@ -320,8 +320,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'input')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'input'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
             new Date('2017-04-01').getTime() + timezoneOffset
@@ -345,8 +344,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'close')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'close'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
             new Date('2017-04-01').getTime() + timezoneOffset
@@ -372,8 +370,7 @@ describe('mwl-flatpickr directive', () => {
           NgModelComponent
         > = TestBed.createComponent(NgModelComponent);
         fixture.componentInstance.events
-          .filter(({ name }) => name === 'monthChange')
-          .take(1)
+          .pipe(filter(({ name }) => name === 'monthChange'), take(1))
           .subscribe(({ event }) => {
             expect(event.selectedDates).to.deep.equal([]);
             expect(event.dateString).to.deep.equal('');
@@ -397,8 +394,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'yearChange')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'yearChange'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
@@ -420,8 +416,7 @@ describe('mwl-flatpickr directive', () => {
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'dayCreate')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'dayCreate'), take(1))
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
@@ -444,8 +439,7 @@ describe('mwl-flatpickr directive', () => {
       > = TestBed.createComponent(NgModelComponent);
       let instance: any;
       fixture.componentInstance.events
-        .filter(({ name }) => name === 'ready')
-        .take(1)
+        .pipe(filter(({ name }) => name === 'ready'), take(1))
         .subscribe(({ event }) => {
           instance = event.instance;
         });
@@ -482,6 +476,43 @@ describe('mwl-flatpickr directive', () => {
       expect(fixture.componentInstance.form.value).to.deep.equal({
         date: new Date('2017-04-01')
       });
+    });
+
+    it('should mark the input as touched', async () => {
+      const fixture: ComponentFixture<
+        ReactiveFormsComponent
+      > = TestBed.createComponent(ReactiveFormsComponent);
+      fixture.componentInstance.convertModelValue = true;
+      fixture.componentInstance.mode = 'single';
+      fixture.detectChanges();
+      await fixture.whenStable();
+      expect(fixture.componentInstance.form.controls.date.touched).to.equal(
+        false
+      );
+      const input: DebugElement = fixture.debugElement.query(By.css('input'));
+      input.triggerEventHandler('blur', {});
+      fixture.detectChanges();
+      expect(fixture.componentInstance.form.controls.date.touched).to.equal(
+        true
+      );
+    });
+
+    it('should disable the input', async () => {
+      const fixture: ComponentFixture<
+        ReactiveFormsComponent
+      > = TestBed.createComponent(ReactiveFormsComponent);
+      fixture.componentInstance.convertModelValue = true;
+      fixture.componentInstance.mode = 'single';
+      fixture.detectChanges();
+      await fixture.whenStable();
+      const input: DebugElement = fixture.debugElement.query(By.css('input'));
+      expect(input.nativeElement.disabled).to.equal(false);
+      fixture.componentInstance.form.controls.date.disable();
+      fixture.detectChanges();
+      expect(input.nativeElement.disabled).to.equal(true);
+      fixture.componentInstance.form.controls.date.enable();
+      fixture.detectChanges();
+      expect(input.nativeElement.disabled).to.equal(false);
     });
   });
 });
