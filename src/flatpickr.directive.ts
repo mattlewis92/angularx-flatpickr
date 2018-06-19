@@ -414,18 +414,40 @@ export class FlatpickrDirective
     if (this.convertModelValue && typeof value === 'string') {
       switch (this.mode) {
         case 'multiple':
-          const dates: Date[] = value.split('; ').map(str => new Date(str));
+          const dates: Date[] = value
+            .split('; ')
+            .map(str =>
+              this.instance.parseDate(
+                str,
+                this.instance.config.dateFormat,
+                !this.instance.config.enableTime
+              )
+            );
           this.onChangeFn(dates);
           break;
 
         case 'range':
-          const [from, to] = value.split(' to ').map(str => new Date(str));
+          const [from, to] = value
+            .split(this.instance.l10n.rangeSeparator)
+            .map(str =>
+              this.instance.parseDate(
+                str,
+                this.instance.config.dateFormat,
+                !this.instance.config.enableTime
+              )
+            );
           this.onChangeFn({ from, to });
           break;
 
         case 'single':
         default:
-          this.onChangeFn(new Date(value));
+          this.onChangeFn(
+            this.instance.parseDate(
+              value,
+              this.instance.config.dateFormat,
+              !this.instance.config.enableTime
+            )
+          );
       }
     } else {
       this.onChangeFn(value);
