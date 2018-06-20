@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.2"></a>
+## [5.0.2](https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2) (2018-06-20)
+
+
+### Bug Fixes
+
+* parse date in same way as flatpickr does it ([9e38827](https://github.com/mattlewis92/angularx-flatpickr/commit/9e38827))
+* **directive:** fix setDisabledState behaviour ([eac1055](https://github.com/mattlewis92/angularx-flatpickr/commit/eac1055))
+
+
+
 <a name="5.0.1"></a>
 ## [5.0.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.0...v5.0.1) (2018-05-16)
 
