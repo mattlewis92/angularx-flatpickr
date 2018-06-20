@@ -19,6 +19,7 @@ import {
 } from './flatpickr-defaults.service';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FLATPICKR } from './flatpickr.token';
+import { Instance } from 'flatpickr';
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -263,8 +264,8 @@ export class FlatpickrDirective
     FlatPickrDayCreateOutputOptions
   > = new EventEmitter();
 
-  private instance: any;
-
+  private instance: Instance;
+  private isDisabled = false;
   private initialValue: any;
 
   onChangeFn: (value: any) => void = () => {}; // tslint:disable-line
@@ -275,7 +276,7 @@ export class FlatpickrDirective
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
     private renderer: Renderer2,
-    @Inject(FLATPICKR) private flatpickr
+    @Inject(FLATPICKR) private flatpickrFactory
   ) {}
 
   ngAfterViewInit(): void {
@@ -367,13 +368,14 @@ export class FlatpickrDirective
       }
     });
     options.time_24hr = options.time24hr;
-    this.instance = this.flatpickr(this.elm.nativeElement, options);
+    this.instance = this.flatpickrFactory(this.elm.nativeElement, options);
+    this.setDisabledState(this.isDisabled);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.instance) {
       Object.keys(changes).forEach(inputKey => {
-        this.instance.set(inputKey, (this as any)[inputKey]);
+        this.instance.set(inputKey as any, (this as any)[inputKey]);
       });
     }
   }
@@ -405,7 +407,14 @@ export class FlatpickrDirective
   }
 
   setDisabledState(isDisabled: boolean): void {
-    this.renderer.setProperty(this.elm.nativeElement, 'disabled', isDisabled);
+    this.isDisabled = isDisabled;
+    if (this.instance) {
+      if (this.isDisabled) {
+        this.renderer.setProperty(this.instance._input, 'disabled', 'disabled');
+      } else {
+        this.renderer.removeAttribute(this.instance._input, 'disabled');
+      }
+    }
   }
 
   @HostListener('input')
@@ -414,18 +423,40 @@ export class FlatpickrDirective
     if (this.convertModelValue && typeof value === 'string') {
       switch (this.mode) {
         case 'multiple':
-          const dates: Date[] = value.split('; ').map(str => new Date(str));
+          const dates: Date[] = value
+            .split('; ')
+            .map(str =>
+              this.instance.parseDate(
+                str,
+                this.instance.config.dateFormat,
+                !this.instance.config.enableTime
+              )
+            );
           this.onChangeFn(dates);
           break;
 
         case 'range':
-          const [from, to] = value.split(' to ').map(str => new Date(str));
+          const [from, to] = value
+            .split(this.instance.l10n.rangeSeparator)
+            .map(str =>
+              this.instance.parseDate(
+                str,
+                this.instance.config.dateFormat,
+                !this.instance.config.enableTime
+              )
+            );
           this.onChangeFn({ from, to });
           break;
 
         case 'single':
         default:
-          this.onChangeFn(new Date(value));
+          this.onChangeFn(
+            this.instance.parseDate(
+              value,
+              this.instance.config.dateFormat,
+              !this.instance.config.enableTime
+            )
+          );
       }
     } else {
       this.onChangeFn(value);

@@ -1,14 +1,14 @@
 {
   "name": "angularx-flatpickr",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "An angular 5.0+ wrapper for flatpickr",
   "scripts": {
     "start": "concurrently --raw \"webpack-dev-server --open\" \"npm run test:watch\"",
     "build:demo": "webpack",
     "build:dist": "ng-packagr -p package.json",
     "build:clean": "del-cli dist",
-    "test": "karma start --single-run && npm run build:dist && npm run build:clean",
-    "test:watch": "karma start --auto-watch",
+    "test": "TZ=Europe/London karma start --single-run && npm run build:dist && npm run build:clean",
+    "test:watch": "TZ=Europe/London karma start --auto-watch",
     "commit": "git-cz",
     "compodoc": "compodoc -p tsconfig-compodoc.json -d docs --disableGraph --disableCoverage --disablePrivate --disableInternal --disableLifeCycleHooks --disableProtected",
     "gh-pages": "git checkout gh-pages && git merge master --no-edit --no-ff && npm run build:demo && npm run compodoc && git add . && git commit -m \"chore: build demo and docs\" && git push && git checkout master",
@@ -21,12 +21,6 @@
     "commitmsg": "validate-commit-msg",
     "codecov": "cat coverage/lcov.info | codecov",
     "precommit": "pretty-quick --staged"
-  },
-  "lint-staged": {
-    "{demo,src,test}/**/*.ts": [
-      "npm run prettier",
-      "git add"
-    ]
   },
   "ngPackage": {
     "lib": {

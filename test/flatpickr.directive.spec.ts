@@ -48,6 +48,8 @@ function clickFlatpickerDate(target: HTMLElement | Element) {
       [mode]="mode"
       [locale]="'en'"
       [convertModelValue]="convertModelValue"
+      [enableTime]="enableTime"
+      [dateFormat]="dateFormat"
       (flatpickrReady)="events.next({name: 'ready', event: $event})"
       (flatpickrValueUpdate)="events.next({name: 'valueUpdate', event: $event})"
       (flatpickrChange)="events.next({name: 'input', event: $event})"
@@ -65,6 +67,8 @@ class NgModelComponent {
   events: Subject<any> = new Subject();
   convertModelValue: boolean;
   mode: string;
+  enableTime = false;
+  dateFormat = 'Y-m-d';
 }
 
 // tslint:disable-next-line
@@ -173,7 +177,7 @@ describe('mwl-flatpickr directive', () => {
     });
 
     describe('convertModelValue', () => {
-      it('should convert the value to a date when in single mode', () => {
+      it('should convert the value to a date without time when in single mode', () => {
         const fixture: ComponentFixture<
           NgModelComponent
         > = TestBed.createComponent(NgModelComponent);
@@ -181,30 +185,66 @@ describe('mwl-flatpickr directive', () => {
         fixture.componentInstance.mode = 'single';
         fixture.detectChanges();
         const input: DebugElement = fixture.debugElement.query(By.css('input'));
-        input.nativeElement.value = '2017-04-01';
+        input.nativeElement.value = '2017-04-01T15:15:15';
         input.triggerEventHandler('input', { target: input.nativeElement });
         expect(fixture.componentInstance.modelValue).to.deep.equal(
-          new Date('2017-04-01')
+          new Date('2017-04-01T00:00:00')
         );
       });
 
-      it('should convert the value to an array of date when in multiple mode', () => {
+      it('should convert the value to a date with time when in single mode with `enableTime` flag', () => {
+        const fixture: ComponentFixture<
+          NgModelComponent
+        > = TestBed.createComponent(NgModelComponent);
+        fixture.componentInstance.convertModelValue = true;
+        fixture.componentInstance.mode = 'single';
+        fixture.componentInstance.dateFormat = 'Y-m-dTH:i:s';
+        fixture.componentInstance.enableTime = true;
+        fixture.detectChanges();
+        const input: DebugElement = fixture.debugElement.query(By.css('input'));
+        input.nativeElement.value = '2017-04-01T15:15:15';
+        input.triggerEventHandler('input', { target: input.nativeElement });
+        expect(fixture.componentInstance.modelValue).to.deep.equal(
+          new Date('2017-04-01T15:15:15')
+        );
+      });
+
+      it('should convert the value to an array of dates without time when in multiple mode', () => {
         const fixture: ComponentFixture<
           NgModelComponent
         > = TestBed.createComponent(NgModelComponent);
         fixture.componentInstance.convertModelValue = true;
         fixture.componentInstance.mode = 'multiple';
         fixture.detectChanges();
+
         const input: DebugElement = fixture.debugElement.query(By.css('input'));
-        input.nativeElement.value = '2017-04-01; 2017-04-02';
+        input.nativeElement.value = '2017-04-01T15:15:15; 2017-04-02T15:15:15';
         input.triggerEventHandler('input', { target: input.nativeElement });
         expect(fixture.componentInstance.modelValue).to.deep.equal([
-          new Date('2017-04-01'),
-          new Date('2017-04-02')
+          new Date('2017-04-01T00:00:00'),
+          new Date('2017-04-02T00:00:00')
         ]);
       });
 
-      it('should convert the value to a from / to object when in range mode', () => {
+      it('should convert the value to an array of dates with time when in multiple mode with `enableTime` flag', () => {
+        const fixture: ComponentFixture<
+          NgModelComponent
+        > = TestBed.createComponent(NgModelComponent);
+        fixture.componentInstance.convertModelValue = true;
+        fixture.componentInstance.mode = 'multiple';
+        fixture.componentInstance.dateFormat = 'Y-m-dTH:i:s';
+        fixture.componentInstance.enableTime = true;
+        fixture.detectChanges();
+        const input: DebugElement = fixture.debugElement.query(By.css('input'));
+        input.nativeElement.value = '2017-04-01T15:15:15; 2017-04-02T15:15:15';
+        input.triggerEventHandler('input', { target: input.nativeElement });
+        expect(fixture.componentInstance.modelValue).to.deep.equal([
+          new Date('2017-04-01T15:15:15'),
+          new Date('2017-04-02T15:15:15')
+        ]);
+      });
+
+      it('should convert the value to a from / to object without time when in range mode', () => {
         const fixture: ComponentFixture<
           NgModelComponent
         > = TestBed.createComponent(NgModelComponent);
@@ -212,11 +252,31 @@ describe('mwl-flatpickr directive', () => {
         fixture.componentInstance.mode = 'range';
         fixture.detectChanges();
         const input: DebugElement = fixture.debugElement.query(By.css('input'));
-        input.nativeElement.value = '2017-04-01 to 2017-04-02';
+        input.nativeElement.value =
+          '2017-04-01 15:15:15 to 2017-04-02 15:15:15';
         input.triggerEventHandler('input', { target: input.nativeElement });
         expect(fixture.componentInstance.modelValue).to.deep.equal({
-          from: new Date('2017-04-01'),
-          to: new Date('2017-04-02')
+          from: new Date('2017-04-01T00:00:00'),
+          to: new Date('2017-04-02T00:00:00')
+        });
+      });
+
+      it('should convert the value to a from / to object with time when in range mode with `enableTime` flag', () => {
+        const fixture: ComponentFixture<
+          NgModelComponent
+        > = TestBed.createComponent(NgModelComponent);
+        fixture.componentInstance.convertModelValue = true;
+        fixture.componentInstance.mode = 'range';
+        fixture.componentInstance.dateFormat = 'Y-m-dTH:i:s';
+        fixture.componentInstance.enableTime = true;
+        fixture.detectChanges();
+        const input: DebugElement = fixture.debugElement.query(By.css('input'));
+        input.nativeElement.value =
+          '2017-04-01 15:15:15 to 2017-04-02 15:15:15';
+        input.triggerEventHandler('input', { target: input.nativeElement });
+        expect(fixture.componentInstance.modelValue).to.deep.equal({
+          from: new Date('2017-04-01T15:15:15'),
+          to: new Date('2017-04-02T15:15:15')
         });
       });
 
@@ -474,7 +534,7 @@ describe('mwl-flatpickr directive', () => {
       input.nativeElement.value = '2017-04-01';
       input.triggerEventHandler('input', { target: input.nativeElement });
       expect(fixture.componentInstance.form.value).to.deep.equal({
-        date: new Date('2017-04-01')
+        date: new Date('2017-04-01T00:00:00')
       });
     });
 
@@ -497,22 +557,46 @@ describe('mwl-flatpickr directive', () => {
       );
     });
 
-    it('should disable the input', async () => {
+    it('should disable the input with `altInput` flag', async () => {
       const fixture: ComponentFixture<
         ReactiveFormsComponent
       > = TestBed.createComponent(ReactiveFormsComponent);
       fixture.componentInstance.convertModelValue = true;
       fixture.componentInstance.mode = 'single';
+      fixture.componentInstance.altInput = true;
       fixture.detectChanges();
       await fixture.whenStable();
-      const input: DebugElement = fixture.debugElement.query(By.css('input'));
-      expect(input.nativeElement.disabled).to.equal(false);
+      const input: HTMLInputElement = fixture.nativeElement.querySelectorAll(
+        'input'
+      )[1];
+      expect(input.disabled).to.equal(false);
       fixture.componentInstance.form.controls.date.disable();
       fixture.detectChanges();
-      expect(input.nativeElement.disabled).to.equal(true);
+      expect(input.disabled).to.equal(true);
       fixture.componentInstance.form.controls.date.enable();
       fixture.detectChanges();
-      expect(input.nativeElement.disabled).to.equal(false);
+      expect(input.disabled).to.equal(false);
+    });
+
+    it('should disable the input without `altInput` flag', async () => {
+      const fixture: ComponentFixture<
+        ReactiveFormsComponent
+      > = TestBed.createComponent(ReactiveFormsComponent);
+      fixture.componentInstance.convertModelValue = true;
+      fixture.componentInstance.mode = 'single';
+      fixture.componentInstance.altInput = false;
+      fixture.detectChanges();
+      await fixture.whenStable();
+      const input: HTMLInputElement = fixture.nativeElement.querySelectorAll(
+        'input'
+      )[0];
+      expect(input.disabled).to.equal(false);
+      fixture.componentInstance.form.controls.date.disable();
+      fixture.detectChanges();
+      expect(input.disabled).to.equal(true);
+      fixture.componentInstance.form.controls.date.enable();
+      fixture.detectChanges();
+      expect(input.disabled).to.equal(false);
     });
   });
 });
