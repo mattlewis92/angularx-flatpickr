@@ -557,22 +557,46 @@ describe('mwl-flatpickr directive', () => {
       );
     });
 
-    it('should disable the input', async () => {
+    it('should disable the input with `altInput` flag', async () => {
       const fixture: ComponentFixture<
         ReactiveFormsComponent
       > = TestBed.createComponent(ReactiveFormsComponent);
       fixture.componentInstance.convertModelValue = true;
       fixture.componentInstance.mode = 'single';
+      fixture.componentInstance.altInput = true;
       fixture.detectChanges();
       await fixture.whenStable();
-      const input: DebugElement = fixture.debugElement.query(By.css('input'));
-      expect(input.nativeElement.disabled).to.equal(false);
+      const input: HTMLInputElement = fixture.nativeElement.querySelectorAll(
+        'input'
+      )[1];
+      expect(input.disabled).to.equal(false);
       fixture.componentInstance.form.controls.date.disable();
       fixture.detectChanges();
-      expect(input.nativeElement.disabled).to.equal(true);
+      expect(input.disabled).to.equal(true);
       fixture.componentInstance.form.controls.date.enable();
       fixture.detectChanges();
-      expect(input.nativeElement.disabled).to.equal(false);
+      expect(input.disabled).to.equal(false);
+    });
+
+    it('should disable the input without `altInput` flag', async () => {
+      const fixture: ComponentFixture<
+        ReactiveFormsComponent
+      > = TestBed.createComponent(ReactiveFormsComponent);
+      fixture.componentInstance.convertModelValue = true;
+      fixture.componentInstance.mode = 'single';
+      fixture.componentInstance.altInput = false;
+      fixture.detectChanges();
+      await fixture.whenStable();
+      const input: HTMLInputElement = fixture.nativeElement.querySelectorAll(
+        'input'
+      )[0];
+      expect(input.disabled).to.equal(false);
+      fixture.componentInstance.form.controls.date.disable();
+      fixture.detectChanges();
+      expect(input.disabled).to.equal(true);
+      fixture.componentInstance.form.controls.date.enable();
+      fixture.detectChanges();
+      expect(input.disabled).to.equal(false);
     });
   });
 });
