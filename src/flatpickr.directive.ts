@@ -10,7 +10,6 @@ import {
   OnDestroy,
   forwardRef,
   HostListener,
-  Inject,
   Renderer2
 } from '@angular/core';
 import {
@@ -18,8 +17,7 @@ import {
   DisableEnableDate
 } from './flatpickr-defaults.service';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { FLATPICKR } from './flatpickr.token';
-import { Instance } from 'flatpickr';
+import flatpickr from 'flatpickr';
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -75,6 +73,11 @@ export class FlatpickrDirective
   @Input() appendTo: HTMLElement;
 
   /**
+   * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
+   */
+  @Input() ariaDateFormat?: string;
+
+  /**
    * Whether clicking on the input should open the picker.
    * You could disable this if you wish to open the calendar manually `with.open()`.
    */
@@ -85,6 +88,15 @@ export class FlatpickrDirective
    * The supported characters are defined in the table below.
    */
   @Input() dateFormat: string;
+
+  /**
+   * Initial value of the hour element.
+   */
+  @Input() defaultHour?: number;
+  /**
+   * Initial value of the minute element.
+   */
+  @Input() defaultMinute?: number;
 
   /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.
@@ -111,6 +123,11 @@ export class FlatpickrDirective
    * Enables seconds in the time picker.
    */
   @Input() enableSeconds: boolean;
+
+  /**
+   * Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.
+   */
+  @Input() formatDate?: (value: any) => string;
 
   /**
    * Adjusts the step for the hour input (incl. scrolling).
@@ -264,7 +281,7 @@ export class FlatpickrDirective
     FlatPickrDayCreateOutputOptions
   > = new EventEmitter();
 
-  private instance: Instance;
+  private instance: flatpickr.Instance;
   private isDisabled = false;
   private initialValue: any;
 
@@ -275,8 +292,7 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    private renderer: Renderer2,
-    @Inject(FLATPICKR) private flatpickrFactory
+    private renderer: Renderer2
   ) {}
 
   ngAfterViewInit(): void {
@@ -286,13 +302,17 @@ export class FlatpickrDirective
       altInputClass: this.altInputClass,
       allowInput: this.allowInput,
       appendTo: this.appendTo,
+      ariaDateFormat: this.ariaDateFormat,
       clickOpens: this.clickOpens,
       dateFormat: this.dateFormat,
+      defaultHour: this.defaultHour,
+      defaultMinute: this.defaultMinute,
       disable: this.disable,
       disableMobile: this.disableMobile,
       enable: this.enable,
       enableTime: this.enableTime,
       enableSeconds: this.enableSeconds,
+      formatDate: this.formatDate,
       hourIncrement: this.hourIncrement,
       defaultDate: this.initialValue,
       inline: this.inline,
@@ -364,11 +384,13 @@ export class FlatpickrDirective
     }
     Object.keys(options).forEach(key => {
       if (typeof options[key] === 'undefined') {
-        options[key] = (this as any).defaults[key];
+        options[key] = (this.defaults as any)[key];
       }
     });
     options.time_24hr = options.time24hr;
-    this.instance = this.flatpickrFactory(this.elm.nativeElement, options);
+    this.instance = this.elm.nativeElement.flatpickr(
+      options
+    ) as flatpickr.Instance;
     this.setDisabledState(this.isDisabled);
   }
 

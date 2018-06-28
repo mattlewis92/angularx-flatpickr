@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import flatpickr from 'flatpickr';
 
 @Component({
   selector: 'mwl-demo-app',
@@ -110,6 +111,28 @@ import { Component, ViewEncapsulation } from '@angular/core';
             </div>
           </div>
         </div>
+
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Time picker</h3>
+            </div>
+            <div class="panel-body">
+              <input
+                class="form-control"
+                type="text"
+                mwlFlatpickr
+                [(ngModel)]="timePicker"
+                [noCalendar]="true"
+                [enableTime]="true"
+                [dateFormat]="'H:i'"
+                >
+              NgModel value: {{ timePicker }}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   `,
@@ -125,6 +148,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
   ]
 })
 export class DemoComponent {
+  // trick to force flatpickr loading even with build optimizers
+  localFlatpickr = flatpickr;
   basicDemoValue = '2017-01-01';
   modelValueAsDate: Date = new Date();
   dateTimeValue: Date = new Date();
@@ -134,4 +159,5 @@ export class DemoComponent {
     to: (new Date() as any)['fp_incr'](10)
   };
   inlineDatePicker: Date = new Date();
+  timePicker: Date = null;
 }
