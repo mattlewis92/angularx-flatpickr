@@ -56,6 +56,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
             </div>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -95,6 +97,27 @@ import { Component, ViewEncapsulation } from '@angular/core';
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
+              <h3 class="panel-title">Time picker</h3>
+            </div>
+            <div class="panel-body">
+              <input
+                class="form-control"
+                type="text"
+                mwlFlatpickr
+                [(ngModel)]="timePicker"
+                [noCalendar]="true"
+                [enableTime]="true"
+                [dateFormat]="'H:i'"
+              >
+              NgModel value: {{ timePicker }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
               <h3 class="panel-title">Inline picker</h3>
             </div>
             <div class="panel-body inline-flatpickr">
@@ -110,28 +133,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
             </div>
           </div>
         </div>
-
-
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Time picker</h3>
-            </div>
-            <div class="panel-body">
-              <input
-                class="form-control"
-                type="text"
-                mwlFlatpickr
-                [(ngModel)]="timePicker"
-                [noCalendar]="true"
-                [enableTime]="true"
-                [dateFormat]="'H:i'"
-                >
-              NgModel value: {{ timePicker }}
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   `,
