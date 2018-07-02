@@ -86,14 +86,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -257,14 +257,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -362,6 +362,17 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>All notable changes to this project will be documented in this file. See <a href="https://github.com/conventional-changelog/standard-version">standard-version</a> for commit guidelines.</p>
+<p><a name="6.0.0"></a></p>
+<h1 id="6-0-0-2018-07-02-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.2...v6.0.0">6.0.0</a> (2018-07-02)</h1>
+<h3 id="features">Features</h3>
+<ul>
+<li>update flatpickr to latest version (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/c407b3e">c407b3e</a>)</li>
+</ul>
+<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<ul>
+<li><code>flatpickrFactory</code> and <code>FLATPICKR</code> injection token are no longer needed and were removed. To migrate just remove the first argument you pass to <code>FlatpickrModule.forRoot</code></li>
+</ul>
+<p>A minimum version of flatpickr 4.5.0 or higher is now required to use this library</p>
 <p><a name="5.0.2"></a></p>
 <h2 id="5-0-2-2018-06-20-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2">5.0.2</a> (2018-06-20)</h2>
 <h3 id="bug-fixes">Bug Fixes</h3>
@@ -402,7 +413,7 @@
 <ul>
 <li><strong>aot:</strong> the value you pass to the forRoot method for flatpickr has changed. The new signature is:</li>
 </ul>
-<pre class="line-numbers"><code class="language-none">import { NgModule } from &#39;&#64;angular/core&#39;;
+<div><pre class="line-numbers"><code class="language-none">import { NgModule } from &#39;&#64;angular/core&#39;;
 import * as flatpickr from &#39;flatpickr&#39;;
 import { FlatpickrModule, FLATPICKR } from &#39;angularx-flatpickr&#39;;
 
@@ -418,7 +429,7 @@ export function flatpickrFactory() {
     })
   ]
 })
-class MyModule {}</code></pre><p><a name="3.0.0"></a></p>
+class MyModule {}</code></pre></div><p><a name="3.0.0"></a></p>
 <h1 id="3-0-0-2017-10-18-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0">3.0.0</a> (2017-10-18)</h1>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>
@@ -502,6 +513,7 @@ removed from flatpickr</li>
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
             var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
         </script>
 

@@ -86,14 +86,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -257,14 +257,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -375,14 +375,12 @@
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-
-
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
@@ -454,11 +452,6 @@
 
 
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/flatpickr.directive.ts:26</a></div>
-                                        </td>
-                                    </tr>
 
                         </tbody>
                     </table>
@@ -488,11 +481,6 @@
 
 
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/flatpickr.directive.ts:27</a></div>
-                                        </td>
-                                    </tr>
 
                         </tbody>
                     </table>
@@ -522,11 +510,6 @@
 
 
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/flatpickr.directive.ts:25</a></div>
-                                        </td>
-                                    </tr>
 
                         </tbody>
                     </table>
@@ -534,7 +517,7 @@
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
   Directive,
   ElementRef,
@@ -547,7 +530,6 @@
   OnDestroy,
   forwardRef,
   HostListener,
-  Inject,
   Renderer2
 } from &#x27;@angular/core&#x27;;
 import {
@@ -555,8 +537,7 @@ import {
   DisableEnableDate
 } from &#x27;./flatpickr-defaults.service&#x27;;
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
-import { FLATPICKR } from &#x27;./flatpickr.token&#x27;;
-import { Instance } from &#x27;flatpickr&#x27;;
+import flatpickr from &#x27;flatpickr&#x27;;
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -612,6 +593,11 @@ export class FlatpickrDirective
   @Input() appendTo: HTMLElement;
 
   /**
+   * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
+   */
+  @Input() ariaDateFormat?: string;
+
+  /**
    * Whether clicking on the input should open the picker.
    * You could disable this if you wish to open the calendar manually &#x60;with.open()&#x60;.
    */
@@ -622,6 +608,15 @@ export class FlatpickrDirective
    * The supported characters are defined in the table below.
    */
   @Input() dateFormat: string;
+
+  /**
+   * Initial value of the hour element.
+   */
+  @Input() defaultHour?: number;
+  /**
+   * Initial value of the minute element.
+   */
+  @Input() defaultMinute?: number;
 
   /**
    * See &lt;a href&#x3D;&quot;https://chmln.github.io/flatpickr/examples/#disabling-specific-dates&quot;&gt;disabling dates&lt;/a&gt;.
@@ -648,6 +643,11 @@ export class FlatpickrDirective
    * Enables seconds in the time picker.
    */
   @Input() enableSeconds: boolean;
+
+  /**
+   * Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.
+   */
+  @Input() formatDate?: (value: any) &#x3D;&gt; string;
 
   /**
    * Adjusts the step for the hour input (incl. scrolling).
@@ -801,7 +801,7 @@ export class FlatpickrDirective
     FlatPickrDayCreateOutputOptions
   &gt; &#x3D; new EventEmitter();
 
-  private instance: Instance;
+  private instance: flatpickr.Instance;
   private isDisabled &#x3D; false;
   private initialValue: any;
 
@@ -812,8 +812,7 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    private renderer: Renderer2,
-    @Inject(FLATPICKR) private flatpickrFactory
+    private renderer: Renderer2
   ) {}
 
   ngAfterViewInit(): void {
@@ -823,13 +822,17 @@ export class FlatpickrDirective
       altInputClass: this.altInputClass,
       allowInput: this.allowInput,
       appendTo: this.appendTo,
+      ariaDateFormat: this.ariaDateFormat,
       clickOpens: this.clickOpens,
       dateFormat: this.dateFormat,
+      defaultHour: this.defaultHour,
+      defaultMinute: this.defaultMinute,
       disable: this.disable,
       disableMobile: this.disableMobile,
       enable: this.enable,
       enableTime: this.enableTime,
       enableSeconds: this.enableSeconds,
+      formatDate: this.formatDate,
       hourIncrement: this.hourIncrement,
       defaultDate: this.initialValue,
       inline: this.inline,
@@ -901,11 +904,14 @@ export class FlatpickrDirective
     }
     Object.keys(options).forEach(key &#x3D;&gt; {
       if (typeof options[key] &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        options[key] &#x3D; (this as any).defaults[key];
+        options[key] &#x3D; (this.defaults as any)[key];
       }
     });
     options.time_24hr &#x3D; options.time24hr;
-    this.instance &#x3D; this.flatpickrFactory(this.elm.nativeElement, options);
+    this.instance &#x3D; flatpickr(
+      this.elm.nativeElement,
+      options
+    ) as flatpickr.Instance;
     this.setDisabledState(this.isDisabled);
   }
 
@@ -1033,6 +1039,7 @@ export class FlatpickrDirective
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
             var COMPODOC_CURRENT_PAGE_URL = 'FlatPickrOutputOptions.html';
         </script>
 

@@ -86,14 +86,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -257,14 +257,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -370,15 +370,12 @@
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-
-
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
-
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
@@ -494,6 +491,9 @@
                                 <a href="#appendTo">appendTo</a>
                             </li>
                             <li>
+                                <a href="#ariaDateFormat">ariaDateFormat</a>
+                            </li>
+                            <li>
                                 <a href="#clickOpens">clickOpens</a>
                             </li>
                             <li>
@@ -501,6 +501,12 @@
                             </li>
                             <li>
                                 <a href="#dateFormat">dateFormat</a>
+                            </li>
+                            <li>
+                                <a href="#defaultHour">defaultHour</a>
+                            </li>
+                            <li>
+                                <a href="#defaultMinute">defaultMinute</a>
                             </li>
                             <li>
                                 <a href="#disable">disable</a>
@@ -516,6 +522,9 @@
                             </li>
                             <li>
                                 <a href="#enableTime">enableTime</a>
+                            </li>
+                            <li>
+                                <a href="#formatDate">formatDate</a>
                             </li>
                             <li>
                                 <a href="#getWeek">getWeek</a>
@@ -637,12 +646,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(elm: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html">FlatpickrDefaults</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, flatpickrFactory: )</code>
+<code>constructor(elm: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html">FlatpickrDefaults</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="273" class="link-to-prism">src/flatpickr.directive.ts:273</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">src/flatpickr.directive.ts:290</a></div>
                             </td>
                         </tr>
 
@@ -660,7 +669,7 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                    <td>elm</td>
+                                                        <td>elm</td>
                                                   
                                                         <td>
                                                                     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
@@ -672,7 +681,7 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                    <td>defaults</td>
+                                                        <td>defaults</td>
                                                   
                                                         <td>
                                                                     <code><a href="../injectables/FlatpickrDefaults.html" target="_self" >FlatpickrDefaults</a></code>
@@ -684,21 +693,10 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                    <td>renderer</td>
+                                                        <td>renderer</td>
                                                   
                                                         <td>
                                                                     <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            no
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td>flatpickrFactory</td>
-                                                  
-                                                        <td>
                                                         </td>
                                                   
                                                     <td>
@@ -735,7 +733,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/flatpickr.directive.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/flatpickr.directive.ts:68</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -758,7 +756,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/flatpickr.directive.ts:54</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/flatpickr.directive.ts:52</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -781,7 +779,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/flatpickr.directive.ts:59</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/flatpickr.directive.ts:57</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -805,7 +803,7 @@ Note that <code>altInput</code> already inherits classes from the original input
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/flatpickr.directive.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/flatpickr.directive.ts:63</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -828,7 +826,30 @@ Note that <code>altInput</code> already inherits classes from the original input
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/flatpickr.directive.ts:75</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/flatpickr.directive.ts:73</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="ariaDateFormat"></a>
+                        <code>ariaDateFormat</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.</p>
+</div>
+                            <p>
+                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/flatpickr.directive.ts:78</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -852,7 +873,7 @@ You could disable this if you wish to open the calendar manually <code>with.open
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/flatpickr.directive.ts:81</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/flatpickr.directive.ts:84</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -875,7 +896,7 @@ You could disable this if you wish to open the calendar manually <code>with.open
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">src/flatpickr.directive.ts:209</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="226" class="link-to-prism">src/flatpickr.directive.ts:226</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -899,7 +920,53 @@ The supported characters are defined in the table below.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/flatpickr.directive.ts:87</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/flatpickr.directive.ts:90</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="defaultHour"></a>
+                        <code>defaultHour</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Initial value of the hour element.</p>
+</div>
+                            <p>
+                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/flatpickr.directive.ts:95</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="defaultMinute"></a>
+                        <code>defaultMinute</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Initial value of the minute element.</p>
+</div>
+                            <p>
+                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/flatpickr.directive.ts:99</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -922,7 +989,7 @@ The supported characters are defined in the table below.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/flatpickr.directive.ts:92</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/flatpickr.directive.ts:104</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -946,7 +1013,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/flatpickr.directive.ts:98</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/flatpickr.directive.ts:110</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -969,7 +1036,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/flatpickr.directive.ts:103</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/flatpickr.directive.ts:115</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -992,7 +1059,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/flatpickr.directive.ts:113</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/flatpickr.directive.ts:125</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1015,7 +1082,30 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/flatpickr.directive.ts:108</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/flatpickr.directive.ts:120</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="formatDate"></a>
+                        <code>formatDate</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.</p>
+</div>
+                            <p>
+                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/flatpickr.directive.ts:130</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1039,7 +1129,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/flatpickr.directive.ts:189</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">src/flatpickr.directive.ts:206</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1062,7 +1152,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/flatpickr.directive.ts:118</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/flatpickr.directive.ts:135</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1085,7 +1175,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/flatpickr.directive.ts:123</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/flatpickr.directive.ts:140</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1108,7 +1198,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/flatpickr.directive.ts:204</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">src/flatpickr.directive.ts:221</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1131,7 +1221,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/flatpickr.directive.ts:128</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/flatpickr.directive.ts:145</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1154,7 +1244,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/flatpickr.directive.ts:133</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/flatpickr.directive.ts:150</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1177,7 +1267,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/flatpickr.directive.ts:138</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/flatpickr.directive.ts:155</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1200,7 +1290,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/flatpickr.directive.ts:143</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/flatpickr.directive.ts:160</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1223,7 +1313,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/flatpickr.directive.ts:148</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/flatpickr.directive.ts:165</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1246,7 +1336,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">src/flatpickr.directive.ts:153</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">src/flatpickr.directive.ts:170</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1269,7 +1359,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="158" class="link-to-prism">src/flatpickr.directive.ts:158</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/flatpickr.directive.ts:175</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1292,7 +1382,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">src/flatpickr.directive.ts:199</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="216" class="link-to-prism">src/flatpickr.directive.ts:216</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1315,7 +1405,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/flatpickr.directive.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/flatpickr.directive.ts:180</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1338,7 +1428,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/flatpickr.directive.ts:168</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">src/flatpickr.directive.ts:185</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1361,7 +1451,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">src/flatpickr.directive.ts:173</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/flatpickr.directive.ts:190</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1384,7 +1474,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">src/flatpickr.directive.ts:178</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/flatpickr.directive.ts:195</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1407,7 +1497,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/flatpickr.directive.ts:183</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">src/flatpickr.directive.ts:200</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1430,7 +1520,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="194" class="link-to-prism">src/flatpickr.directive.ts:194</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">src/flatpickr.directive.ts:211</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1454,7 +1544,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">src/flatpickr.directive.ts:221</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/flatpickr.directive.ts:238</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1475,7 +1565,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">src/flatpickr.directive.ts:241</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="258" class="link-to-prism">src/flatpickr.directive.ts:258</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1496,7 +1586,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="263" class="link-to-prism">src/flatpickr.directive.ts:263</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="280" class="link-to-prism">src/flatpickr.directive.ts:280</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1517,7 +1607,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="247" class="link-to-prism">src/flatpickr.directive.ts:247</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="264" class="link-to-prism">src/flatpickr.directive.ts:264</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1538,7 +1628,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="235" class="link-to-prism">src/flatpickr.directive.ts:235</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="252" class="link-to-prism">src/flatpickr.directive.ts:252</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1559,7 +1649,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="215" class="link-to-prism">src/flatpickr.directive.ts:215</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">src/flatpickr.directive.ts:232</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1580,7 +1670,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="227" class="link-to-prism">src/flatpickr.directive.ts:227</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="244" class="link-to-prism">src/flatpickr.directive.ts:244</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1601,7 +1691,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="255" class="link-to-prism">src/flatpickr.directive.ts:255</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="272" class="link-to-prism">src/flatpickr.directive.ts:272</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -1631,9 +1721,10 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="421" class="link-to-prism">src/flatpickr.directive.ts:421</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="444" class="link-to-prism">src/flatpickr.directive.ts:444</a></div>
                             </td>
                         </tr>
+
 
             </tbody>
         </table>
@@ -1666,9 +1757,10 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="401" class="link-to-prism">src/flatpickr.directive.ts:401</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="424" class="link-to-prism">src/flatpickr.directive.ts:424</a></div>
                             </td>
                         </tr>
+
 
                 <tr>
                     <td class="col-md-4">
@@ -1734,9 +1826,10 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="405" class="link-to-prism">src/flatpickr.directive.ts:405</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="428" class="link-to-prism">src/flatpickr.directive.ts:428</a></div>
                             </td>
                         </tr>
+
 
                 <tr>
                     <td class="col-md-4">
@@ -1802,9 +1895,10 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="409" class="link-to-prism">src/flatpickr.directive.ts:409</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="432" class="link-to-prism">src/flatpickr.directive.ts:432</a></div>
                             </td>
                         </tr>
+
 
                 <tr>
                     <td class="col-md-4">
@@ -1870,9 +1964,10 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="387" class="link-to-prism">src/flatpickr.directive.ts:387</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="410" class="link-to-prism">src/flatpickr.directive.ts:410</a></div>
                             </td>
                         </tr>
+
 
                 <tr>
                     <td class="col-md-4">
@@ -1955,7 +2050,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="271" class="link-to-prism">src/flatpickr.directive.ts:271</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="288" class="link-to-prism">src/flatpickr.directive.ts:288</a></div>
                             </td>
                         </tr>
 
@@ -1988,7 +2083,7 @@ It takes in a date as a parameter and should return a corresponding string that 
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="273" class="link-to-prism">src/flatpickr.directive.ts:273</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">src/flatpickr.directive.ts:290</a></div>
                             </td>
                         </tr>
 
@@ -2001,7 +2096,7 @@ It takes in a date as a parameter and should return a corresponding string that 
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
   Directive,
   ElementRef,
@@ -2014,7 +2109,6 @@ It takes in a date as a parameter and should return a corresponding string that 
   OnDestroy,
   forwardRef,
   HostListener,
-  Inject,
   Renderer2
 } from &#x27;@angular/core&#x27;;
 import {
@@ -2022,8 +2116,7 @@ import {
   DisableEnableDate
 } from &#x27;./flatpickr-defaults.service&#x27;;
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
-import { FLATPICKR } from &#x27;./flatpickr.token&#x27;;
-import { Instance } from &#x27;flatpickr&#x27;;
+import flatpickr from &#x27;flatpickr&#x27;;
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -2079,6 +2172,11 @@ export class FlatpickrDirective
   @Input() appendTo: HTMLElement;
 
   /**
+   * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
+   */
+  @Input() ariaDateFormat?: string;
+
+  /**
    * Whether clicking on the input should open the picker.
    * You could disable this if you wish to open the calendar manually &#x60;with.open()&#x60;.
    */
@@ -2089,6 +2187,15 @@ export class FlatpickrDirective
    * The supported characters are defined in the table below.
    */
   @Input() dateFormat: string;
+
+  /**
+   * Initial value of the hour element.
+   */
+  @Input() defaultHour?: number;
+  /**
+   * Initial value of the minute element.
+   */
+  @Input() defaultMinute?: number;
 
   /**
    * See &lt;a href&#x3D;&quot;https://chmln.github.io/flatpickr/examples/#disabling-specific-dates&quot;&gt;disabling dates&lt;/a&gt;.
@@ -2115,6 +2222,11 @@ export class FlatpickrDirective
    * Enables seconds in the time picker.
    */
   @Input() enableSeconds: boolean;
+
+  /**
+   * Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.
+   */
+  @Input() formatDate?: (value: any) &#x3D;&gt; string;
 
   /**
    * Adjusts the step for the hour input (incl. scrolling).
@@ -2268,7 +2380,7 @@ export class FlatpickrDirective
     FlatPickrDayCreateOutputOptions
   &gt; &#x3D; new EventEmitter();
 
-  private instance: Instance;
+  private instance: flatpickr.Instance;
   private isDisabled &#x3D; false;
   private initialValue: any;
 
@@ -2279,8 +2391,7 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    private renderer: Renderer2,
-    @Inject(FLATPICKR) private flatpickrFactory
+    private renderer: Renderer2
   ) {}
 
   ngAfterViewInit(): void {
@@ -2290,13 +2401,17 @@ export class FlatpickrDirective
       altInputClass: this.altInputClass,
       allowInput: this.allowInput,
       appendTo: this.appendTo,
+      ariaDateFormat: this.ariaDateFormat,
       clickOpens: this.clickOpens,
       dateFormat: this.dateFormat,
+      defaultHour: this.defaultHour,
+      defaultMinute: this.defaultMinute,
       disable: this.disable,
       disableMobile: this.disableMobile,
       enable: this.enable,
       enableTime: this.enableTime,
       enableSeconds: this.enableSeconds,
+      formatDate: this.formatDate,
       hourIncrement: this.hourIncrement,
       defaultDate: this.initialValue,
       inline: this.inline,
@@ -2368,11 +2483,14 @@ export class FlatpickrDirective
     }
     Object.keys(options).forEach(key &#x3D;&gt; {
       if (typeof options[key] &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        options[key] &#x3D; (this as any).defaults[key];
+        options[key] &#x3D; (this.defaults as any)[key];
       }
     });
     options.time_24hr &#x3D; options.time24hr;
-    this.instance &#x3D; this.flatpickrFactory(this.elm.nativeElement, options);
+    this.instance &#x3D; flatpickr(
+      this.elm.nativeElement,
+      options
+    ) as flatpickr.Instance;
     this.setDisabledState(this.isDisabled);
   }
 
@@ -2506,6 +2624,7 @@ export class FlatpickrDirective
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
             var COMPODOC_CURRENT_PAGE_URL = 'FlatpickrDirective.html';
         </script>
 

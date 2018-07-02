@@ -86,14 +86,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
                                     >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -257,14 +257,14 @@
                         <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                     <span class="fa fa-fw fa-code"></span>
                                     <span>Directives</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6c52eb87-f5ac-44b8-9e40-65a1cb706c43"
+                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
 >
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
@@ -382,28 +382,17 @@
 <p>An angular 5.0+ wrapper for flatpickr</p>
 <h2 id="installation">Installation</h2>
 <p>Install through npm:</p>
-<pre class="line-numbers"><code class="language-none">npm install --save flatpickr angularx-flatpickr</code></pre><p>Then include in your apps module:</p>
-<pre class="line-numbers"><code class="language-typescript">import &#39;flatpickr/dist/flatpickr.css&#39;; // you may need to adjust the css import depending on your build tool
+<div><pre class="line-numbers"><code class="language-none">npm install --save flatpickr angularx-flatpickr</code></pre></div><p>Then include in your apps module:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import &#39;flatpickr/dist/flatpickr.css&#39;; // you may need to adjust the css import depending on your build tool
 import { NgModule } from &#39;&#64;angular/core&#39;;
 import { FormsModule } from &#39;&#64;angular/forms&#39;;
 import { FlatpickrModule, FLATPICKR } from &#39;angularx-flatpickr&#39;;
-import * as flatpickr from &#39;flatpickr&#39;;
-
-export function flatpickrFactory() {
-  return flatpickr;
-}
 
 &#64;NgModule({
-  imports: [
-    FormsModule,
-    FlatpickrModule.forRoot({
-      provide: FLATPICKR,
-      useFactory: flatpickrFactory
-    })
-  ]
+  imports: [FormsModule, FlatpickrModule.forRoot()]
 })
-export class MyModule {}</code></pre><p>Finally use in one of your apps components:</p>
-<pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+export class MyModule {}</code></pre></div><p>Finally use in one of your apps components:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
 
 &#64;Component({
   template: `
@@ -415,7 +404,7 @@ export class MyModule {}</code></pre><p>Finally use in one of your apps componen
       [convertModelValue]=&quot;true&quot;&gt;
   `
 })
-export class MyComponent {}</code></pre><p>You may also find it useful to view the <a href="https://github.com/mattlewis92/angularx-flatpickr/blob/master/demo/demo.component.ts">demo source</a>.</p>
+export class MyComponent {}</code></pre></div><p>You may also find it useful to view the <a href="https://github.com/mattlewis92/angularx-flatpickr/blob/master/demo/demo.component.ts">demo source</a>.</p>
 <h2 id="documentation">Documentation</h2>
 <p>All documentation is auto-generated from the source via <a href="https://compodoc.github.io/compodoc/">compodoc</a> and can be viewed here:
 <a href="https://mattlewis92.github.io/angularx-flatpickr/docs/">https://mattlewis92.github.io/angularx-flatpickr/docs/</a></p>
@@ -430,7 +419,7 @@ export class MyComponent {}</code></pre><p>You may also find it useful to view t
 <h3 id="testing">Testing</h3>
 <p>Run <code>npm test</code> to run tests once or <code>npm run test:watch</code> to continually run tests.</p>
 <h3 id="release">Release</h3>
-<pre class="line-numbers"><code class="language-bash">npm run release</code></pre><h2 id="license">License</h2>
+<div><pre class="line-numbers"><code class="language-bash">npm run release</code></pre></div><h2 id="license">License</h2>
 <p>MIT</p>
 
 
@@ -472,6 +461,7 @@ export class MyComponent {}</code></pre><p>You may also find it useful to view t
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
             var COMPODOC_CURRENT_PAGE_URL = 'index.html';
         </script>
 
