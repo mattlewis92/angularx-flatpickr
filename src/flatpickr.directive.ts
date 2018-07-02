@@ -284,13 +284,6 @@ export class FlatpickrDirective
   private instance: flatpickr.Instance;
   private isDisabled = false;
   private initialValue: any;
-  /**
-   * Trick to force flatpickr loading even with build optimizers
-   * Can be deleted after merge of {@link https://github.com/flatpickr/flatpickr/pull/1310}
-   */
-  protected get flatpickrSelector(): any {
-    return flatpickr;
-  }
 
   onChangeFn: (value: any) => void = () => {}; // tslint:disable-line
 
@@ -395,7 +388,7 @@ export class FlatpickrDirective
       }
     });
     options.time_24hr = options.time24hr;
-    this.instance = this.elm.nativeElement.flatpickr(
+    this.instance = flatpickr(
       options
     ) as flatpickr.Instance;
     this.setDisabledState(this.isDisabled);
