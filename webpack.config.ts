@@ -57,7 +57,7 @@ export default {
       async: isDevServer
     }),
     new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)esm5/,
+      /angular(\\|\/)core(\\|\/)fesm5/,
       path.join(__dirname, 'src')
     ),
     new HtmlWebpackPlugin({
