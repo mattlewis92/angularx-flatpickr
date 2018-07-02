@@ -107,7 +107,7 @@
   "peerDependencies": {
     "@angular/core": ">=5.0.0 <7.0.0",
     "@angular/forms": ">=5.0.0 <7.0.0",
-    "flatpickr": "^4.0.5"
+    "flatpickr": "^4.5.0"
   },
   "config": {
     "commitizen": {
