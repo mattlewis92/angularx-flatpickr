@@ -17,10 +17,6 @@ import { Subject } from 'rxjs/Subject';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 import { filter, take } from 'rxjs/operators';
-import flatpickr from 'flatpickr';
-
-// trick to force flatpickr loading even with build optimizers
-const localFlatpickr = flatpickr;
 
 function triggerDomEvent(
   eventType: string,

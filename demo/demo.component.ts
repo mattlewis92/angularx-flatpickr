@@ -1,6 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import flatpickr from 'flatpickr';
-
 @Component({
   selector: 'mwl-demo-app',
   template: `
@@ -148,8 +146,6 @@ import flatpickr from 'flatpickr';
   ]
 })
 export class DemoComponent {
-  // trick to force flatpickr loading even with build optimizers
-  localFlatpickr = flatpickr;
   basicDemoValue = '2017-01-01';
   modelValueAsDate: Date = new Date();
   dateTimeValue: Date = new Date();
