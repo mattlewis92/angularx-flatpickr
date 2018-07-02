@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.2...v6.0.0) (2018-07-02)
+
+
+### Features
+
+* update flatpickr to latest version ([c407b3e](https://github.com/mattlewis92/angularx-flatpickr/commit/c407b3e))
+
+
+### BREAKING CHANGES
+
+* `flatpickrFactory` and `FLATPICKR` injection token are no longer needed and were removed. To migrate just remove the first argument you pass to `FlatpickrModule.forRoot`
+
+A minimum version of flatpickr 4.5.0 or higher is now required to use this library
+
+
+
 <a name="5.0.2"></a>
 ## [5.0.2](https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2) (2018-06-20)
 
