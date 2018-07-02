@@ -9,7 +9,7 @@ import 'zone.js/dist/mocha-patch';
 import 'zone.js/dist/async-test';
 import 'zone.js/dist/fake-async-test';
 import { use } from 'chai';
-import * as sinonChai from 'sinon-chai';
+import sinonChai from 'sinon-chai';
 import { TestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
