@@ -14,6 +14,7 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs/Subject';
+import flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 import { filter, take } from 'rxjs/operators';
@@ -34,6 +35,8 @@ function clickFlatpickerDate(target: HTMLElement | Element) {
     which: 1
   });
 }
+
+/* tslint:disable: max-inline-declarations enforce-component-selector */
 
 @Component({
   template: `
@@ -62,7 +65,7 @@ class NgModelComponent {
   modelValue: any;
   altFormat = 'd.m.Y';
   altInput = true;
-  events: Subject<any> = new Subject();
+  events = new Subject<any>();
   convertModelValue: boolean;
   mode: string;
   enableTime = false;

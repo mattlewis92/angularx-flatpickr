@@ -1,3 +1,4 @@
+/* tslint:disable: max-inline-declarations use-view-encapsulation */
 import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'mwl-demo-app',
@@ -137,12 +138,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   styles: [
     `
-    .inline-flatpickr .form-control,
-    .flatpickr-calendar.arrowTop:before,
-    .flatpickr-calendar.arrowTop:after {
-      display: none;
-    }
-  `
+      .inline-flatpickr .form-control,
+      .flatpickr-calendar.arrowTop:before,
+      .flatpickr-calendar.arrowTop:after {
+        display: none;
+      }
+    `
   ]
 })
 export class DemoComponent {
