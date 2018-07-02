@@ -389,6 +389,7 @@ export class FlatpickrDirective
     });
     options.time_24hr = options.time24hr;
     this.instance = flatpickr(
+      this.elm.nativeElement,
       options
     ) as flatpickr.Instance;
     this.setDisabledState(this.isDisabled);
