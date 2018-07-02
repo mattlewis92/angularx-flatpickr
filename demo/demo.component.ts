@@ -1,6 +1,5 @@
 /* tslint:disable: max-inline-declarations use-view-encapsulation */
 import { Component, ViewEncapsulation } from '@angular/core';
-
 @Component({
   selector: 'mwl-demo-app',
   template: `
@@ -111,6 +110,28 @@ import { Component, ViewEncapsulation } from '@angular/core';
             </div>
           </div>
         </div>
+
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Time picker</h3>
+            </div>
+            <div class="panel-body">
+              <input
+                class="form-control"
+                type="text"
+                mwlFlatpickr
+                [(ngModel)]="timePicker"
+                [noCalendar]="true"
+                [enableTime]="true"
+                [dateFormat]="'H:i'"
+                >
+              NgModel value: {{ timePicker }}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   `,
@@ -135,4 +156,5 @@ export class DemoComponent {
     to: (new Date() as any)['fp_incr'](10)
   };
   inlineDatePicker: Date = new Date();
+  timePicker: Date = null;
 }

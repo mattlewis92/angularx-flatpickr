@@ -14,10 +14,8 @@ import {
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { Subject } from 'rxjs';
-import flatpickr from 'flatpickr';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
-import { FLATPICKR } from '../src';
 import { filter, take } from 'rxjs/operators';
 
 function triggerDomEvent(
@@ -102,31 +100,15 @@ class ReactiveFormsComponent {
 }
 
 describe('mwl-flatpickr directive', () => {
-  let clock: sinon.SinonFakeTimers;
-  let timezoneOffset: number;
-  beforeEach(() => {
-    clock = sinon.useFakeTimers(new Date('2017-04-06').getTime());
-    timezoneOffset = new Date().getTimezoneOffset() * 60 * 1000;
-  });
-
-  afterEach(() => {
-    clock.restore();
-  });
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        FlatpickrModule.forRoot(
-          {
-            provide: FLATPICKR,
-            useValue: flatpickr
-          },
-          {
-            altInputClass: 'foo'
-          }
-        )
+        FlatpickrModule.forRoot({
+          altInputClass: 'foo',
+          defaultHour: 0
+        })
       ],
       declarations: [NgModelComponent, ReactiveFormsComponent]
     });
@@ -138,14 +120,19 @@ describe('mwl-flatpickr directive', () => {
   });
 
   describe('non reactive forms', () => {
-    it('should allow a date to be selected', () => {
+    it('should allow a date to be selected', async () => {
       const fixture: ComponentFixture<
         NgModelComponent
       > = TestBed.createComponent(NgModelComponent);
       fixture.detectChanges();
+
+      fixture.componentInstance.modelValue = '2017-04-01';
+      fixture.detectChanges();
+      await fixture.whenStable();
       const input: HTMLInputElement = fixture.nativeElement.querySelector(
         'input'
       );
+
       input.click();
       const instance: any = document.body.querySelector('.flatpickr-calendar');
       clickFlatpickerDate(
@@ -391,20 +378,26 @@ describe('mwl-flatpickr directive', () => {
         )
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
-            new Date('2017-04-01').getTime() + timezoneOffset
+            new Date('2017-04-01T00:00:00').getTime()
           );
           expect(event.dateString).to.deep.equal('2017-04-01');
           done();
         });
+      fixture.componentInstance.modelValue = '2017-04-01';
       fixture.detectChanges();
-      const input: HTMLInputElement = fixture.nativeElement.querySelector(
-        'input'
-      );
-      input.click();
-      const instance: any = document.body.querySelector('.flatpickr-calendar');
-      clickFlatpickerDate(
-        instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
-      );
+      fixture.whenStable().then(() => {
+        const input: HTMLInputElement = fixture.nativeElement.querySelector(
+          'input'
+        );
+
+        input.click();
+        const instance: any = document.body.querySelector(
+          '.flatpickr-calendar'
+        );
+        clickFlatpickerDate(
+          instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
+        );
+      });
     });
 
     it('should call the flatpickrClose output', done => {
@@ -418,20 +411,25 @@ describe('mwl-flatpickr directive', () => {
         )
         .subscribe(({ event }) => {
           expect(event.selectedDates[0].getTime()).to.deep.equal(
-            new Date('2017-04-01').getTime() + timezoneOffset
+            new Date('2017-04-01T00:00:00').getTime()
           );
           expect(event.dateString).to.deep.equal('2017-04-01');
           done();
         });
+      fixture.componentInstance.modelValue = '2017-04-01';
       fixture.detectChanges();
-      const input: HTMLInputElement = fixture.nativeElement.querySelector(
-        'input'
-      );
-      input.click();
-      const instance: any = document.body.querySelector('.flatpickr-calendar');
-      clickFlatpickerDate(
-        instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
-      );
+      fixture.whenStable().then(() => {
+        const input: HTMLInputElement = fixture.nativeElement.querySelector(
+          'input'
+        );
+        input.click();
+        const instance: any = document.body.querySelector(
+          '.flatpickr-calendar'
+        );
+        clickFlatpickerDate(
+          instance.querySelector('.flatpickr-day:not(.prevMonthDay)')
+        );
+      });
     });
 
     it.skip(
@@ -500,10 +498,6 @@ describe('mwl-flatpickr directive', () => {
         .subscribe(({ event }) => {
           expect(event.selectedDates).to.deep.equal([]);
           expect(event.dateString).to.deep.equal('');
-          expect(event.dayElement.outerHTML).to.equal(
-            '<span class="flatpickr-day prevMonthDay" ' +
-              'aria-label="March 26, 2017" tabindex="-1">26</span>'
-          );
           done();
         });
       fixture.detectChanges();

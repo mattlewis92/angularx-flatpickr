@@ -36,6 +36,11 @@ export interface FlatpickrDefaultsInterface {
   appendTo?: HTMLElement;
 
   /**
+   * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
+   */
+  ariaDateFormat?: string;
+
+  /**
    * Whether clicking on the input should open the picker.
    * You could disable this if you wish to open the calendar manually `with.open()`.
    */
@@ -46,6 +51,14 @@ export interface FlatpickrDefaultsInterface {
    * The supported characters are defined in the table below.
    */
   dateFormat?: string;
+  /**
+   * Initial value of the hour element.
+   */
+  defaultHour?: number;
+  /**
+   * Initial value of the minute element.
+   */
+  defaultMinute?: number;
 
   /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.
@@ -72,7 +85,10 @@ export interface FlatpickrDefaultsInterface {
    * Enables seconds in the time picker.
    */
   enableSeconds?: boolean;
-
+  /**
+   * Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.
+   */
+  formatDate?: (value: any) => string;
   /**
    * Adjusts the step for the hour input (incl. scrolling).
    */
@@ -205,6 +221,11 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   appendTo: HTMLElement = undefined;
 
   /**
+   * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
+   */
+  ariaDateFormat?: string = 'F j, Y';
+
+  /**
    * Whether clicking on the input should open the picker.
    * You could disable this if you wish to open the calendar manually `with.open()`.
    */
@@ -215,6 +236,16 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * The supported characters are defined in the table below.
    */
   dateFormat: string = 'Y-m-d';
+
+  /**
+   * Initial value of the hour element.
+   */
+  defaultHour?: number = 12;
+
+  /**
+   * Initial value of the minute element.
+   */
+  defaultMinute?: number = 0;
 
   /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.
@@ -241,6 +272,11 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Enables seconds in the time picker.
    */
   enableSeconds: boolean = false;
+
+  /**
+   * Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.
+   */
+  formatDate?: (value: any) => string = undefined;
 
   /**
    * Adjusts the step for the hour input (incl. scrolling).
