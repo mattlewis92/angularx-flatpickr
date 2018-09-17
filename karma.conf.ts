@@ -12,7 +12,7 @@ export default (config: any) => {
     frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
-    files: ['test/entry.ts'],
+    files: ['test/entry.ts', './node_modules/flatpickr/dist/flatpickr.css'],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
