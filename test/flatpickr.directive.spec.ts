@@ -50,6 +50,7 @@ function clickFlatpickerDate(target: HTMLElement | Element) {
       [convertModelValue]="convertModelValue"
       [enableTime]="enableTime"
       [dateFormat]="dateFormat"
+      [now]="now"
       (flatpickrReady)="events.next({name: 'ready', event: $event})"
       (flatpickrValueUpdate)="events.next({name: 'valueUpdate', event: $event})"
       (flatpickrChange)="events.next({name: 'input', event: $event})"
@@ -69,6 +70,7 @@ class NgModelComponent {
   mode: string;
   enableTime = false;
   dateFormat = 'Y-m-d';
+  now = null;
 }
 
 // tslint:disable-next-line
@@ -100,8 +102,8 @@ class ReactiveFormsComponent {
 }
 
 describe('mwl-flatpickr directive', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [
         FormsModule,
         ReactiveFormsModule,
@@ -111,7 +113,7 @@ describe('mwl-flatpickr directive', () => {
         })
       ],
       declarations: [NgModelComponent, ReactiveFormsComponent]
-    });
+    }).compileComponents();
     Array.from(document.body.querySelectorAll('.flatpickr-calendar')).forEach(
       instance => {
         instance.parentNode.removeChild(instance);
@@ -525,6 +527,33 @@ describe('mwl-flatpickr directive', () => {
       fixture.destroy();
       expect(instance.destroy).to.have.callCount(1);
     });
+
+    it('should use a different now date', async () => {
+      const fixture: ComponentFixture<
+        NgModelComponent
+      > = TestBed.createComponent(NgModelComponent);
+
+      // set the now date for the component
+      fixture.componentInstance.now = new Date('2017-05-01T00:00:00');
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      // click the input
+      let input = fixture.debugElement.query(By.css('input'));
+      input.triggerEventHandler('click', null);
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      // wait until the flatpickr HTML has been rendered to the DOM
+      await waitUntilElementWithClassExists('flatpickr-days');
+
+      // verify that the currently selected day matches what we passed into now
+      const instance: any = document.body.querySelector(
+        '.flatpickr-days .today'
+      );
+
+      expect(instance.getAttribute('aria-label')).to.equal('May 1, 2017');
+    });
   });
 
   describe('reactive forms', () => {
@@ -617,3 +646,45 @@ describe('mwl-flatpickr directive', () => {
     });
   });
 });
+
+/**
+ * Helper function to wait for the DOM to render an element. The fixture will not wait for external deps such as flatpickr.
+ *
+ * @param selector the css class on the element to wait for (required)
+ * @param max the max number of second to wait and then fail (optional)
+ * @param current the current number of second we have already waiting (optional)
+ * @param resolve the resolve handler to be called on success (internal use only)
+ * @param reject the reject handler to be called on failure (internal use only)
+ */
+function waitUntilElementWithClassExists(
+  selector: string,
+  max: number = 1000,
+  current: number = 0,
+  resolve?: Function,
+  reject?: Function
+): Promise<void> {
+  console.log('waitUntilElementWithClassExists(): checking for element');
+  if (!resolve) {
+    // console.log('waitUntilElementWithClassExists(): first run');
+    return new Promise<void>((resolve, reject) => {
+      waitUntilElementWithClassExists(selector, max, current, resolve, reject);
+    });
+  } else if (document.getElementsByClassName(selector).length > 0) {
+    // console.log('waitUntilElementWithClassExists(): found element');
+    return resolve();
+  } else if (current + 50 >= max) {
+    // console.log('waitUntilElementWithClassExists(): timeout waiting for element');
+    return reject();
+  } else {
+    // console.log('waitUntilElementWithClassExists(): NOT found element, waiting');
+    setTimeout(() => {
+      waitUntilElementWithClassExists(
+        selector,
+        max,
+        current + 50,
+        resolve,
+        reject
+      );
+    }, 50);
+  }
+}
