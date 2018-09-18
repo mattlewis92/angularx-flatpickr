@@ -38,7 +38,7 @@ Then include in your apps module:
 import 'flatpickr/dist/flatpickr.css'; // you may need to adjust the css import depending on your build tool
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FlatpickrModule, FLATPICKR } from 'angularx-flatpickr';
+import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
   imports: [FormsModule, FlatpickrModule.forRoot()]

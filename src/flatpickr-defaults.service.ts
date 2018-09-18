@@ -130,6 +130,11 @@ export interface FlatpickrDefaultsInterface {
   noCalendar?: boolean;
 
   /**
+   * Provide a date for 'today', which will be used instead of "new Date()"
+   */
+  now?: Date | string | number;
+
+  /**
    * Function that expects a date string and must return a Date object.
    */
   parseDate?: (str: string) => Date;
@@ -317,6 +322,11 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Hides the day selection in calendar. Use it along with `enableTime` to create a time picker.
    */
   noCalendar: boolean = false;
+
+  /**
+   * Default now to the current date
+   */
+  now: Date | string | number = new Date();
 
   /**
    * Function that expects a date string and must return a Date object.

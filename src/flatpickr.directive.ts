@@ -170,6 +170,11 @@ export class FlatpickrDirective
   @Input() noCalendar: boolean;
 
   /**
+   * Provide a date for 'today', which will be used instead of "new Date()"
+   */
+  @Input() now?: Date | string | number;
+
+  /**
    * Function that expects a date string and must return a Date object.
    */
   @Input() parseDate: (str: string) => Date;
@@ -322,6 +327,7 @@ export class FlatpickrDirective
       mode: this.mode,
       nextArrow: this.nextArrow,
       noCalendar: this.noCalendar,
+      now: this.now,
       parseDate: this.parseDate,
       prevArrow: this.prevArrow,
       shorthandCurrentMonth: this.shorthandCurrentMonth,
