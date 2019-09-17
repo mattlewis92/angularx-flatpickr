@@ -660,14 +660,14 @@ function waitUntilElementWithClassExists(
   selector: string,
   max: number = 1000,
   current: number = 0,
-  resolve?: Function,
-  reject?: Function
+  resolve?: () => any,
+  reject?: () => any
 ): Promise<void> {
-  console.log('waitUntilElementWithClassExists(): checking for element');
+  // console.log('waitUntilElementWithClassExists(): checking for element');
   if (!resolve) {
     // console.log('waitUntilElementWithClassExists(): first run');
-    return new Promise<void>((resolve, reject) => {
-      waitUntilElementWithClassExists(selector, max, current, resolve, reject);
+    return new Promise<void>((resolve2, reject2) => {
+      waitUntilElementWithClassExists(selector, max, current, resolve2, reject2);
     });
   } else if (document.getElementsByClassName(selector).length > 0) {
     // console.log('waitUntilElementWithClassExists(): found element');
