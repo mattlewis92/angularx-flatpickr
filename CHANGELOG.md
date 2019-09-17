@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.1.1"></a>
+## [6.1.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.0...v6.1.1) (2019-09-17)
+
+
+### Bug Fixes
+
+* set default locale ([2f35353](https://github.com/mattlewis92/angularx-flatpickr/commit/2f35353))
+
+
+
 <a name="6.1.0"></a>
 # [6.1.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.0.0...v6.1.0) (2018-09-18)
 
