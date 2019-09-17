@@ -1466,6 +1466,11 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;default&#x27;</code>
+                        </td>
+                    </tr>
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="386" class="link-to-prism">src/flatpickr-defaults.service.ts:386</a></div>
@@ -2588,7 +2593,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * The locale object or string to use for the locale.
    */
-  locale: object | string;
+  locale: object | string &#x3D; &#x27;default&#x27;;
 
   /**
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the &#x60;mode&#x60;
