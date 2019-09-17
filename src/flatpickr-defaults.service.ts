@@ -383,7 +383,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * The locale object or string to use for the locale.
    */
-  locale: object | string;
+  locale: object | string = 'default';
 
   /**
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`

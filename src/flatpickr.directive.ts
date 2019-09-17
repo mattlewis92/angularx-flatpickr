@@ -337,6 +337,7 @@ export class FlatpickrDirective
       getWeek: this.getWeek,
       wrap: this.wrap,
       plugins: this.plugins,
+      locale: this.locale,
       onChange: (selectedDates: Date[], dateString: string, instance: any) => {
         this.flatpickrChange.emit({ selectedDates, dateString, instance });
       },
@@ -384,10 +385,7 @@ export class FlatpickrDirective
         });
       }
     };
-    if (this.locale) {
-      // workaround warning from flatpickr
-      options.locale = this.locale;
-    }
+
     Object.keys(options).forEach(key => {
       if (typeof options[key] === 'undefined') {
         options[key] = (this.defaults as any)[key];
