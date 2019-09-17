@@ -3,10 +3,11 @@
 [![Build Status](https://travis-ci.org/mattlewis92/angularx-flatpickr.svg?branch=master)](https://travis-ci.org/mattlewis92/angularx-flatpickr)
 [![codecov](https://codecov.io/gh/mattlewis92/angularx-flatpickr/branch/master/graph/badge.svg)](https://codecov.io/gh/mattlewis92/angularx-flatpickr)
 [![npm version](https://badge.fury.io/js/angularx-flatpickr.svg)](http://badge.fury.io/js/angularx-flatpickr)
-[![devDependency Status](https://david-dm.org/mattlewis92/angularx-flatpickr/dev-status.svg)](https://david-dm.org/mattlewis92/angularx-flatpickr?type=dev)
-[![GitHub issues](https://img.shields.io/github/issues/mattlewis92/angularx-flatpickr.svg)](https://github.com/mattlewis92/angularx-flatpickr/issues)
-[![GitHub stars](https://img.shields.io/github/stars/mattlewis92/angularx-flatpickr.svg)](https://github.com/mattlewis92/angularx-flatpickr/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mattlewis92/angularx-flatpickr/master/LICENSE)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mattlewis92_.svg)](https://twitter.com/mattlewis92_)
+
+<a href="https://www.patreon.com/mattlewis92">
+	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
 
 ## Demo
 
