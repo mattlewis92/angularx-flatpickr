@@ -539,7 +539,7 @@ describe('mwl-flatpickr directive', () => {
       await fixture.whenStable();
 
       // click the input
-      let input = fixture.debugElement.query(By.css('input'));
+      const input = fixture.debugElement.query(By.css('input'));
       input.triggerEventHandler('click', null);
       fixture.detectChanges();
       await fixture.whenStable();
