@@ -195,6 +195,11 @@ export interface FlatpickrDefaultsInterface {
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`
    */
   convertModelValue?: boolean;
+  
+  /**
+   * The number of months shown.
+   */
+  showMonths?: number;
 }
 
 @Injectable()
@@ -389,4 +394,9 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`
    */
   convertModelValue: boolean = false;
+  
+  /**
+   * The number of months shown.
+   */
+  showMonths: number = 1;
 }
