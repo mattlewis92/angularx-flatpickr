@@ -188,9 +188,11 @@ export class FlatpickrDirective
    * Show the month using the shorthand version (ie, Sep instead of September).
    */
   @Input() shorthandCurrentMonth: boolean;
-    
-  @Input() showMonths: number;
 
+  /**
+   * The number of months shown.
+   */
+  @Input() showMonths: number;
 
   /**
    * Position the calendar inside the wrapper and next to the input element. (Leave `false` unless you know what you're doing).
@@ -334,7 +336,7 @@ export class FlatpickrDirective
       parseDate: this.parseDate,
       prevArrow: this.prevArrow,
       shorthandCurrentMonth: this.shorthandCurrentMonth,
-      showMonths: this.showMonths ,
+      showMonths: this.showMonths,
       static: this.static,
       time24hr: this.time24hr,
       weekNumbers: this.weekNumbers,
