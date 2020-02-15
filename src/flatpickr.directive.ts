@@ -99,6 +99,11 @@ export class FlatpickrDirective
   @Input() defaultMinute?: number;
 
   /**
+   * Initial value of the seconds element.
+   */
+  @Input() defaultSeconds?: number;
+
+  /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.
    */
   @Input() disable: DisableEnableDate[];
@@ -317,6 +322,7 @@ export class FlatpickrDirective
       dateFormat: this.dateFormat,
       defaultHour: this.defaultHour,
       defaultMinute: this.defaultMinute,
+      defaultSeconds: this.defaultSeconds,
       disable: this.disable,
       disableMobile: this.disableMobile,
       enable: this.enable,
