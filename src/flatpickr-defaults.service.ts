@@ -59,6 +59,10 @@ export interface FlatpickrDefaultsInterface {
    * Initial value of the minute element.
    */
   defaultMinute?: number;
+  /**
+   * Initial value of the seconds element.
+   */
+  defaultSeconds?: number;
 
   /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.
@@ -195,7 +199,7 @@ export interface FlatpickrDefaultsInterface {
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`
    */
   convertModelValue?: boolean;
-  
+
   /**
    * The number of months shown.
    */
@@ -256,6 +260,11 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Initial value of the minute element.
    */
   defaultMinute?: number = 0;
+
+  /**
+   * Initial value of the seconds element.
+   */
+  defaultSeconds?: number = 0;
 
   /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.
@@ -394,7 +403,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the `mode`
    */
   convertModelValue: boolean = false;
-  
+
   /**
    * The number of months shown.
    */
