@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.3.1"></a>
+## [6.3.1](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.0...v6.3.1) (2020-03-01)
+
+
+### Bug Fixes
+
+* workaround bug in flatpickr where the alt input class wouldn't be set ([519caf3](https://github.com/mattlewis92/angularx-flatpickr/commit/519caf3)), closes [#40](https://github.com/mattlewis92/angularx-flatpickr/issues/40)
+
+
+
 <a name="6.3.0"></a>
 # [6.3.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.2.0...v6.3.0) (2020-02-15)
 
