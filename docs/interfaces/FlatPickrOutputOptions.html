@@ -924,6 +924,12 @@ export class FlatpickrDirective
       }
     });
     options.time_24hr &#x3D; options.time24hr;
+
+    // workaround bug in flatpickr 4.6 where it doesn&#x27;t copy the classes across
+    // TODO - remove once fix in https://github.com/flatpickr/flatpickr/issues/1860 is released
+    options.altInputClass &#x3D;
+      (options.altInputClass || &#x27;&#x27;) + &#x27; &#x27; + this.elm.nativeElement.className;
+
     this.instance &#x3D; flatpickr(
       this.elm.nativeElement,
       options
