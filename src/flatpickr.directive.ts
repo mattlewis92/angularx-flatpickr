@@ -14,7 +14,8 @@ import {
 } from '@angular/core';
 import {
   FlatpickrDefaults,
-  DisableEnableDate
+  DisableEnableDate,
+  FlatpickrDefaultsInterface
 } from './flatpickr-defaults.service';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import flatpickr from 'flatpickr';
@@ -46,6 +47,27 @@ export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
 })
 export class FlatpickrDirective
   implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
+  /**
+   * Object-options that can be user for multiple instances of Flatpickr.
+   * Option from this object is applied only if specific option is not specified.
+   * Example:
+   * ```typescript
+   * options: FlatpickrDefaultsInterface = {
+   *      altFormat: 'd/m/Y',   // will be ignored since altFormat is provided via specific attribute
+   *      altInput: true        // will be used since specific attribute is not provided
+   * };
+   * ```
+   * ```html
+   * <input
+   *   class="form-control"
+   *   type="text"
+   *   mwlFlatpickr
+   *   [options]="options"
+   *   altFormat="d/m/Y">
+   * ```
+   */
+  @Input() options: FlatpickrDefaultsInterface = {};
+
   /**
    * Exactly the same as date format, but for the altInput field.
    */
@@ -400,7 +422,11 @@ export class FlatpickrDirective
 
     Object.keys(options).forEach(key => {
       if (typeof options[key] === 'undefined') {
-        options[key] = (this.defaults as any)[key];
+        if (typeof this.options[key] !== 'undefined') {
+          options[key] = (this.options as any)[key];
+        } else {
+          options[key] = (this.defaults as any)[key];
+        }
       }
     });
     options.time_24hr = options.time24hr;

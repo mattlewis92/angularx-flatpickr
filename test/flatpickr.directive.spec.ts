@@ -17,6 +17,7 @@ import { Subject } from 'rxjs';
 import { FlatpickrModule } from '../src';
 import { By } from '@angular/platform-browser';
 import { filter, take } from 'rxjs/operators';
+import { FlatpickrDefaultsInterface } from '../src/flatpickr-defaults.service';
 
 function triggerDomEvent(
   eventType: string,
@@ -42,11 +43,11 @@ function clickFlatpickerDate(target: HTMLElement | Element) {
     <input
       type="text"
       mwlFlatpickr
+      [options]="options"
       [(ngModel)]="modelValue"
       [altFormat]="altFormat"
       [altInput]="altInput"
       [mode]="mode"
-      [locale]="'en'"
       [convertModelValue]="convertModelValue"
       [enableTime]="enableTime"
       [dateFormat]="dateFormat"
@@ -71,6 +72,11 @@ class NgModelComponent {
   enableTime = false;
   dateFormat = 'Y-m-d';
   now = null;
+  options: FlatpickrDefaultsInterface = {
+    altFormat: 'Y-m-d',
+    enableTime: true,
+    locale: 'en'
+  };
 }
 
 // tslint:disable-next-line
@@ -667,7 +673,13 @@ function waitUntilElementWithClassExists(
   if (!resolve) {
     // console.log('waitUntilElementWithClassExists(): first run');
     return new Promise<void>((resolve2, reject2) => {
-      waitUntilElementWithClassExists(selector, max, current, resolve2, reject2);
+      waitUntilElementWithClassExists(
+        selector,
+        max,
+        current,
+        resolve2,
+        reject2
+      );
     });
   } else if (document.getElementsByClassName(selector).length > 0) {
     // console.log('waitUntilElementWithClassExists(): found element');
