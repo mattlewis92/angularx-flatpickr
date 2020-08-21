@@ -476,7 +476,8 @@
 } from &#x27;@angular/core&#x27;;
 import {
   FlatpickrDefaults,
-  DisableEnableDate
+  DisableEnableDate,
+  FlatpickrDefaultsInterface
 } from &#x27;./flatpickr-defaults.service&#x27;;
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
 import flatpickr from &#x27;flatpickr&#x27;;
@@ -508,6 +509,27 @@ export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any &#x3D; {
 })
 export class FlatpickrDirective
   implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
+  /**
+   * Object-options that can be user for multiple instances of Flatpickr.
+   * Option from this object is applied only if specific option is not specified.
+   * Example:
+   * &#x60;&#x60;&#x60;typescript
+   * options: FlatpickrDefaultsInterface &#x3D; {
+   *      altFormat: &#x27;d/m/Y&#x27;,   // will be ignored since altFormat is provided via specific attribute
+   *      altInput: true        // will be used since specific attribute is not provided
+   * };
+   * &#x60;&#x60;&#x60;
+   * &#x60;&#x60;&#x60;html
+   * &lt;input
+   *   class&#x3D;&quot;form-control&quot;
+   *   type&#x3D;&quot;text&quot;
+   *   mwlFlatpickr
+   *   [options]&#x3D;&quot;options&quot;
+   *   altFormat&#x3D;&quot;d/m/Y&quot;&gt;
+   * &#x60;&#x60;&#x60;
+   */
+  @Input() options: FlatpickrDefaultsInterface &#x3D; {};
+
   /**
    * Exactly the same as date format, but for the altInput field.
    */
@@ -862,7 +884,11 @@ export class FlatpickrDirective
 
     Object.keys(options).forEach(key &#x3D;&gt; {
       if (typeof options[key] &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        options[key] &#x3D; (this.defaults as any)[key];
+        if (typeof this.options[key] !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+          options[key] &#x3D; (this.options as any)[key];
+        } else {
+          options[key] &#x3D; (this.defaults as any)[key];
+        }
       }
     });
     options.time_24hr &#x3D; options.time24hr;
