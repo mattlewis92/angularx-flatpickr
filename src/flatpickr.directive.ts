@@ -263,6 +263,11 @@ export class FlatpickrDirective
   @Input() convertModelValue: boolean;
 
   /**
+   * How the month should be displayed in the header of the calendar.
+   */
+  @Input() monthSelectorType: 'static' | 'dropdown';
+
+  /**
    * Gets triggered once the calendar is in a ready state
    */
   @Output()
@@ -365,6 +370,7 @@ export class FlatpickrDirective
       prevArrow: this.prevArrow,
       shorthandCurrentMonth: this.shorthandCurrentMonth,
       showMonths: this.showMonths,
+      monthSelectorType: this.monthSelectorType,
       static: this.static,
       time24hr: this.time24hr,
       weekNumbers: this.weekNumbers,

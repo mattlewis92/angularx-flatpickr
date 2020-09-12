@@ -204,6 +204,11 @@ export interface FlatpickrDefaultsInterface {
    * The number of months shown.
    */
   showMonths?: number;
+
+  /**
+   * How the month should be displayed in the header of the calendar.
+   */
+  monthSelectorType?: 'static' | 'dropdown';
 }
 
 @Injectable()
@@ -408,4 +413,9 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * The number of months shown.
    */
   showMonths: number = 1;
+
+  /**
+   * How the month should be displayed in the header of the calendar.
+   */
+  monthSelectorType: 'static' | 'dropdown' = 'static';
 }
