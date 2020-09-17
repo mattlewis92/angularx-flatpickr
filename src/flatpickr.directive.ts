@@ -458,7 +458,7 @@ export class FlatpickrDirective
   }
 
   ngOnDestroy(): void {
-    this.instance.destroy();
+    this.instance?.destroy();
   }
 
   writeValue(value: any): void {
