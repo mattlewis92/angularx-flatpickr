@@ -1864,7 +1864,7 @@ Example:</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="498" class="link-to-prism">src/flatpickr.directive.ts:498</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="500" class="link-to-prism">src/flatpickr.directive.ts:500</a></div>
                             </td>
                         </tr>
 
@@ -1900,7 +1900,7 @@ Example:</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="478" class="link-to-prism">src/flatpickr.directive.ts:478</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="480" class="link-to-prism">src/flatpickr.directive.ts:480</a></div>
                             </td>
                         </tr>
 
@@ -1969,7 +1969,7 @@ Example:</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="482" class="link-to-prism">src/flatpickr.directive.ts:482</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="484" class="link-to-prism">src/flatpickr.directive.ts:484</a></div>
                             </td>
                         </tr>
 
@@ -2038,7 +2038,7 @@ Example:</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="486" class="link-to-prism">src/flatpickr.directive.ts:486</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="488" class="link-to-prism">src/flatpickr.directive.ts:488</a></div>
                             </td>
                         </tr>
 
@@ -2107,7 +2107,7 @@ Example:</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="464" class="link-to-prism">src/flatpickr.directive.ts:464</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="466" class="link-to-prism">src/flatpickr.directive.ts:466</a></div>
                             </td>
                         </tr>
 
@@ -2700,7 +2700,9 @@ export class FlatpickrDirective
   }
 
   ngOnDestroy(): void {
-    this.instance.destroy();
+    if (this.instance) {
+		this.instance.destroy();
+	}
   }
 
   writeValue(value: any): void {
