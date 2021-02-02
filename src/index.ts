@@ -1,3 +1,3 @@
 export * from './flatpickr.module';
 export { FlatpickrDefaults } from './flatpickr-defaults.service';
-export * from './flatpickr.directive';
+export { FlatpickrDirective } from './flatpickr.directive';
