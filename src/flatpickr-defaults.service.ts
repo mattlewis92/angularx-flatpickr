@@ -285,7 +285,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * See <a href="https://chmln.github.io/flatpickr/examples/#disabling-all-dates-except-select-few">enabling dates</a>.
    */
-  enable: DisableEnableDate[] = [];
+  enable: DisableEnableDate[];
 
   /**
    * Enables time picker.
