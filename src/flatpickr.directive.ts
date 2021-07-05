@@ -442,6 +442,10 @@ export class FlatpickrDirective
     options.altInputClass =
       (options.altInputClass || '') + ' ' + this.elm.nativeElement.className;
 
+    if (!options.enable) {
+      delete options.enable;
+    }
+
     this.instance = flatpickr(
       this.elm.nativeElement,
       options
@@ -459,8 +463,8 @@ export class FlatpickrDirective
 
   ngOnDestroy(): void {
     if (this.instance) {
-		this.instance.destroy();
-	}
+      this.instance.destroy();
+    }
   }
 
   writeValue(value: any): void {

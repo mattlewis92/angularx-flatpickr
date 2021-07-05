@@ -1,9 +1,4 @@
-import {
-  ComponentFixture,
-  fakeAsync,
-  flush,
-  TestBed
-} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, DebugElement } from '@angular/core';
 import {
   FormControl,
@@ -31,7 +26,7 @@ function triggerDomEvent(
 }
 
 function clickFlatpickerDate(target: HTMLElement | Element) {
-  triggerDomEvent('mousedown', target, {
+  triggerDomEvent('click', target, {
     which: 1
   });
 }
@@ -440,34 +435,28 @@ describe('mwl-flatpickr directive', () => {
       });
     });
 
-    it.skip(
-      'should call the flatpickrMonthChange output',
-      fakeAsync(done => {
-        const fixture: ComponentFixture<
-          NgModelComponent
-        > = TestBed.createComponent(NgModelComponent);
-        fixture.componentInstance.events
-          .pipe(
-            filter(({ name }) => name === 'monthChange'),
-            take(1)
-          )
-          .subscribe(({ event }) => {
-            expect(event.selectedDates).to.deep.equal([]);
-            expect(event.dateString).to.deep.equal('');
-            done();
-          });
-        fixture.detectChanges();
-        const input: HTMLInputElement = fixture.nativeElement.querySelector(
-          'input'
-        );
-        input.click();
-        const instance: any = document.body.querySelector(
-          '.flatpickr-calendar'
-        );
-        clickFlatpickerDate(instance.querySelector('.flatpickr-prev-month'));
-        flush();
-      })
-    );
+    it('should call the flatpickrMonthChange output', done => {
+      const fixture: ComponentFixture<
+        NgModelComponent
+      > = TestBed.createComponent(NgModelComponent);
+      fixture.componentInstance.events
+        .pipe(
+          filter(({ name }) => name === 'monthChange'),
+          take(1)
+        )
+        .subscribe(({ event }) => {
+          expect(event.selectedDates).to.deep.equal([]);
+          expect(event.dateString).to.deep.equal('');
+          done();
+        });
+      fixture.detectChanges();
+      const input: HTMLInputElement = fixture.nativeElement.querySelector(
+        'input'
+      );
+      input.click();
+      const instance: any = document.body.querySelector('.flatpickr-calendar');
+      clickFlatpickerDate(instance.querySelector('.flatpickr-prev-month'));
+    });
 
     it('should call the flatpickrYearChange output', done => {
       const fixture: ComponentFixture<
