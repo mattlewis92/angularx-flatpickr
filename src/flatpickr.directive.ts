@@ -43,7 +43,8 @@ export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
   host: {
     // tslint:disable-line use-host-property-decorator
     '(blur)': 'onTouchedFn()'
-  }
+  },
+  exportAs: 'mwlFlatpickr'
 })
 export class FlatpickrDirective
   implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
@@ -323,7 +324,11 @@ export class FlatpickrDirective
     FlatPickrDayCreateOutputOptions
   > = new EventEmitter();
 
-  private instance: flatpickr.Instance;
+  /**
+   * The flatpickr instance where you can call methods like toggle(), open(), close() etc
+   */
+  instance: flatpickr.Instance;
+
   private isDisabled = false;
   private initialValue: any;
 
