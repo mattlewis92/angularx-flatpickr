@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.6.0"></a>
+# [6.6.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.3...v6.6.0) (2021-07-06)
+
+
+### Features
+
+* expose the flatpickr instance so you can call its methods ([7270193](https://github.com/mattlewis92/angularx-flatpickr/commit/7270193))
+
+
+
 <a name="6.5.3"></a>
 ## [6.5.3](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.2...v6.5.3) (2021-07-05)
 
