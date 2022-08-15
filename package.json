@@ -1,6 +1,6 @@
 {
   "name": "angularx-flatpickr",
-  "version": "6.6.0",
+  "version": "7.0.0",
   "description": "An angular 14.0+ wrapper for flatpickr",
   "scripts": {
     "start": "concurrently --raw \"ng serve --open\" \"pnpm test:watch\"",

@@ -1,6 +1,17 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [7.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.6.0...v7.0.0) (2022-08-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* angular 14 or higher is now required to use this package
+
+### build
+
+* upgrade to angular 14 ([#49](https://github.com/mattlewis92/angularx-flatpickr/issues/49)) ([bd5419f](https://github.com/mattlewis92/angularx-flatpickr/commit/bd5419fecbcb187f6643dfbf388a3732f68b7e8b))
 
 <a name="6.6.0"></a>
 # [6.6.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.3...v6.6.0) (2021-07-06)
