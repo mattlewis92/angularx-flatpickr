@@ -8,353 +8,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">angularx-flatpickr documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#xs-modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="xs-modules-links"
-                >
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#xs-injectables-links"
-                        >
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="xs-injectables-links"
-                        >
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-interfaces-links"
-                >
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-interfaces-links"
-                >
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-miscellaneous-links"
-                >
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-miscellaneous-links"
-                >
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="modules-links"
->
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#injectables-links"
->
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="injectables-links"
->
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#interfaces-links"
->
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="interfaces-links"
->
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#miscellaneous-links"
->
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="miscellaneous-links"
->
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content directive">
@@ -364,9 +35,11 @@
 
 
 
+
+
 <ol class="breadcrumb">
   <li>Directives</li>
-  <li>FlatpickrDirective</li>
+  <li >FlatpickrDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -384,27 +57,29 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/flatpickr.directive.ts</code>
+            <code>projects/angularx-flatpickr/src/lib/flatpickr.directive.ts</code>
         </p>
+
+
 
 
             <p class="comment">
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                        <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
-                        <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
-                        <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
-                        <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
+                            <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                            <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                            <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
             </p>
 
 
         <section>
             <h3>Metadata</h3>
-            <table class="table table-sm table-hover">
+            <table class="table table-sm table-hover metadata">
                 <tbody>
                     <tr>
-                        <td class="col-md-3">providers</td>
+                        <td class="col-md-3">Providers</td>
                         <td class="col-md-9">
                             <code>
                                 FLATPICKR_CONTROL_VALUE_ACCESSOR
@@ -413,7 +88,7 @@
                     </tr>
 
                     <tr>
-                        <td class="col-md-3">selector</td>
+                        <td class="col-md-3">Selector</td>
                         <td class="col-md-9"><code>[mwlFlatpickr]</code></td>
                     </tr>
 
@@ -434,13 +109,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#instance">instance</a>
+                                <a href="#instance" >instance</a>
                             </li>
                             <li>
-                                <a href="#onChangeFn">onChangeFn</a>
+                                <a href="#onChangeFn" >onChangeFn</a>
                             </li>
                             <li>
-                                <a href="#onTouchedFn">onTouchedFn</a>
+                                <a href="#onTouchedFn" >onTouchedFn</a>
                             </li>
                         </ul>
                     </td>
@@ -455,16 +130,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#registerOnChange">registerOnChange</a>
+                                <a href="#inputChanged" >inputChanged</a>
                             </li>
                             <li>
-                                <a href="#registerOnTouched">registerOnTouched</a>
+                                <a href="#registerOnChange" >registerOnChange</a>
                             </li>
                             <li>
-                                <a href="#setDisabledState">setDisabledState</a>
+                                <a href="#registerOnTouched" >registerOnTouched</a>
                             </li>
                             <li>
-                                <a href="#writeValue">writeValue</a>
+                                <a href="#setDisabledState" >setDisabledState</a>
+                            </li>
+                            <li>
+                                <a href="#writeValue" >writeValue</a>
                             </li>
                         </ul>
                     </td>
@@ -479,124 +157,124 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#allowInput">allowInput</a>
+                                <a href="#allowInput" >allowInput</a>
                             </li>
                             <li>
-                                <a href="#altFormat">altFormat</a>
+                                <a href="#altFormat" >altFormat</a>
                             </li>
                             <li>
-                                <a href="#altInput">altInput</a>
+                                <a href="#altInput" >altInput</a>
                             </li>
                             <li>
-                                <a href="#altInputClass">altInputClass</a>
+                                <a href="#altInputClass" >altInputClass</a>
                             </li>
                             <li>
-                                <a href="#appendTo">appendTo</a>
+                                <a href="#appendTo" >appendTo</a>
                             </li>
                             <li>
-                                <a href="#ariaDateFormat">ariaDateFormat</a>
+                                <a href="#ariaDateFormat" >ariaDateFormat</a>
                             </li>
                             <li>
-                                <a href="#clickOpens">clickOpens</a>
+                                <a href="#clickOpens" >clickOpens</a>
                             </li>
                             <li>
-                                <a href="#convertModelValue">convertModelValue</a>
+                                <a href="#convertModelValue" >convertModelValue</a>
                             </li>
                             <li>
-                                <a href="#dateFormat">dateFormat</a>
+                                <a href="#dateFormat" >dateFormat</a>
                             </li>
                             <li>
-                                <a href="#defaultHour">defaultHour</a>
+                                <a href="#defaultHour" >defaultHour</a>
                             </li>
                             <li>
-                                <a href="#defaultMinute">defaultMinute</a>
+                                <a href="#defaultMinute" >defaultMinute</a>
                             </li>
                             <li>
-                                <a href="#defaultSeconds">defaultSeconds</a>
+                                <a href="#defaultSeconds" >defaultSeconds</a>
                             </li>
                             <li>
-                                <a href="#disable">disable</a>
+                                <a href="#disable" >disable</a>
                             </li>
                             <li>
-                                <a href="#disableMobile">disableMobile</a>
+                                <a href="#disableMobile" >disableMobile</a>
                             </li>
                             <li>
-                                <a href="#enable">enable</a>
+                                <a href="#enable" >enable</a>
                             </li>
                             <li>
-                                <a href="#enableSeconds">enableSeconds</a>
+                                <a href="#enableSeconds" >enableSeconds</a>
                             </li>
                             <li>
-                                <a href="#enableTime">enableTime</a>
+                                <a href="#enableTime" >enableTime</a>
                             </li>
                             <li>
-                                <a href="#formatDate">formatDate</a>
+                                <a href="#formatDate" >formatDate</a>
                             </li>
                             <li>
-                                <a href="#getWeek">getWeek</a>
+                                <a href="#getWeek" >getWeek</a>
                             </li>
                             <li>
-                                <a href="#hourIncrement">hourIncrement</a>
+                                <a href="#hourIncrement" >hourIncrement</a>
                             </li>
                             <li>
-                                <a href="#inline">inline</a>
+                                <a href="#inline" >inline</a>
                             </li>
                             <li>
-                                <a href="#locale">locale</a>
+                                <a href="#locale" >locale</a>
                             </li>
                             <li>
-                                <a href="#maxDate">maxDate</a>
+                                <a href="#maxDate" >maxDate</a>
                             </li>
                             <li>
-                                <a href="#minDate">minDate</a>
+                                <a href="#minDate" >minDate</a>
                             </li>
                             <li>
-                                <a href="#minuteIncrement">minuteIncrement</a>
+                                <a href="#minuteIncrement" >minuteIncrement</a>
                             </li>
                             <li>
-                                <a href="#mode">mode</a>
+                                <a href="#mode" >mode</a>
                             </li>
                             <li>
-                                <a href="#monthSelectorType">monthSelectorType</a>
+                                <a href="#monthSelectorType" >monthSelectorType</a>
                             </li>
                             <li>
-                                <a href="#nextArrow">nextArrow</a>
+                                <a href="#nextArrow" >nextArrow</a>
                             </li>
                             <li>
-                                <a href="#noCalendar">noCalendar</a>
+                                <a href="#noCalendar" >noCalendar</a>
                             </li>
                             <li>
-                                <a href="#now">now</a>
+                                <a href="#now" >now</a>
                             </li>
                             <li>
-                                <a href="#options">options</a>
+                                <a href="#options" >options</a>
                             </li>
                             <li>
-                                <a href="#parseDate">parseDate</a>
+                                <a href="#parseDate" >parseDate</a>
                             </li>
                             <li>
-                                <a href="#plugins">plugins</a>
+                                <a href="#plugins" >plugins</a>
                             </li>
                             <li>
-                                <a href="#prevArrow">prevArrow</a>
+                                <a href="#prevArrow" >prevArrow</a>
                             </li>
                             <li>
-                                <a href="#shorthandCurrentMonth">shorthandCurrentMonth</a>
+                                <a href="#shorthandCurrentMonth" >shorthandCurrentMonth</a>
                             </li>
                             <li>
-                                <a href="#showMonths">showMonths</a>
+                                <a href="#showMonths" >showMonths</a>
                             </li>
                             <li>
-                                <a href="#static">static</a>
+                                <a href="#static" >static</a>
                             </li>
                             <li>
-                                <a href="#time24hr">time24hr</a>
+                                <a href="#time24hr" >time24hr</a>
                             </li>
                             <li>
-                                <a href="#weekNumbers">weekNumbers</a>
+                                <a href="#weekNumbers" >weekNumbers</a>
                             </li>
                             <li>
-                                <a href="#wrap">wrap</a>
+                                <a href="#wrap" >wrap</a>
                             </li>
                         </ul>
                     </td>
@@ -611,28 +289,28 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#flatpickrChange">flatpickrChange</a>
+                                <a href="#flatpickrChange" >flatpickrChange</a>
                             </li>
                             <li>
-                                <a href="#flatpickrClose">flatpickrClose</a>
+                                <a href="#flatpickrClose" >flatpickrClose</a>
                             </li>
                             <li>
-                                <a href="#flatpickrDayCreate">flatpickrDayCreate</a>
+                                <a href="#flatpickrDayCreate" >flatpickrDayCreate</a>
                             </li>
                             <li>
-                                <a href="#flatpickrMonthChange">flatpickrMonthChange</a>
+                                <a href="#flatpickrMonthChange" >flatpickrMonthChange</a>
                             </li>
                             <li>
-                                <a href="#flatpickrOpen">flatpickrOpen</a>
+                                <a href="#flatpickrOpen" >flatpickrOpen</a>
                             </li>
                             <li>
-                                <a href="#flatpickrReady">flatpickrReady</a>
+                                <a href="#flatpickrReady" >flatpickrReady</a>
                             </li>
                             <li>
-                                <a href="#flatpickrValueUpdate">flatpickrValueUpdate</a>
+                                <a href="#flatpickrValueUpdate" >flatpickrValueUpdate</a>
                             </li>
                             <li>
-                                <a href="#flatpickrYearChange">flatpickrYearChange</a>
+                                <a href="#flatpickrYearChange" >flatpickrYearChange</a>
                             </li>
                         </ul>
                     </td>
@@ -648,7 +326,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#input">input</a>
+                                <a href="#blur" >blur</a>
+                            </li>
+                            <li>
+                                <a href="#input" >input</a>
                             </li>
                         </ul>
                     </td>
@@ -664,12 +345,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(elm: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html">FlatpickrDefaults</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>)</code>
+<code>constructor(elm: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, defaults: <a href="../injectables/FlatpickrDefaults.html" target="_self">FlatpickrDefaults</a>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="337" class="link-to-prism">src/flatpickr.directive.ts:337</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="327" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:327</a></div>
                             </td>
                         </tr>
 
@@ -690,11 +371,11 @@
                                                         <td>elm</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
                                                         </td>
                                                   
                                                     <td>
-                                                            no
+                                                            No
                                                     </td>
                                                     
                                                 </tr>
@@ -702,11 +383,11 @@
                                                         <td>defaults</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/FlatpickrDefaults.html" target="_self" >FlatpickrDefaults</a></code>
+                                                                        <code><a href="../injectables/FlatpickrDefaults.html" target="_self" >FlatpickrDefaults</a></code>
                                                         </td>
                                                   
                                                     <td>
-                                                            no
+                                                            No
                                                     </td>
                                                     
                                                 </tr>
@@ -714,11 +395,11 @@
                                                         <td>renderer</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
+                                                                        <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
                                                         </td>
                                                   
                                                     <td>
-                                                            no
+                                                            No
                                                     </td>
                                                     
                                                 </tr>
@@ -736,939 +417,1100 @@
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="allowInput"></a>
-                        <code>allowInput</code>
+                        <b>allowInput</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Allows the user to enter a date directly input the input field. By default, direct entry is disabled.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/flatpickr.directive.ts:91</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:88</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Allows the user to enter a date directly input the input field. By default, direct entry is disabled.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="altFormat"></a>
-                        <code>altFormat</code>
+                        <b>altFormat</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Exactly the same as date format, but for the altInput field.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/flatpickr.directive.ts:75</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:72</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exactly the same as date format, but for the altInput field.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="altInput"></a>
-                        <code>altInput</code>
+                        <b>altInput</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Show the user a readable date (as per altFormat), but return something totally different to the server.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/flatpickr.directive.ts:80</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:77</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><div><pre class="line-numbers"><code class="language-none">Show the user a readable date (as per altFormat), but return something totally different to the server.</code></pre></div></div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="altInputClass"></a>
-                        <code>altInputClass</code>
+                        <b>altInputClass</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>This class will be added to the input element created by the altInput option.
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:83</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This class will be added to the input element created by the altInput option.
 Note that <code>altInput</code> already inherits classes from the original input.</p>
 </div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                            </p>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/flatpickr.directive.ts:86</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="appendTo"></a>
-                        <code>appendTo</code>
+                        <b>appendTo</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Instead of <code>body</code>, appends the calendar to the specified node instead.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>HTMLElement</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>HTMLElement</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/flatpickr.directive.ts:96</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:93</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Instead of <code>body</code>, appends the calendar to the specified node instead.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="ariaDateFormat"></a>
-                        <code>ariaDateFormat</code>
+                        <b>ariaDateFormat</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/flatpickr.directive.ts:101</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:98</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="clickOpens"></a>
-                        <code>clickOpens</code>
+                        <b>clickOpens</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Whether clicking on the input should open the picker.
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:104</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Whether clicking on the input should open the picker.
 You could disable this if you wish to open the calendar manually <code>with.open()</code>.</p>
 </div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                            </p>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/flatpickr.directive.ts:107</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="convertModelValue"></a>
-                        <code>convertModelValue</code>
+                        <b>convertModelValue</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the <code>mode</code></p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="264" class="link-to-prism">src/flatpickr.directive.ts:264</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="261" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:261</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Auto convert the ngModel value from a string to a date / array of dates / from - to date object depending on the <code>mode</code></p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="dateFormat"></a>
-                        <code>dateFormat</code>
+                        <b>dateFormat</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>A string of characters which are used to define how the date will be displayed in the input box.
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:110</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A string of characters which are used to define how the date will be displayed in the input box.
 The supported characters are defined in the table below.</p>
 </div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                            </p>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/flatpickr.directive.ts:113</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="defaultHour"></a>
-                        <code>defaultHour</code>
+                        <b>defaultHour</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Initial value of the hour element.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/flatpickr.directive.ts:118</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:115</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Initial value of the hour element.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="defaultMinute"></a>
-                        <code>defaultMinute</code>
+                        <b>defaultMinute</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Initial value of the minute element.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/flatpickr.directive.ts:122</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:119</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Initial value of the minute element.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="defaultSeconds"></a>
-                        <code>defaultSeconds</code>
+                        <b>defaultSeconds</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Initial value of the seconds element.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">src/flatpickr.directive.ts:127</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:124</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Initial value of the seconds element.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="disable"></a>
-                        <code>disable</code>
+                        <b>disable</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">src/flatpickr.directive.ts:132</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:129</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>See <a href="https://chmln.github.io/flatpickr/examples/#disabling-specific-dates">disabling dates</a>.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="disableMobile"></a>
-                        <code>disableMobile</code>
+                        <b>disableMobile</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Set disableMobile to true to always use the non-native picker.
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:135</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set disableMobile to true to always use the non-native picker.
 By default, Flatpickr utilizes native datetime widgets unless certain options (e.g. disable) are used.</p>
 </div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                            </p>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/flatpickr.directive.ts:138</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="enable"></a>
-                        <code>enable</code>
+                        <b>enable</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>See <a href="https://chmln.github.io/flatpickr/examples/#disabling-all-dates-except-select-few">enabling dates</a>.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/flatpickr.directive.ts:143</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:140</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>See <a href="https://chmln.github.io/flatpickr/examples/#disabling-all-dates-except-select-few">enabling dates</a>.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="enableSeconds"></a>
-                        <code>enableSeconds</code>
+                        <b>enableSeconds</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Enables seconds in the time picker.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">src/flatpickr.directive.ts:153</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:150</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Enables seconds in the time picker.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="enableTime"></a>
-                        <code>enableTime</code>
+                        <b>enableTime</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Enables time picker.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/flatpickr.directive.ts:148</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:145</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Enables time picker.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="formatDate"></a>
-                        <code>formatDate</code>
+                        <b>formatDate</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="158" class="link-to-prism">src/flatpickr.directive.ts:158</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:155</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Allows using a custom date formatting function instead of the built-in handling for date formats using dateFormat, altFormat, etc.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="getWeek"></a>
-                        <code>getWeek</code>
+                        <b>getWeek</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>You may override the function that extracts the week numbers from a Date by supplying a getWeek function.
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:241</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>You may override the function that extracts the week numbers from a Date by supplying a getWeek function.
 It takes in a date as a parameter and should return a corresponding string that you want to appear left of every week.</p>
 </div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-
-                            </p>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="244" class="link-to-prism">src/flatpickr.directive.ts:244</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="hourIncrement"></a>
-                        <code>hourIncrement</code>
+                        <b>hourIncrement</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Adjusts the step for the hour input (incl. scrolling).</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/flatpickr.directive.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:160</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Adjusts the step for the hour input (incl. scrolling).</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="inline"></a>
-                        <code>inline</code>
+                        <b>inline</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Displays the calendar inline.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/flatpickr.directive.ts:168</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:165</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Displays the calendar inline.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="locale"></a>
-                        <code>locale</code>
+                        <b>locale</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>The locale object or string to use for the locale.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>object | string</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>object | string</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="259" class="link-to-prism">src/flatpickr.directive.ts:259</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="256" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:256</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The locale object or string to use for the locale.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="maxDate"></a>
-                        <code>maxDate</code>
+                        <b>maxDate</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>The maximum date that a user can pick to (inclusive).</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>string | Date</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | Date</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">src/flatpickr.directive.ts:173</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:170</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The maximum date that a user can pick to (inclusive).</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="minDate"></a>
-                        <code>minDate</code>
+                        <b>minDate</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>The minimum date that a user can start picking from (inclusive).</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>string | Date</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | Date</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">src/flatpickr.directive.ts:178</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:175</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The minimum date that a user can start picking from (inclusive).</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="minuteIncrement"></a>
-                        <code>minuteIncrement</code>
+                        <b>minuteIncrement</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Adjusts the step for the minute input (incl. scrolling).</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/flatpickr.directive.ts:183</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:180</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Adjusts the step for the minute input (incl. scrolling).</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="mode"></a>
-                        <code>mode</code>
+                        <b>mode</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Select a single date, multiple dates or a date range.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>&quot;single&quot; | &quot;multiple&quot; | &quot;range&quot;</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;single&quot; | &quot;multiple&quot; | &quot;range&quot;</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="188" class="link-to-prism">src/flatpickr.directive.ts:188</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:185</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Select a single date, multiple dates or a date range.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="monthSelectorType"></a>
-                        <code>monthSelectorType</code>
+                        <b>monthSelectorType</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>How the month should be displayed in the header of the calendar.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>&quot;static&quot; | &quot;dropdown&quot;</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;static&quot; | &quot;dropdown&quot;</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="269" class="link-to-prism">src/flatpickr.directive.ts:269</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="266" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:266</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>How the month should be displayed in the header of the calendar.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="nextArrow"></a>
-                        <code>nextArrow</code>
+                        <b>nextArrow</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>HTML for the arrow icon, used to switch months.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/flatpickr.directive.ts:193</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:190</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>HTML for the arrow icon, used to switch months.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="noCalendar"></a>
-                        <code>noCalendar</code>
+                        <b>noCalendar</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Hides the day selection in calendar. Use it along with <code>enableTime</code> to create a time picker.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">src/flatpickr.directive.ts:198</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:195</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Hides the day selection in calendar. Use it along with <code>enableTime</code> to create a time picker.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="now"></a>
-                        <code>now</code>
+                        <b>now</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Provide a date for &#39;today&#39;, which will be used instead of &quot;new Date()&quot;</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>Date | string | number</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Date | string | number</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="203" class="link-to-prism">src/flatpickr.directive.ts:203</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:200</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Provide a date for &#39;today&#39;, which will be used instead of &quot;new Date()&quot;</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="options"></a>
-                        <code>options</code>
+                        <b>options</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Object-options that can be user for multiple instances of Flatpickr.
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/FlatpickrDefaults.html" target="_self" >FlatpickrDefaultsInterface</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:67</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Object-options that can be user for multiple instances of Flatpickr.
 Option from this object is applied only if specific option is not specified.
 Example:</p>
 <div><pre class="line-numbers"><code class="language-typescript">options: FlatpickrDefaultsInterface = {
-      altFormat: &#39;d/m/Y&#39;,   // will be ignored since altFormat is provided via specific attribute
-      altInput: true        // will be used since specific attribute is not provided
+     altFormat: &#39;d/m/Y&#39;,   // will be ignored since altFormat is provided via specific attribute
+     altInput: true        // will be used since specific attribute is not provided
 };</code></pre></div><div><pre class="line-numbers"><code class="language-html">&lt;input
-   class=&quot;form-control&quot;
-   type=&quot;text&quot;
-   mwlFlatpickr
-   [options]=&quot;options&quot;
-   altFormat=&quot;d/m/Y&quot;&gt;</code></pre></div></div>
-                            <p>
-                            <em>Type:</em>    <code><a href="../injectables/FlatpickrDefaults.html" target="_self" >FlatpickrDefaultsInterface</a></code>
-
-                            </p>
-                        <p>
-                            <em>Default value: </em><code>{}</code>
-                        </p>
+  class=&quot;form-control&quot;
+  type=&quot;text&quot;
+  mwlFlatpickr
+  [options]=&quot;options&quot;
+  altFormat=&quot;d/m/Y&quot;&gt;</code></pre></div></div>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/flatpickr.directive.ts:70</a></div>
-                            </td>
-                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="parseDate"></a>
-                        <code>parseDate</code>
+                        <b>parseDate</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Function that expects a date string and must return a Date object.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">src/flatpickr.directive.ts:208</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="205" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:205</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Function that expects a date string and must return a Date object.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="plugins"></a>
-                        <code>plugins</code>
+                        <b>plugins</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Array of plugin instances to use.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>any[]</code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="254" class="link-to-prism">src/flatpickr.directive.ts:254</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:251</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array of plugin instances to use.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="prevArrow"></a>
-                        <code>prevArrow</code>
+                        <b>prevArrow</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>HTML for the left arrow icon.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">src/flatpickr.directive.ts:213</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="210" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:210</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>HTML for the left arrow icon.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="shorthandCurrentMonth"></a>
-                        <code>shorthandCurrentMonth</code>
+                        <b>shorthandCurrentMonth</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Show the month using the shorthand version (ie, Sep instead of September).</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="218" class="link-to-prism">src/flatpickr.directive.ts:218</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="215" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:215</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Show the month using the shorthand version (ie, Sep instead of September).</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="showMonths"></a>
-                        <code>showMonths</code>
+                        <b>showMonths</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>The number of months shown.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="223" class="link-to-prism">src/flatpickr.directive.ts:223</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:220</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The number of months shown.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="static"></a>
-                        <code>static</code>
+                        <b>static</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Position the calendar inside the wrapper and next to the input element. (Leave <code>false</code> unless you know what you&#39;re doing).</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/flatpickr.directive.ts:228</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:225</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Position the calendar inside the wrapper and next to the input element. (Leave <code>false</code> unless you know what you&#39;re doing).</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="time24hr"></a>
-                        <code>time24hr</code>
+                        <b>time24hr</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Displays time picker in 24 hour mode without AM/PM selection when enabled.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="233" class="link-to-prism">src/flatpickr.directive.ts:233</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="230" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:230</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Displays time picker in 24 hour mode without AM/PM selection when enabled.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="weekNumbers"></a>
-                        <code>weekNumbers</code>
+                        <b>weekNumbers</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Enables display of week numbers in calendar.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/flatpickr.directive.ts:238</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="235" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:235</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Enables display of week numbers in calendar.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="wrap"></a>
-                        <code>wrap</code>
+                        <b>wrap</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Custom elements and input groups.</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
-                            </p>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="249" class="link-to-prism">src/flatpickr.directive.ts:249</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:246</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Custom elements and input groups.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -1677,605 +1519,701 @@ Example:</p>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrChange"></a>
-                        <code>flatpickrChange</code>
+                        <b>flatpickrChange</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered when the user selects a date, or changes the time on a selected date.</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="281" class="link-to-prism">src/flatpickr.directive.ts:281</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="278" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:278</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets triggered when the user selects a date, or changes the time on a selected date.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrClose"></a>
-                        <code>flatpickrClose</code>
+                        <b>flatpickrClose</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered when the calendar is closed.</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="301" class="link-to-prism">src/flatpickr.directive.ts:301</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:296</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets triggered when the calendar is closed.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrDayCreate"></a>
-                        <code>flatpickrDayCreate</code>
+                        <b>flatpickrDayCreate</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Take full control of every date cell with this output</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrDayCreateOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrDayCreateOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="323" class="link-to-prism">src/flatpickr.directive.ts:323</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="314" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:314</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Take full control of every date cell with this output</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrMonthChange"></a>
-                        <code>flatpickrMonthChange</code>
+                        <b>flatpickrMonthChange</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered when the month is changed, either by the user or programmatically.</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="307" class="link-to-prism">src/flatpickr.directive.ts:307</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="302" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:302</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets triggered when the month is changed, either by the user or programmatically.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrOpen"></a>
-                        <code>flatpickrOpen</code>
+                        <b>flatpickrOpen</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered when the calendar is opened.</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="295" class="link-to-prism">src/flatpickr.directive.ts:295</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:290</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets triggered when the calendar is opened.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrReady"></a>
-                        <code>flatpickrReady</code>
+                        <b>flatpickrReady</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered once the calendar is in a ready state</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="275" class="link-to-prism">src/flatpickr.directive.ts:275</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="272" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:272</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets triggered once the calendar is in a ready state</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrValueUpdate"></a>
-                        <code>flatpickrValueUpdate</code>
+                        <b>flatpickrValueUpdate</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered when the input value is updated with a new date string.</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="287" class="link-to-prism">src/flatpickr.directive.ts:287</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="284" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:284</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets triggered when the input value is updated with a new date string.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="flatpickrYearChange"></a>
-                        <code>flatpickrYearChange</code>
+                        <b>flatpickrYearChange</b>
                     </td>
-                    <td class="col-md-10">
-                        <div><p>Gets triggered when the year is changed, either by the user or programmatically.</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >EventEmitter&lt;FlatPickrOutputOptions&gt;</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="315" class="link-to-prism">src/flatpickr.directive.ts:315</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="308" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:308</a></div>
                             </td>
                         </tr>
-            </tbody>
-        </table>
-</section>
-
-            <section>
-    <h3>HostListeners</h3>        <table class="table table-sm table-bordered">
-            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="input"></a>
-                        <span class="name">
-                            <b>
-                            input
-                            </b>
-                            <a href="#input"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>input()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="509" class="link-to-prism">src/flatpickr.directive.ts:509</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-</section>
-
-            <section>
-    
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="registerOnChange"></a>
-                        <span class="name">
-                            <b>
-                            registerOnChange
-                            </b>
-                            <a href="#registerOnChange"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>registerOnChange(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="489" class="link-to-prism">src/flatpickr.directive.ts:489</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>fn</td>
-                                                        <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            no
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="registerOnTouched"></a>
-                        <span class="name">
-                            <b>
-                            registerOnTouched
-                            </b>
-                            <a href="#registerOnTouched"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>registerOnTouched(fn: () => void)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="493" class="link-to-prism">src/flatpickr.directive.ts:493</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>fn</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            no
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="setDisabledState"></a>
-                        <span class="name">
-                            <b>
-                            setDisabledState
-                            </b>
-                            <a href="#setDisabledState"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>setDisabledState(isDisabled: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="497" class="link-to-prism">src/flatpickr.directive.ts:497</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>isDisabled</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            no
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="writeValue"></a>
-                        <span class="name">
-                            <b>
-                            writeValue
-                            </b>
-                            <a href="#writeValue"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>writeValue(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="475" class="link-to-prism">src/flatpickr.directive.ts:475</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>value</td>
-                                                        <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            no
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="instance"></a>
-                        <span class="name">
-                            <b>
-                            instance
-                            </b>
-                            <a href="#instance"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>instance:     <code>flatpickr.Instance</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>flatpickr.Instance</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="330" class="link-to-prism">src/flatpickr.directive.ts:330</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The flatpickr instance where you can call methods like toggle(), open(), close() etc</p>
+                        <div class="io-description"><p>Gets triggered when the year is changed, either by the user or programmatically.</p>
 </div>
                     </td>
                 </tr>
-
             </tbody>
         </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+</section>
+
+            <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="blur"></a>
+                    <span class="name">
+                        <b>
+                            blur
+                        </b>
+                        <a href="#blur"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="327"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:327</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="input"></a>
+                    <span class="name">
+                        <b>
+                            input
+                        </b>
+                        <a href="#input"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="499"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:499</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inputChanged"></a>
+                    <span class="name">
+                        <span ><b>inputChanged</b></span>
+                        <a href="#inputChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inputChanged()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;input&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="499"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:499</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnChange"></a>
+                    <span class="name">
+                        <span ><b>registerOnChange</b></span>
+                        <a href="#registerOnChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnChange(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="479"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:479</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnTouched"></a>
+                    <span class="name">
+                        <span ><b>registerOnTouched</b></span>
+                        <a href="#registerOnTouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnTouched(fn: () => void)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="483"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:483</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDisabledState"></a>
+                    <span class="name">
+                        <span ><b>setDisabledState</b></span>
+                        <a href="#setDisabledState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setDisabledState(isDisabled: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="487"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:487</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>isDisabled</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="writeValue"></a>
+                    <span class="name">
+                        <span ><b>writeValue</b></span>
+                        <a href="#writeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>writeValue(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="465"
+                            class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:465</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="instance"></a>
+                    <span class="name">
+                        <span ><b>instance</b></span>
+                        <a href="#instance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="onChangeFn"></a>
-                        <span class="name">
-                            <b>
-                            onChangeFn
-                            </b>
-                            <a href="#onChangeFn"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>onChangeFn:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-</code>
+                        <i>Type : </i>    <code>flatpickr.Instance</code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="319" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:319</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>() &#x3D;&gt; {}</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="335" class="link-to-prism">src/flatpickr.directive.ts:335</a></div>
-                            </td>
-                        </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The flatpickr instance where you can call methods like toggle(), open(), close() etc</p>
+</div>
+                </td>
+            </tr>
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onChangeFn"></a>
+                    <span class="name">
+                        <span ><b>onChangeFn</b></span>
+                        <a href="#onChangeFn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="onTouchedFn"></a>
-                        <span class="name">
-                            <b>
-                            onTouchedFn
-                            </b>
-                            <a href="#onTouchedFn"><span class="fa fa-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>onTouchedFn:     <code></code>
-</code>
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>() &#x3D;&gt; {}</code>
+                                <div class="io-line">Defined in <a href="" data-line="324" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:324</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="337" class="link-to-prism">src/flatpickr.directive.ts:337</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onTouchedFn"></a>
+                    <span class="name">
+                        <span ><b>onTouchedFn</b></span>
+                        <a href="#onTouchedFn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostListener(&#x27;blur&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="327" class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.directive.ts:327</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
 </section>
 
 
@@ -2295,12 +2233,12 @@ Example:</p>
   OnDestroy,
   forwardRef,
   HostListener,
-  Renderer2
+  Renderer2,
 } from &#x27;@angular/core&#x27;;
 import {
   FlatpickrDefaults,
   DisableEnableDate,
-  FlatpickrDefaultsInterface
+  FlatpickrDefaultsInterface,
 } from &#x27;./flatpickr-defaults.service&#x27;;
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
 import flatpickr from &#x27;flatpickr&#x27;;
@@ -2318,21 +2256,18 @@ export interface FlatPickrDayCreateOutputOptions
 
 export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any &#x3D; {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() &#x3D;&gt; FlatpickrDirective), //tslint:disable-line
-  multi: true
+  useExisting: forwardRef(() &#x3D;&gt; FlatpickrDirective),
+  multi: true,
 };
 
 @Directive({
   selector: &#x27;[mwlFlatpickr]&#x27;,
   providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR],
-  host: {
-    // tslint:disable-line use-host-property-decorator
-    &#x27;(blur)&#x27;: &#x27;onTouchedFn()&#x27;
-  },
-  exportAs: &#x27;mwlFlatpickr&#x27;
+  exportAs: &#x27;mwlFlatpickr&#x27;,
 })
 export class FlatpickrDirective
-  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
+  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor
+{
   /**
    * Object-options that can be user for multiple instances of Flatpickr.
    * Option from this object is applied only if specific option is not specified.
@@ -2569,9 +2504,7 @@ export class FlatpickrDirective
    * Gets triggered when the input value is updated with a new date string.
    */
   @Output()
-  flatpickrValueUpdate: EventEmitter&lt;
-    FlatPickrOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrValueUpdate: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * Gets triggered when the calendar is opened.
@@ -2589,25 +2522,19 @@ export class FlatpickrDirective
    * Gets triggered when the month is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrMonthChange: EventEmitter&lt;
-    FlatPickrOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrMonthChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * Gets triggered when the year is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrYearChange: EventEmitter&lt;
-    FlatPickrOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrYearChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * Take full control of every date cell with this output
    */
   @Output()
-  flatpickrDayCreate: EventEmitter&lt;
-    FlatPickrDayCreateOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrDayCreate: EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * The flatpickr instance where you can call methods like toggle(), open(), close() etc
@@ -2617,8 +2544,9 @@ export class FlatpickrDirective
   private isDisabled &#x3D; false;
   private initialValue: any;
 
-  onChangeFn: (value: any) &#x3D;&gt; void &#x3D; () &#x3D;&gt; {}; // tslint:disable-line
+  onChangeFn: (value: any) &#x3D;&gt; void &#x3D; () &#x3D;&gt; {};
 
+  @HostListener(&#x27;blur&#x27;)
   onTouchedFn &#x3D; () &#x3D;&gt; {};
 
   constructor(
@@ -2711,14 +2639,14 @@ export class FlatpickrDirective
           selectedDates,
           dateString,
           instance,
-          dayElement
+          dayElement,
         });
-      }
+      },
     };
 
-    Object.keys(options).forEach(key &#x3D;&gt; {
+    Object.keys(options).forEach((key) &#x3D;&gt; {
       if (typeof options[key] &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        if (typeof this.options[key] !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+        if (typeof (this.options as any)[key] !&#x3D;&#x3D; &#x27;undefined&#x27;) {
           options[key] &#x3D; (this.options as any)[key];
         } else {
           options[key] &#x3D; (this.defaults as any)[key];
@@ -2745,7 +2673,7 @@ export class FlatpickrDirective
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.instance) {
-      Object.keys(changes).forEach(inputKey &#x3D;&gt; {
+      Object.keys(changes).forEach((inputKey) &#x3D;&gt; {
         this.instance.set(inputKey as any, (this as any)[inputKey]);
       });
     }
@@ -2796,9 +2724,9 @@ export class FlatpickrDirective
     if (this.convertModelValue &amp;&amp; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
       switch (this.mode) {
         case &#x27;multiple&#x27;:
-          const dates: Date[] &#x3D; value
+          const dates: Array&lt;Date | undefined&gt; &#x3D; value
             .split(&#x27;; &#x27;)
-            .map(str &#x3D;&gt;
+            .map((str) &#x3D;&gt;
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
@@ -2811,7 +2739,7 @@ export class FlatpickrDirective
         case &#x27;range&#x27;:
           const [from, to] &#x3D; value
             .split(this.instance.l10n.rangeSeparator)
-            .map(str &#x3D;&gt;
+            .map((str) &#x3D;&gt;
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
@@ -2850,6 +2778,10 @@ export class FlatpickrDirective
 
 
 
+
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
@@ -2864,6 +2796,28 @@ export class FlatpickrDirective
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'FlatpickrDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
        <script src="../js/libs/bootstrap-native.js"></script>
 
        <script src="../js/libs/es6-shim.min.js"></script>
@@ -2873,21 +2827,16 @@ export class FlatpickrDirective
 
        <script src="../js/compodoc.js"></script>
 
-        <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
-            var COMPODOC_CURRENT_PAGE_URL = 'FlatpickrDirective.html';
-        </script>
-
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
-
        <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
        <script src="../js/libs/prism.js"></script>
        <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
 
 
     </body>

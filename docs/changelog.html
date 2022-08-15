@@ -8,429 +8,109 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="./" class="navbar-brand">angularx-flatpickr documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#xs-modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="xs-modules-links"
-                >
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#xs-injectables-links"
-                        >
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="xs-injectables-links"
-                        >
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-interfaces-links"
-                >
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-interfaces-links"
-                >
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-miscellaneous-links"
-                >
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-miscellaneous-links"
-                >
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="modules-links"
->
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#injectables-links"
->
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="injectables-links"
->
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#interfaces-links"
->
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="interfaces-links"
->
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#miscellaneous-links"
->
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="miscellaneous-links"
->
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="change-log">Change Log</h1>
+<h1 id="changelog">Changelog</h1>
 <p>All notable changes to this project will be documented in this file. See <a href="https://github.com/conventional-changelog/standard-version">standard-version</a> for commit guidelines.</p>
+<h2 id="700-2022-08-15"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.6.0...v7.0.0">7.0.0</a> (2022-08-15)</h2>
+<h3 id="⚠-breaking-changes">⚠ BREAKING CHANGES</h3>
+<ul>
+<li>angular 14 or higher is now required to use this package</li>
+</ul>
+<h3 id="build">build</h3>
+<ul>
+<li>upgrade to angular 14 (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/49">#49</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/bd5419fecbcb187f6643dfbf388a3732f68b7e8b">bd5419f</a>)</li>
+</ul>
 <p><a name="6.6.0"></a></p>
-<h1 id="6-6-0-2021-07-06-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.3...v6.6.0">6.6.0</a> (2021-07-06)</h1>
+<h1 id="660-2021-07-06"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.3...v6.6.0">6.6.0</a> (2021-07-06)</h1>
 <h3 id="features">Features</h3>
 <ul>
 <li>expose the flatpickr instance so you can call its methods (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/7270193">7270193</a>)</li>
 </ul>
 <p><a name="6.5.3"></a></p>
-<h2 id="6-5-3-2021-07-05-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.2...v6.5.3">6.5.3</a> (2021-07-05)</h2>
+<h2 id="653-2021-07-05"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.2...v6.5.3">6.5.3</a> (2021-07-05)</h2>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>
 <li>fix being able to select dates (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/fe324c8">fe324c8</a>)</li>
 </ul>
 <p><a name="6.5.2"></a></p>
-<h2 id="6-5-2-2021-02-02-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.1...v6.5.2">6.5.2</a> (2021-02-02)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="652-2021-02-02"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.1...v6.5.2">6.5.2</a> (2021-02-02)</h2>
+<h3 id="bug-fixes-1">Bug Fixes</h3>
 <ul>
 <li>export FlatpickrDirective (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/1ca2abf">1ca2abf</a>)</li>
 </ul>
 <p><a name="6.5.1"></a></p>
-<h2 id="6-5-1-2020-09-18-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.0...v6.5.1">6.5.1</a> (2020-09-18)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="651-2020-09-18"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.0...v6.5.1">6.5.1</a> (2020-09-18)</h2>
+<h3 id="bug-fixes-2">Bug Fixes</h3>
 <ul>
 <li>handle directive being destroyed before the view is created   (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/0fe12a3">0fe12a3</a>)</li>
 </ul>
 <p><a name="6.5.0"></a></p>
-<h1 id="6-5-0-2020-09-12-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.4.0...v6.5.0">6.5.0</a> (2020-09-12)</h1>
-<h3 id="features">Features</h3>
+<h1 id="650-2020-09-12"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.4.0...v6.5.0">6.5.0</a> (2020-09-12)</h1>
+<h3 id="features-1">Features</h3>
 <ul>
 <li>add monthSelectorType option (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/e12ee40">e12ee40</a>)</li>
 </ul>
 <p><a name="6.4.0"></a></p>
-<h1 id="6-4-0-2020-08-21-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.1...v6.4.0">6.4.0</a> (2020-08-21)</h1>
-<h3 id="features">Features</h3>
+<h1 id="640-2020-08-21"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.1...v6.4.0">6.4.0</a> (2020-08-21)</h1>
+<h3 id="features-2">Features</h3>
 <ul>
 <li>add common options attribute (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/7731a7b">7731a7b</a>)</li>
 </ul>
 <p><a name="6.3.1"></a></p>
-<h2 id="6-3-1-2020-03-01-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.0...v6.3.1">6.3.1</a> (2020-03-01)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="631-2020-03-01"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.0...v6.3.1">6.3.1</a> (2020-03-01)</h2>
+<h3 id="bug-fixes-3">Bug Fixes</h3>
 <ul>
 <li>workaround bug in flatpickr where the alt input class wouldn&#39;t be set (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/519caf3">519caf3</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/40">#40</a></li>
 </ul>
 <p><a name="6.3.0"></a></p>
-<h1 id="6-3-0-2020-02-15-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.2.0...v6.3.0">6.3.0</a> (2020-02-15)</h1>
-<h3 id="features">Features</h3>
+<h1 id="630-2020-02-15"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.2.0...v6.3.0">6.3.0</a> (2020-02-15)</h1>
+<h3 id="features-3">Features</h3>
 <ul>
 <li>add defaultSeconds option (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/74c6ef6">74c6ef6</a>)</li>
 </ul>
 <p><a name="6.2.0"></a></p>
-<h1 id="6-2-0-2019-12-30-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.1...v6.2.0">6.2.0</a> (2019-12-30)</h1>
-<h3 id="features">Features</h3>
+<h1 id="620-2019-12-30"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.1...v6.2.0">6.2.0</a> (2019-12-30)</h1>
+<h3 id="features-4">Features</h3>
 <ul>
 <li>add showMonths option (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/2e64c2d">2e64c2d</a>)</li>
 </ul>
 <p><a name="6.1.1"></a></p>
-<h2 id="6-1-1-2019-09-17-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.0...v6.1.1">6.1.1</a> (2019-09-17)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="611-2019-09-17"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.0...v6.1.1">6.1.1</a> (2019-09-17)</h2>
+<h3 id="bug-fixes-4">Bug Fixes</h3>
 <ul>
 <li>set default locale (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/2f35353">2f35353</a>)</li>
 </ul>
 <p><a name="6.1.0"></a></p>
-<h1 id="6-1-0-2018-09-18-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.0.0...v6.1.0">6.1.0</a> (2018-09-18)</h1>
-<h3 id="features">Features</h3>
+<h1 id="610-2018-09-18"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.0.0...v6.1.0">6.1.0</a> (2018-09-18)</h1>
+<h3 id="features-5">Features</h3>
 <ul>
 <li>support for an alternate &#39;now&#39; date (e.g. non-localtime for different TZ) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/d4c3866">d4c3866</a>)</li>
 </ul>
 <p><a name="6.0.0"></a></p>
-<h1 id="6-0-0-2018-07-02-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.2...v6.0.0">6.0.0</a> (2018-07-02)</h1>
-<h3 id="features">Features</h3>
+<h1 id="600-2018-07-02"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.2...v6.0.0">6.0.0</a> (2018-07-02)</h1>
+<h3 id="features-6">Features</h3>
 <ul>
 <li>update flatpickr to latest version (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/c407b3e">c407b3e</a>)</li>
 </ul>
@@ -440,42 +120,42 @@
 </ul>
 <p>A minimum version of flatpickr 4.5.0 or higher is now required to use this library</p>
 <p><a name="5.0.2"></a></p>
-<h2 id="5-0-2-2018-06-20-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2">5.0.2</a> (2018-06-20)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="502-2018-06-20"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2">5.0.2</a> (2018-06-20)</h2>
+<h3 id="bug-fixes-5">Bug Fixes</h3>
 <ul>
 <li>parse date in same way as flatpickr does it (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/9e38827">9e38827</a>)</li>
 <li><strong>directive:</strong> fix setDisabledState behaviour (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/eac1055">eac1055</a>)</li>
 </ul>
 <p><a name="5.0.1"></a></p>
-<h2 id="5-0-1-2018-05-16-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.0...v5.0.1">5.0.1</a> (2018-05-16)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="501-2018-05-16"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.0...v5.0.1">5.0.1</a> (2018-05-16)</h2>
+<h3 id="bug-fixes-6">Bug Fixes</h3>
 <ul>
 <li>mark the form control when touched (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/d3c783e">d3c783e</a>)</li>
 <li>mark the input as disabled when used with reactive forms (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/2c1122c">2c1122c</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/15">#15</a></li>
 </ul>
 <p><a name="5.0.0"></a></p>
-<h1 id="5-0-0-2017-12-24-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.1...v5.0.0">5.0.0</a> (2017-12-24)</h1>
-<h3 id="features">Features</h3>
+<h1 id="500-2017-12-24"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.1...v5.0.0">5.0.0</a> (2017-12-24)</h1>
+<h3 id="features-7">Features</h3>
 <ul>
 <li>upgrade to angular 5 (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/d764610">d764610</a>)</li>
 </ul>
-<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-1">BREAKING CHANGES</h3>
 <ul>
 <li>Angular 5 or higher is now required to use this package</li>
 </ul>
 <p><a name="4.0.1"></a></p>
-<h2 id="4-0-1-2017-11-08-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.0...v4.0.1">4.0.1</a> (2017-11-08)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="401-2017-11-08"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.0...v4.0.1">4.0.1</a> (2017-11-08)</h2>
+<h3 id="bug-fixes-7">Bug Fixes</h3>
 <ul>
 <li>allow angular 5 peer dependency (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/684395e">684395e</a>)</li>
 </ul>
 <p><a name="4.0.0"></a></p>
-<h1 id="4-0-0-2017-10-22-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0">4.0.0</a> (2017-10-22)</h1>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h1 id="400-2017-10-22"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0">4.0.0</a> (2017-10-22)</h1>
+<h3 id="bug-fixes-8">Bug Fixes</h3>
 <ul>
 <li><strong>aot:</strong> allow the lib to compile with aot (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/12c76e8">12c76e8</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/7">#7</a></li>
 </ul>
-<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-2">BREAKING CHANGES</h3>
 <ul>
 <li><strong>aot:</strong> the value you pass to the forRoot method for flatpickr has changed. The new signature is:</li>
 </ul>
@@ -496,49 +176,55 @@ export function flatpickrFactory() {
   ]
 })
 class MyModule {}</code></pre></div><p><a name="3.0.0"></a></p>
-<h1 id="3-0-0-2017-10-18-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0">3.0.0</a> (2017-10-18)</h1>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h1 id="300-2017-10-18"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0">3.0.0</a> (2017-10-18)</h1>
+<h3 id="bug-fixes-9">Bug Fixes</h3>
 <ul>
 <li>support latest flatpickr (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/b66000d">b66000d</a>)</li>
 </ul>
-<h3 id="features">Features</h3>
+<h3 id="features-8">Features</h3>
 <ul>
 <li>upgrade flatpickr to v4 (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/0fa4335">0fa4335</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/4">#4</a> <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/5">#5</a></li>
 </ul>
-<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-3">BREAKING CHANGES</h3>
 <ul>
 <li>flatpickr is now a peer dependency of this module. You must now add it as an
 explicit dependency, import it and pass it to the first argument of <code>FlatpickrModule.forRoot</code></li>
 </ul>
 <p><a name="2.0.1"></a></p>
-<h2 id="2-0-1-2017-08-17-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.0...v2.0.1">2.0.1</a> (2017-08-17)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2 id="201-2017-08-17"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.0...v2.0.1">2.0.1</a> (2017-08-17)</h2>
+<h3 id="bug-fixes-10">Bug Fixes</h3>
 <ul>
 <li>update model value even if convertModelValue is false (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/cd5374a">cd5374a</a>)</li>
 <li>use input event instead of change event to detect flatpicker changes (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/fc6f751">fc6f751</a>)</li>
 </ul>
 <p><a name="2.0.0"></a></p>
-<h1 id="2-0-0-2017-08-11-"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v1.0.0...v2.0.0">2.0.0</a> (2017-08-11)</h1>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h1 id="200-2017-08-11"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v1.0.0...v2.0.0">2.0.0</a> (2017-08-11)</h1>
+<h3 id="bug-fixes-11">Bug Fixes</h3>
 <ul>
 <li>make the directive to work with reactive forms (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/e619706">e619706</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/1">#1</a></li>
 </ul>
-<h3 id="features">Features</h3>
+<h3 id="features-9">Features</h3>
 <ul>
 <li>upgrade flatpickr to v3 (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/ea73c66">ea73c66</a>)</li>
 </ul>
-<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-4">BREAKING CHANGES</h3>
 <ul>
 <li>flatpickr has been upgraded to v3. The <code>utc</code> was removed from this lib as it was
 removed from flatpickr</li>
 <li>the forms module is now required to use this component</li>
 </ul>
 <p><a name="1.0.0"></a></p>
-<h1 id="1-0-0-2017-04-07-">1.0.0 (2017-04-07)</h1>
-<h3 id="features">Features</h3>
+<h1 id="100-2017-04-07">1.0.0 (2017-04-07)</h1>
+<h3 id="features-10">Features</h3>
 <ul>
 <li>initial implementation (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/acbd9ac">acbd9ac</a>)</li>
 </ul>
+
+
+
+
+
+
 
 
 
@@ -568,6 +254,28 @@ removed from flatpickr</li>
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
        <script src="./js/libs/bootstrap-native.js"></script>
 
        <script src="./js/libs/es6-shim.min.js"></script>
@@ -577,21 +285,16 @@ removed from flatpickr</li>
 
        <script src="./js/compodoc.js"></script>
 
-        <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
-            var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
-        </script>
-
-       <script src="./js/search/search.js"></script>
-       <script src="./js/search/lunr.min.js"></script>
-       <script src="./js/search/search-lunr.js"></script>
-
        <script src="./js/tabs.js"></script>
        <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
        <script src="./js/libs/prism.js"></script>
        <script src="./js/sourceCode.js"></script>
-       <script src="./js/search/search_index.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
 
 
     </body>

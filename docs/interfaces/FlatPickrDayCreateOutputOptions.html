@@ -8,353 +8,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">angularx-flatpickr documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#xs-modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="xs-modules-links"
-                >
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#xs-injectables-links"
-                        >
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="xs-injectables-links"
-                        >
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-interfaces-links"
-                >
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-interfaces-links"
-                >
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-miscellaneous-links"
-                >
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-miscellaneous-links"
-                >
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="modules-links"
->
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#injectables-links"
->
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="injectables-links"
->
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#interfaces-links"
->
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="interfaces-links"
->
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#miscellaneous-links"
->
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="miscellaneous-links"
->
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content interface">
@@ -369,9 +40,14 @@
 
 
 
+
+
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>FlatPickrDayCreateOutputOptions</li>
+  <li
+  >
+  FlatPickrDayCreateOutputOptions</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -389,15 +65,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/flatpickr.directive.ts</code>
+            <code>projects/angularx-flatpickr/src/lib/flatpickr.directive.ts</code>
         </p>
+
 
 
             <p class="comment">
                 <h3>Extends</h3>
             </p>
             <p class="comment">
-                    <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >FlatPickrOutputOptions</a></code>
+                        <code><a href="../interfaces/FlatPickrOutputOptions.html" target="_self" >FlatPickrOutputOptions</a></code>
             </p>
 
         <section>
@@ -413,7 +90,10 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#dayElement">dayElement</a>
+                                        <a href="#dayElement" 
+>
+                                            dayElement
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -431,7 +111,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="dayElement"></a>
-                                        <span class="name"><b>dayElement</b><a href="#dayElement"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>dayElement</b>
+                                            <a href="#dayElement">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -472,12 +156,12 @@
   OnDestroy,
   forwardRef,
   HostListener,
-  Renderer2
+  Renderer2,
 } from &#x27;@angular/core&#x27;;
 import {
   FlatpickrDefaults,
   DisableEnableDate,
-  FlatpickrDefaultsInterface
+  FlatpickrDefaultsInterface,
 } from &#x27;./flatpickr-defaults.service&#x27;;
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from &#x27;@angular/forms&#x27;;
 import flatpickr from &#x27;flatpickr&#x27;;
@@ -495,21 +179,18 @@ export interface FlatPickrDayCreateOutputOptions
 
 export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any &#x3D; {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() &#x3D;&gt; FlatpickrDirective), //tslint:disable-line
-  multi: true
+  useExisting: forwardRef(() &#x3D;&gt; FlatpickrDirective),
+  multi: true,
 };
 
 @Directive({
   selector: &#x27;[mwlFlatpickr]&#x27;,
   providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR],
-  host: {
-    // tslint:disable-line use-host-property-decorator
-    &#x27;(blur)&#x27;: &#x27;onTouchedFn()&#x27;
-  },
-  exportAs: &#x27;mwlFlatpickr&#x27;
+  exportAs: &#x27;mwlFlatpickr&#x27;,
 })
 export class FlatpickrDirective
-  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
+  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor
+{
   /**
    * Object-options that can be user for multiple instances of Flatpickr.
    * Option from this object is applied only if specific option is not specified.
@@ -746,9 +427,7 @@ export class FlatpickrDirective
    * Gets triggered when the input value is updated with a new date string.
    */
   @Output()
-  flatpickrValueUpdate: EventEmitter&lt;
-    FlatPickrOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrValueUpdate: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * Gets triggered when the calendar is opened.
@@ -766,25 +445,19 @@ export class FlatpickrDirective
    * Gets triggered when the month is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrMonthChange: EventEmitter&lt;
-    FlatPickrOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrMonthChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * Gets triggered when the year is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrYearChange: EventEmitter&lt;
-    FlatPickrOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrYearChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * Take full control of every date cell with this output
    */
   @Output()
-  flatpickrDayCreate: EventEmitter&lt;
-    FlatPickrDayCreateOutputOptions
-  &gt; &#x3D; new EventEmitter();
+  flatpickrDayCreate: EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt; &#x3D; new EventEmitter();
 
   /**
    * The flatpickr instance where you can call methods like toggle(), open(), close() etc
@@ -794,8 +467,9 @@ export class FlatpickrDirective
   private isDisabled &#x3D; false;
   private initialValue: any;
 
-  onChangeFn: (value: any) &#x3D;&gt; void &#x3D; () &#x3D;&gt; {}; // tslint:disable-line
+  onChangeFn: (value: any) &#x3D;&gt; void &#x3D; () &#x3D;&gt; {};
 
+  @HostListener(&#x27;blur&#x27;)
   onTouchedFn &#x3D; () &#x3D;&gt; {};
 
   constructor(
@@ -888,14 +562,14 @@ export class FlatpickrDirective
           selectedDates,
           dateString,
           instance,
-          dayElement
+          dayElement,
         });
-      }
+      },
     };
 
-    Object.keys(options).forEach(key &#x3D;&gt; {
+    Object.keys(options).forEach((key) &#x3D;&gt; {
       if (typeof options[key] &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        if (typeof this.options[key] !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+        if (typeof (this.options as any)[key] !&#x3D;&#x3D; &#x27;undefined&#x27;) {
           options[key] &#x3D; (this.options as any)[key];
         } else {
           options[key] &#x3D; (this.defaults as any)[key];
@@ -922,7 +596,7 @@ export class FlatpickrDirective
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.instance) {
-      Object.keys(changes).forEach(inputKey &#x3D;&gt; {
+      Object.keys(changes).forEach((inputKey) &#x3D;&gt; {
         this.instance.set(inputKey as any, (this as any)[inputKey]);
       });
     }
@@ -973,9 +647,9 @@ export class FlatpickrDirective
     if (this.convertModelValue &amp;&amp; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
       switch (this.mode) {
         case &#x27;multiple&#x27;:
-          const dates: Date[] &#x3D; value
+          const dates: Array&lt;Date | undefined&gt; &#x3D; value
             .split(&#x27;; &#x27;)
-            .map(str &#x3D;&gt;
+            .map((str) &#x3D;&gt;
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
@@ -988,7 +662,7 @@ export class FlatpickrDirective
         case &#x27;range&#x27;:
           const [from, to] &#x3D; value
             .split(this.instance.l10n.rangeSeparator)
-            .map(str &#x3D;&gt;
+            .map((str) &#x3D;&gt;
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
@@ -1021,6 +695,9 @@ export class FlatpickrDirective
 
 
 
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
@@ -1035,6 +712,28 @@ export class FlatpickrDirective
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'FlatPickrDayCreateOutputOptions.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
        <script src="../js/libs/bootstrap-native.js"></script>
 
        <script src="../js/libs/es6-shim.min.js"></script>
@@ -1044,21 +743,16 @@ export class FlatpickrDirective
 
        <script src="../js/compodoc.js"></script>
 
-        <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'FlatPickrDayCreateOutputOptions.html';
-        </script>
-
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
-
        <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
        <script src="../js/libs/prism.js"></script>
        <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
 
 
     </body>

@@ -8,353 +8,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">angularx-flatpickr documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#xs-modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="xs-modules-links"
-                >
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="xs-directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
-                                    >
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#xs-injectables-links"
-                        >
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="xs-injectables-links"
-                        >
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-interfaces-links"
-                >
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-interfaces-links"
-                >
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#xs-miscellaneous-links"
-                >
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="xs-miscellaneous-links"
-                >
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-
-    <ul class="list">
-
-        <li class="title">
-            <a href="index.html" data-type="index-link">angularx-flatpickr documentation</a>
-        </li>
-
-        <li class="divider"></li>
-
-            <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-
-        <li class="chapter">
-            <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
-            <ul class="links">
-                    <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-th"></span>Overview
-                        </a>
-                    </li>
-                    <li class="link">
-                      <a href="index.html" data-type="chapter-link"><span class="fa fa-file-text-o"></span>README</a>
-                    </li>
-                    <li class="link">
-                            <a href="changelog.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>CHANGELOG
-                        </a>
-                    </li>
-                    <li class="link">
-                            <a href="license.html"
-                        data-type="chapter-link">
-                            <span class="fa fa-fw fa-file-text-o"></span>LICENSE
-                        </a>
-                    </li>
-                    <li class="link">
-                        <a href="dependencies.html"
-                            data-type="chapter-link">
-                            <span class="fa fa-fw fa-list"></span>Dependencies
-                        </a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter modules">
-            <a data-type="chapter-link" href="modules.html">
-                <div class="menu-toggler linked" data-toggle="collapse"
-                        data-target="#modules-links"
-                >
-                    <span class="fa fa-fw fa-archive"></span>
-                    <span class="link-name">Modules</span>
-                    <span class="fa fa-angle-down"></span>
-                </div>
-            </a>
-            <ul class="links collapse"
-                    id="modules-links"
->
-                    <li class="link">
-                        <a href="modules/FlatpickrModule.html" data-type="entity-link">FlatpickrModule</a>
-                            <li class="chapter inner">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                    <span class="fa fa-fw fa-code"></span>
-                                    <span>Directives</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse"
-                                        id="directives-links-module-FlatpickrModule-6a65ca9cd0cb9a65d05b1e847a519969"
->
-                                        <li class="link">
-                                            <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">FlatpickrDirective</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </li>
-            </ul>
-        </li>
-
-
-
-
-                <li class="chapter">
-                    <div class="simple menu-toggler" data-toggle="collapse"
-                            data-target="#injectables-links"
->
-                        <span class="fa fa-fw fa-long-arrow-down"></span>
-                        <span>Injectables</span>
-                        <span class="fa fa-angle-down"></span>
-                    </div>
-                    <ul class="links collapse"
-                            id="injectables-links"
->
-                            <li class="link">
-                                <a href="injectables/FlatpickrDefaults.html" data-type="entity-link">FlatpickrDefaults</a>
-                            </li>
-                    </ul>
-                </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#interfaces-links"
->
-                <span class="fa fa-fw fa-info"></span>
-                <span>Interfaces</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="interfaces-links"
->
-                    <li class="link">
-                        <a href="interfaces/FlatPickrDayCreateOutputOptions.html" data-type="entity-link">FlatPickrDayCreateOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatPickrOutputOptions.html" data-type="entity-link">FlatPickrOutputOptions</a>
-                    </li>
-                    <li class="link">
-                        <a href="interfaces/FlatpickrDefaultsInterface.html" data-type="entity-link">FlatpickrDefaultsInterface</a>
-                    </li>
-            </ul>
-        </li>
-
-
-        <li class="chapter">
-            <div class="simple menu-toggler" data-toggle="collapse"
-                    data-target="#miscellaneous-links"
->
-                <span class="fa fa-fw fa-cubes"></span>
-                <span>Miscellaneous</span>
-                <span class="fa fa-angle-down"></span>
-            </div>
-            <ul class="links collapse"
-                    id="miscellaneous-links"
->
-                    <li class="link">
-                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
-                    </li>
-                    <li class="link">
-                      <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
-                    </li>
-            </ul>
-        </li>
-
-
-
-        <li class="divider"></li>
-        <li class="copyright">
-                Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.svg" class="img-responsive" data-type="compodoc-logo">
-                </a>
-        </li>
-
-    </ul>
-
-</nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content interface">
@@ -369,9 +40,14 @@
 
 
 
+
+
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>FlatpickrDefaultsInterface</li>
+  <li
+  >
+  FlatpickrDefaultsInterface</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -389,8 +65,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/flatpickr-defaults.service.ts</code>
+            <code>projects/angularx-flatpickr/src/lib/flatpickr-defaults.service.ts</code>
         </p>
+
 
 
 
@@ -408,163 +85,283 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#allowInput">allowInput</a>
+                                        <a href="#allowInput" 
+>
+                                            allowInput
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#altFormat">altFormat</a>
+                                        <a href="#altFormat" 
+>
+                                            altFormat
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#altInput">altInput</a>
+                                        <a href="#altInput" 
+>
+                                            altInput
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#altInputClass">altInputClass</a>
+                                        <a href="#altInputClass" 
+>
+                                            altInputClass
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#appendTo">appendTo</a>
+                                        <a href="#appendTo" 
+>
+                                            appendTo
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#ariaDateFormat">ariaDateFormat</a>
+                                        <a href="#ariaDateFormat" 
+>
+                                            ariaDateFormat
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#clickOpens">clickOpens</a>
+                                        <a href="#clickOpens" 
+>
+                                            clickOpens
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#convertModelValue">convertModelValue</a>
+                                        <a href="#convertModelValue" 
+>
+                                            convertModelValue
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#dateFormat">dateFormat</a>
+                                        <a href="#dateFormat" 
+>
+                                            dateFormat
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#defaultHour">defaultHour</a>
+                                        <a href="#defaultHour" 
+>
+                                            defaultHour
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#defaultMinute">defaultMinute</a>
+                                        <a href="#defaultMinute" 
+>
+                                            defaultMinute
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#defaultSeconds">defaultSeconds</a>
+                                        <a href="#defaultSeconds" 
+>
+                                            defaultSeconds
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#disable">disable</a>
+                                        <a href="#disable" 
+>
+                                            disable
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#disableMobile">disableMobile</a>
+                                        <a href="#disableMobile" 
+>
+                                            disableMobile
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#enable">enable</a>
+                                        <a href="#enable" 
+>
+                                            enable
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#enableSeconds">enableSeconds</a>
+                                        <a href="#enableSeconds" 
+>
+                                            enableSeconds
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#enableTime">enableTime</a>
+                                        <a href="#enableTime" 
+>
+                                            enableTime
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#formatDate">formatDate</a>
+                                        <a href="#formatDate" 
+>
+                                            formatDate
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#getWeek">getWeek</a>
+                                        <a href="#getWeek" 
+>
+                                            getWeek
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#hourIncrement">hourIncrement</a>
+                                        <a href="#hourIncrement" 
+>
+                                            hourIncrement
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#inline">inline</a>
+                                        <a href="#inline" 
+>
+                                            inline
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#locale">locale</a>
+                                        <a href="#locale" 
+>
+                                            locale
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#maxDate">maxDate</a>
+                                        <a href="#maxDate" 
+>
+                                            maxDate
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#minDate">minDate</a>
+                                        <a href="#minDate" 
+>
+                                            minDate
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#minuteIncrement">minuteIncrement</a>
+                                        <a href="#minuteIncrement" 
+>
+                                            minuteIncrement
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#mode">mode</a>
+                                        <a href="#mode" 
+>
+                                            mode
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#monthSelectorType">monthSelectorType</a>
+                                        <a href="#monthSelectorType" 
+>
+                                            monthSelectorType
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#nextArrow">nextArrow</a>
+                                        <a href="#nextArrow" 
+>
+                                            nextArrow
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#noCalendar">noCalendar</a>
+                                        <a href="#noCalendar" 
+>
+                                            noCalendar
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#now">now</a>
+                                        <a href="#now" 
+>
+                                            now
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#parseDate">parseDate</a>
+                                        <a href="#parseDate" 
+>
+                                            parseDate
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#plugins">plugins</a>
+                                        <a href="#plugins" 
+>
+                                            plugins
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#prevArrow">prevArrow</a>
+                                        <a href="#prevArrow" 
+>
+                                            prevArrow
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#shorthandCurrentMonth">shorthandCurrentMonth</a>
+                                        <a href="#shorthandCurrentMonth" 
+>
+                                            shorthandCurrentMonth
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#showMonths">showMonths</a>
+                                        <a href="#showMonths" 
+>
+                                            showMonths
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#static">static</a>
+                                        <a href="#static" 
+>
+                                            static
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#time24hr">time24hr</a>
+                                        <a href="#time24hr" 
+>
+                                            time24hr
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#utc">utc</a>
+                                        <a href="#utc" 
+>
+                                            utc
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#weekNumbers">weekNumbers</a>
+                                        <a href="#weekNumbers" 
+>
+                                            weekNumbers
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#wrap">wrap</a>
+                                        <a href="#wrap" 
+>
+                                            wrap
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -582,12 +379,16 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="allowInput"></a>
-                                        <span class="name"><b>allowInput</b><a href="#allowInput"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>allowInput</b>
+                                            <a href="#allowInput">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>allowInput:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>allowInput:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -595,7 +396,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -622,12 +423,16 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="altFormat"></a>
-                                        <span class="name"><b>altFormat</b><a href="#altFormat"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>altFormat</b>
+                                            <a href="#altFormat">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>altFormat:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>altFormat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -635,7 +440,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -662,12 +467,16 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="altInput"></a>
-                                        <span class="name"><b>altInput</b><a href="#altInput"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>altInput</b>
+                                            <a href="#altInput">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>altInput:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>altInput:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -675,7 +484,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -691,8 +500,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Show the user a readable date (as per altFormat), but return something totally different to the server.</p>
-</div>
+                                    <div class="io-description"><div><pre class="line-numbers"><code class="language-none">Show the user a readable date (as per altFormat), but return something totally different to the server.</code></pre></div></div>
                                 </td>
                             </tr>
                         </tbody>
@@ -702,12 +510,16 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="altInputClass"></a>
-                                        <span class="name"><b>altInputClass</b><a href="#altInputClass"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>altInputClass</b>
+                                            <a href="#altInputClass">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>altInputClass:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>altInputClass:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -715,7 +527,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -743,7 +555,11 @@ Note that <code>altInput</code> already inherits classes from the original input
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="appendTo"></a>
-                                        <span class="name"><b>appendTo</b><a href="#appendTo"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>appendTo</b>
+                                            <a href="#appendTo">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -783,12 +599,16 @@ Note that <code>altInput</code> already inherits classes from the original input
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="ariaDateFormat"></a>
-                                        <span class="name"><b>ariaDateFormat</b><a href="#ariaDateFormat"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>ariaDateFormat</b>
+                                            <a href="#ariaDateFormat">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>ariaDateFormat:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>ariaDateFormat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -796,7 +616,7 @@ Note that <code>altInput</code> already inherits classes from the original input
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -823,12 +643,16 @@ Note that <code>altInput</code> already inherits classes from the original input
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="clickOpens"></a>
-                                        <span class="name"><b>clickOpens</b><a href="#clickOpens"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>clickOpens</b>
+                                            <a href="#clickOpens">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>clickOpens:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>clickOpens:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -836,7 +660,7 @@ Note that <code>altInput</code> already inherits classes from the original input
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -864,12 +688,16 @@ You could disable this if you wish to open the calendar manually <code>with.open
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="convertModelValue"></a>
-                                        <span class="name"><b>convertModelValue</b><a href="#convertModelValue"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>convertModelValue</b>
+                                            <a href="#convertModelValue">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>convertModelValue:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>convertModelValue:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -877,7 +705,7 @@ You could disable this if you wish to open the calendar manually <code>with.open
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -904,12 +732,16 @@ You could disable this if you wish to open the calendar manually <code>with.open
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="dateFormat"></a>
-                                        <span class="name"><b>dateFormat</b><a href="#dateFormat"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>dateFormat</b>
+                                            <a href="#dateFormat">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>dateFormat:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>dateFormat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -917,7 +749,7 @@ You could disable this if you wish to open the calendar manually <code>with.open
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -945,12 +777,16 @@ The supported characters are defined in the table below.</p>
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="defaultHour"></a>
-                                        <span class="name"><b>defaultHour</b><a href="#defaultHour"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>defaultHour</b>
+                                            <a href="#defaultHour">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>defaultHour:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>defaultHour:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -958,7 +794,7 @@ The supported characters are defined in the table below.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -985,12 +821,16 @@ The supported characters are defined in the table below.</p>
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="defaultMinute"></a>
-                                        <span class="name"><b>defaultMinute</b><a href="#defaultMinute"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>defaultMinute</b>
+                                            <a href="#defaultMinute">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>defaultMinute:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>defaultMinute:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -998,7 +838,7 @@ The supported characters are defined in the table below.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -1025,12 +865,16 @@ The supported characters are defined in the table below.</p>
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="defaultSeconds"></a>
-                                        <span class="name"><b>defaultSeconds</b><a href="#defaultSeconds"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>defaultSeconds</b>
+                                            <a href="#defaultSeconds">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>defaultSeconds:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>defaultSeconds:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1038,7 +882,7 @@ The supported characters are defined in the table below.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -1065,12 +909,16 @@ The supported characters are defined in the table below.</p>
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="disable"></a>
-                                        <span class="name"><b>disable</b><a href="#disable"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>disable</b>
+                                            <a href="#disable">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>disable:     <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
+                                        <code>disable:         <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1078,7 +926,7 @@ The supported characters are defined in the table below.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
+                                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
 
                                         </td>
                                     </tr>
@@ -1105,12 +953,16 @@ The supported characters are defined in the table below.</p>
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="disableMobile"></a>
-                                        <span class="name"><b>disableMobile</b><a href="#disableMobile"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>disableMobile</b>
+                                            <a href="#disableMobile">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>disableMobile:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>disableMobile:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1118,7 +970,7 @@ The supported characters are defined in the table below.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -1146,12 +998,16 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="enable"></a>
-                                        <span class="name"><b>enable</b><a href="#enable"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>enable</b>
+                                            <a href="#enable">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>enable:     <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
+                                        <code>enable:         <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1159,7 +1015,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
+                                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#DisableEnableDate" target="_self" >DisableEnableDate[]</a></code>
 
                                         </td>
                                     </tr>
@@ -1186,12 +1042,16 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="enableSeconds"></a>
-                                        <span class="name"><b>enableSeconds</b><a href="#enableSeconds"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>enableSeconds</b>
+                                            <a href="#enableSeconds">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>enableSeconds:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>enableSeconds:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1199,7 +1059,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -1226,12 +1086,16 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="enableTime"></a>
-                                        <span class="name"><b>enableTime</b><a href="#enableTime"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>enableTime</b>
+                                            <a href="#enableTime">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>enableTime:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>enableTime:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1239,7 +1103,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -1266,12 +1130,16 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="formatDate"></a>
-                                        <span class="name"><b>formatDate</b><a href="#formatDate"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>formatDate</b>
+                                            <a href="#formatDate">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>formatDate:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                        <code>formatDate:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1279,7 +1147,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 
                                         </td>
                                     </tr>
@@ -1306,12 +1174,16 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="getWeek"></a>
-                                        <span class="name"><b>getWeek</b><a href="#getWeek"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>getWeek</b>
+                                            <a href="#getWeek">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>getWeek:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                        <code>getWeek:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1319,7 +1191,7 @@ By default, Flatpickr utilizes native datetime widgets unless certain options (e
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 
                                         </td>
                                     </tr>
@@ -1347,12 +1219,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="hourIncrement"></a>
-                                        <span class="name"><b>hourIncrement</b><a href="#hourIncrement"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>hourIncrement</b>
+                                            <a href="#hourIncrement">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>hourIncrement:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>hourIncrement:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1360,7 +1236,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -1387,12 +1263,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="inline"></a>
-                                        <span class="name"><b>inline</b><a href="#inline"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>inline</b>
+                                            <a href="#inline">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>inline:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>inline:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1400,7 +1280,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -1427,7 +1307,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="locale"></a>
-                                        <span class="name"><b>locale</b><a href="#locale"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>locale</b>
+                                            <a href="#locale">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1467,7 +1351,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="maxDate"></a>
-                                        <span class="name"><b>maxDate</b><a href="#maxDate"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>maxDate</b>
+                                            <a href="#maxDate">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1507,7 +1395,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="minDate"></a>
-                                        <span class="name"><b>minDate</b><a href="#minDate"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>minDate</b>
+                                            <a href="#minDate">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1547,12 +1439,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="minuteIncrement"></a>
-                                        <span class="name"><b>minuteIncrement</b><a href="#minuteIncrement"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>minuteIncrement</b>
+                                            <a href="#minuteIncrement">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>minuteIncrement:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>minuteIncrement:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1560,7 +1456,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -1587,7 +1483,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="mode"></a>
-                                        <span class="name"><b>mode</b><a href="#mode"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>mode</b>
+                                            <a href="#mode">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1627,7 +1527,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="monthSelectorType"></a>
-                                        <span class="name"><b>monthSelectorType</b><a href="#monthSelectorType"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>monthSelectorType</b>
+                                            <a href="#monthSelectorType">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1667,12 +1571,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="nextArrow"></a>
-                                        <span class="name"><b>nextArrow</b><a href="#nextArrow"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>nextArrow</b>
+                                            <a href="#nextArrow">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>nextArrow:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>nextArrow:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1680,7 +1588,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -1707,12 +1615,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="noCalendar"></a>
-                                        <span class="name"><b>noCalendar</b><a href="#noCalendar"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>noCalendar</b>
+                                            <a href="#noCalendar">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>noCalendar:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>noCalendar:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1720,7 +1632,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -1747,7 +1659,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="now"></a>
-                                        <span class="name"><b>now</b><a href="#now"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>now</b>
+                                            <a href="#now">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1787,12 +1703,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="parseDate"></a>
-                                        <span class="name"><b>parseDate</b><a href="#parseDate"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>parseDate</b>
+                                            <a href="#parseDate">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>parseDate:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                        <code>parseDate:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1800,7 +1720,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
 
                                         </td>
                                     </tr>
@@ -1827,7 +1747,11 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="plugins"></a>
-                                        <span class="name"><b>plugins</b><a href="#plugins"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>plugins</b>
+                                            <a href="#plugins">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1867,12 +1791,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="prevArrow"></a>
-                                        <span class="name"><b>prevArrow</b><a href="#prevArrow"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>prevArrow</b>
+                                            <a href="#prevArrow">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>prevArrow:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>prevArrow:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1880,7 +1808,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -1907,12 +1835,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="shorthandCurrentMonth"></a>
-                                        <span class="name"><b>shorthandCurrentMonth</b><a href="#shorthandCurrentMonth"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>shorthandCurrentMonth</b>
+                                            <a href="#shorthandCurrentMonth">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>shorthandCurrentMonth:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>shorthandCurrentMonth:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1920,7 +1852,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -1947,12 +1879,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="showMonths"></a>
-                                        <span class="name"><b>showMonths</b><a href="#showMonths"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>showMonths</b>
+                                            <a href="#showMonths">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>showMonths:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>showMonths:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -1960,7 +1896,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -1987,12 +1923,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="static"></a>
-                                        <span class="name"><b>static</b><a href="#static"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>static</b>
+                                            <a href="#static">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>static:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>static:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -2000,7 +1940,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -2027,12 +1967,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="time24hr"></a>
-                                        <span class="name"><b>time24hr</b><a href="#time24hr"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>time24hr</b>
+                                            <a href="#time24hr">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>time24hr:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>time24hr:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -2040,7 +1984,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -2067,12 +2011,16 @@ It takes in a date as a parameter and should return a corresponding string that 
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="utc"></a>
-                                        <span class="name"><b>utc</b><a href="#utc"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>utc</b>
+                                            <a href="#utc">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>utc:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>utc:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -2080,7 +2028,7 @@ It takes in a date as a parameter and should return a corresponding string that 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -2108,12 +2056,16 @@ It&#39;s recommended that date strings contain the timezone, but not necessary.<
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="weekNumbers"></a>
-                                        <span class="name"><b>weekNumbers</b><a href="#weekNumbers"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>weekNumbers</b>
+                                            <a href="#weekNumbers">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>weekNumbers:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>weekNumbers:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -2121,7 +2073,7 @@ It&#39;s recommended that date strings contain the timezone, but not necessary.<
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -2148,12 +2100,16 @@ It&#39;s recommended that date strings contain the timezone, but not necessary.<
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="wrap"></a>
-                                        <span class="name"><b>wrap</b><a href="#wrap"><span class="fa fa-link"></span></a></span>
+                                        <span class="name "><b>wrap</b>
+                                            <a href="#wrap">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>wrap:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>wrap:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -2161,7 +2117,7 @@ It&#39;s recommended that date strings contain the timezone, but not necessary.<
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -2195,8 +2151,6 @@ export type DisableEnableDate &#x3D;
   | Date
   | { from: Date | string; to: Date | string }
   | ((date: Date) &#x3D;&gt; boolean);
-
-// tslint:disable no-inferrable-types
 
 export interface FlatpickrDefaultsInterface {
   /**
@@ -2427,7 +2381,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * Instead of &#x60;body&#x60;, appends the calendar to the specified node instead.
    */
-  appendTo: HTMLElement &#x3D; undefined;
+  appendTo: HTMLElement | undefined &#x3D; undefined;
 
   /**
    * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
@@ -2505,12 +2459,12 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * The maximum date that a user can pick to (inclusive).
    */
-  maxDate: string | Date &#x3D; undefined;
+  maxDate: string | Date | undefined &#x3D; undefined;
 
   /**
    * The minimum date that a user can start picking from (inclusive).
    */
-  minDate: string | Date &#x3D; undefined;
+  minDate: string | Date | undefined &#x3D; undefined;
 
   /**
    * Adjusts the step for the minute input (incl. scrolling).
@@ -2617,6 +2571,9 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
 
 
 
+
+
+
                    </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
@@ -2631,6 +2588,28 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'FlatpickrDefaultsInterface.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
        <script src="../js/libs/bootstrap-native.js"></script>
 
        <script src="../js/libs/es6-shim.min.js"></script>
@@ -2640,21 +2619,16 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
 
        <script src="../js/compodoc.js"></script>
 
-        <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'FlatpickrDefaultsInterface.html';
-        </script>
-
-       <script src="../js/search/search.js"></script>
-       <script src="../js/search/lunr.min.js"></script>
-       <script src="../js/search/search-lunr.js"></script>
-
        <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
        <script src="../js/libs/prism.js"></script>
        <script src="../js/sourceCode.js"></script>
-       <script src="../js/search/search_index.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
 
 
     </body>
