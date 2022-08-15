@@ -1,13 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "src/**/*.ts"
+    "projects/angularx-flatpickr/src/lib/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "demo",
-    "test",
-    "karma.conf.ts",
-    "webpack.config.ts"
   ]
 }

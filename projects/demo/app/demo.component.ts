@@ -1,5 +1,5 @@
-/* tslint:disable: max-inline-declarations use-view-encapsulation */
 import { Component, ViewEncapsulation } from '@angular/core';
+
 @Component({
   selector: 'mwl-demo-app',
   template: `
@@ -157,5 +157,5 @@ export class DemoComponent {
     to: (new Date() as any)['fp_incr'](10)
   };
   inlineDatePicker: Date = new Date();
-  timePicker: Date = null;
+  timePicker: Date | null = null;
 }
