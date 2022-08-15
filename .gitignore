@@ -36,6 +36,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+projects/angularx-flatpickr/package.json
 
 # System files
 .DS_Store
