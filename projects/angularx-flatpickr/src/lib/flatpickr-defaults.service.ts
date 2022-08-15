@@ -6,8 +6,6 @@ export type DisableEnableDate =
   | { from: Date | string; to: Date | string }
   | ((date: Date) => boolean);
 
-// tslint:disable no-inferrable-types
-
 export interface FlatpickrDefaultsInterface {
   /**
    * Exactly the same as date format, but for the altInput field.
@@ -237,7 +235,7 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * Instead of `body`, appends the calendar to the specified node instead.
    */
-  appendTo: HTMLElement = undefined;
+  appendTo: HTMLElement | undefined = undefined;
 
   /**
    * Defines how the date will be formatted in the aria-label for calendar days, using the same tokens as dateFormat. If you change this, you should choose a value that will make sense if a screen reader reads it out loud.
@@ -315,12 +313,12 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
   /**
    * The maximum date that a user can pick to (inclusive).
    */
-  maxDate: string | Date = undefined;
+  maxDate: string | Date | undefined = undefined;
 
   /**
    * The minimum date that a user can start picking from (inclusive).
    */
-  minDate: string | Date = undefined;
+  minDate: string | Date | undefined = undefined;
 
   /**
    * Adjusts the step for the minute input (incl. scrolling).

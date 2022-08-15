@@ -10,12 +10,12 @@ import {
   OnDestroy,
   forwardRef,
   HostListener,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import {
   FlatpickrDefaults,
   DisableEnableDate,
-  FlatpickrDefaultsInterface
+  FlatpickrDefaultsInterface,
 } from './flatpickr-defaults.service';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import flatpickr from 'flatpickr';
@@ -33,21 +33,18 @@ export interface FlatPickrDayCreateOutputOptions
 
 export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => FlatpickrDirective), //tslint:disable-line
-  multi: true
+  useExisting: forwardRef(() => FlatpickrDirective),
+  multi: true,
 };
 
 @Directive({
   selector: '[mwlFlatpickr]',
   providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR],
-  host: {
-    // tslint:disable-line use-host-property-decorator
-    '(blur)': 'onTouchedFn()'
-  },
-  exportAs: 'mwlFlatpickr'
+  exportAs: 'mwlFlatpickr',
 })
 export class FlatpickrDirective
-  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor {
+  implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor
+{
   /**
    * Object-options that can be user for multiple instances of Flatpickr.
    * Option from this object is applied only if specific option is not specified.
@@ -284,9 +281,7 @@ export class FlatpickrDirective
    * Gets triggered when the input value is updated with a new date string.
    */
   @Output()
-  flatpickrValueUpdate: EventEmitter<
-    FlatPickrOutputOptions
-  > = new EventEmitter();
+  flatpickrValueUpdate: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Gets triggered when the calendar is opened.
@@ -304,25 +299,19 @@ export class FlatpickrDirective
    * Gets triggered when the month is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrMonthChange: EventEmitter<
-    FlatPickrOutputOptions
-  > = new EventEmitter();
+  flatpickrMonthChange: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Gets triggered when the year is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrYearChange: EventEmitter<
-    FlatPickrOutputOptions
-  > = new EventEmitter();
+  flatpickrYearChange: EventEmitter<FlatPickrOutputOptions> = new EventEmitter();
 
   /**
    * Take full control of every date cell with this output
    */
   @Output()
-  flatpickrDayCreate: EventEmitter<
-    FlatPickrDayCreateOutputOptions
-  > = new EventEmitter();
+  flatpickrDayCreate: EventEmitter<FlatPickrDayCreateOutputOptions> = new EventEmitter();
 
   /**
    * The flatpickr instance where you can call methods like toggle(), open(), close() etc
@@ -332,8 +321,9 @@ export class FlatpickrDirective
   private isDisabled = false;
   private initialValue: any;
 
-  onChangeFn: (value: any) => void = () => {}; // tslint:disable-line
+  onChangeFn: (value: any) => void = () => {};
 
+  @HostListener('blur')
   onTouchedFn = () => {};
 
   constructor(
@@ -426,14 +416,14 @@ export class FlatpickrDirective
           selectedDates,
           dateString,
           instance,
-          dayElement
+          dayElement,
         });
-      }
+      },
     };
 
-    Object.keys(options).forEach(key => {
+    Object.keys(options).forEach((key) => {
       if (typeof options[key] === 'undefined') {
-        if (typeof this.options[key] !== 'undefined') {
+        if (typeof (this.options as any)[key] !== 'undefined') {
           options[key] = (this.options as any)[key];
         } else {
           options[key] = (this.defaults as any)[key];
@@ -460,7 +450,7 @@ export class FlatpickrDirective
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.instance) {
-      Object.keys(changes).forEach(inputKey => {
+      Object.keys(changes).forEach((inputKey) => {
         this.instance.set(inputKey as any, (this as any)[inputKey]);
       });
     }
@@ -511,9 +501,9 @@ export class FlatpickrDirective
     if (this.convertModelValue && typeof value === 'string') {
       switch (this.mode) {
         case 'multiple':
-          const dates: Date[] = value
+          const dates: Array<Date | undefined> = value
             .split('; ')
-            .map(str =>
+            .map((str) =>
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
@@ -526,7 +516,7 @@ export class FlatpickrDirective
         case 'range':
           const [from, to] = value
             .split(this.instance.l10n.rangeSeparator)
-            .map(str =>
+            .map((str) =>
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,

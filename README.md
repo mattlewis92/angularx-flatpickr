@@ -1,10 +1,10 @@
 # angularx flatpickr
 
 [![Sponsorship](https://img.shields.io/badge/funding-github-%23EA4AAA)](https://github.com/users/mattlewis92/sponsorship)
-[![Build Status](https://travis-ci.org/mattlewis92/angularx-flatpickr.svg?branch=master)](https://travis-ci.org/mattlewis92/angularx-flatpickr)
-[![codecov](https://codecov.io/gh/mattlewis92/angularx-flatpickr/branch/master/graph/badge.svg)](https://codecov.io/gh/mattlewis92/angularx-flatpickr)
+[![Build Status](https://github.com/mattlewis92/angularx-flatpickr/actions/workflows/ci.yml/badge.svg)](https://github.com/mattlewis92/angularx-flatpickr/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/mattlewis92/angularx-flatpickr/branch/main/graph/badge.svg)](https://codecov.io/gh/mattlewis92/angularx-flatpickr)
 [![npm version](https://badge.fury.io/js/angularx-flatpickr.svg)](http://badge.fury.io/js/angularx-flatpickr)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mattlewis92_.svg)](https://twitter.com/mattlewis92_)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mattlewis92/angularx-flatpickr/main/LICENSE)
 
 ## Demo
 
@@ -12,34 +12,35 @@ https://mattlewis92.github.io/angularx-flatpickr/
 
 ## Table of contents
 
-* [About](#about)
-* [Installation](#installation)
-* [Documentation](#documentation)
-* [Development](#development)
-* [License](#license)
+- [About](#about)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Development](#development)
+- [License](#license)
 
 ## About
 
-An angular 5.0+ wrapper for flatpickr
+An angular 14.0+ wrapper for flatpickr
 
 ## Installation
 
 Install through npm:
 
 ```
-npm install --save flatpickr angularx-flatpickr
+npm install flatpickr angularx-flatpickr
 ```
+
+Next, in your `angular.json` add `"node_modules/flatpickr/dist/flatpickr.css"` to the `styles` array of your application
 
 Then include in your apps module:
 
 ```typescript
-import 'flatpickr/dist/flatpickr.css'; // you may need to adjust the css import depending on your build tool
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
-  imports: [FormsModule, FlatpickrModule.forRoot()]
+  imports: [FormsModule, FlatpickrModule.forRoot()],
 })
 export class MyModule {}
 ```
@@ -51,18 +52,19 @@ import { Component } from '@angular/core';
 
 @Component({
   template: `
-    <input 
-      type="text" 
-      mwlFlatpickr 
-      [(ngModel)]="selectedDate" 
-      [altInput]="true" 
-      [convertModelValue]="true">
-  `
+    <input
+      type="text"
+      mwlFlatpickr
+      [(ngModel)]="selectedDate"
+      [altInput]="true"
+      [convertModelValue]="true"
+    />
+  `,
 })
 export class MyComponent {}
 ```
 
-You may also find it useful to view the [demo source](https://github.com/mattlewis92/angularx-flatpickr/blob/master/demo/demo.component.ts).
+You may also find it useful to view the [demo source](https://github.com/mattlewis92/angularx-flatpickr/blob/main/projects/demo/app/demo.component.ts).
 
 ## Documentation
 
@@ -73,21 +75,22 @@ https://mattlewis92.github.io/angularx-flatpickr/docs/
 
 ### Prepare your environment
 
-* Install [Node.js](http://nodejs.org/) and npm
-* Install local dev dependencies: `npm install` while current directory is this repo
+- Install [Node.js (>=14.19.0 or >=16.9.0)](http://nodejs.org/)
+- Install pnpm: `corepack enable`
+- Install local dev dependencies: `pnpm install` while current directory is this repo
 
 ### Development server
 
-Run `npm start` to start a development server on port 8000 with auto reload + tests.
+Run `pnpm start` to start a development server on port 8000 with auto reload + tests.
 
 ### Testing
 
-Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
+Run `pnpm test` to run tests once or `pnpm test:watch` to continually run tests.
 
 ### Release
 
 ```bash
-npm run release
+pnpm run release
 ```
 
 ## License

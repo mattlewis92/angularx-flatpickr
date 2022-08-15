@@ -2,3 +2,5 @@
 *.js
 *.css
 CHANGELOG.md
+docs
+pnpm-lock.yaml
