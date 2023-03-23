@@ -207,6 +207,11 @@ export interface FlatpickrDefaultsInterface {
    * How the month should be displayed in the header of the calendar.
    */
   monthSelectorType?: 'static' | 'dropdown';
+
+  /**
+   * Array of HTML elements that should not close the picker on click.
+   */
+  ignoredFocusElements?: HTMLElement[];
 }
 
 @Injectable()
@@ -416,4 +421,9 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * How the month should be displayed in the header of the calendar.
    */
   monthSelectorType: 'static' | 'dropdown' = 'static';
+
+  /**
+   * Array of HTML elements that should not close the picker on click.
+   */
+  ignoredFocusElements: HTMLElement[] = [];
 }
