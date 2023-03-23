@@ -412,6 +412,11 @@ export class FlatpickrDirective
   @Input() monthSelectorType: &#x27;static&#x27; | &#x27;dropdown&#x27;;
 
   /**
+   * Array of HTML elements that should not close the picker on click.
+   */
+  @Input() ignoredFocusElements: HTMLElement[] &#x3D; [];
+
+  /**
    * Gets triggered once the calendar is in a ready state
    */
   @Output()
@@ -427,7 +432,8 @@ export class FlatpickrDirective
    * Gets triggered when the input value is updated with a new date string.
    */
   @Output()
-  flatpickrValueUpdate: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+  flatpickrValueUpdate: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D;
+    new EventEmitter();
 
   /**
    * Gets triggered when the calendar is opened.
@@ -445,19 +451,22 @@ export class FlatpickrDirective
    * Gets triggered when the month is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrMonthChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+  flatpickrMonthChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D;
+    new EventEmitter();
 
   /**
    * Gets triggered when the year is changed, either by the user or programmatically.
    */
   @Output()
-  flatpickrYearChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D; new EventEmitter();
+  flatpickrYearChange: EventEmitter&lt;FlatPickrOutputOptions&gt; &#x3D;
+    new EventEmitter();
 
   /**
    * Take full control of every date cell with this output
    */
   @Output()
-  flatpickrDayCreate: EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt; &#x3D; new EventEmitter();
+  flatpickrDayCreate: EventEmitter&lt;FlatPickrDayCreateOutputOptions&gt; &#x3D;
+    new EventEmitter();
 
   /**
    * The flatpickr instance where you can call methods like toggle(), open(), close() etc
@@ -519,6 +528,7 @@ export class FlatpickrDirective
       wrap: this.wrap,
       plugins: this.plugins,
       locale: this.locale,
+      ignoredFocusElements: this.ignoredFocusElements,
       onChange: (selectedDates: Date[], dateString: string, instance: any) &#x3D;&gt; {
         this.flatpickrChange.emit({ selectedDates, dateString, instance });
       },
@@ -576,6 +586,8 @@ export class FlatpickrDirective
         }
       }
     });
+
+    // @ts-ignore
     options.time_24hr &#x3D; options.time24hr;
 
     // workaround bug in flatpickr 4.6 where it doesn&#x27;t copy the classes across
