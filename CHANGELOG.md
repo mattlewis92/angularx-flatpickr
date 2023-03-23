@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.0.0...v7.1.0) (2023-03-23)
+
+
+### Features
+
+* add ignoredFocusElements input ([#50](https://github.com/mattlewis92/angularx-flatpickr/issues/50)) ([da15442](https://github.com/mattlewis92/angularx-flatpickr/commit/da1544235c06037e6cffdd7e2178c6f18debc8bf))
+
 ## [7.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v6.6.0...v7.0.0) (2022-08-15)
 
 
