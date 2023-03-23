@@ -59,6 +59,7 @@
     "@compodoc/compodoc": "^1.1.19",
     "@types/chai": "^4.3.3",
     "@types/mocha": "^9.1.1",
+    "@types/sinon": "^10.0.13",
     "@types/sinon-chai": "^3.2.8",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
@@ -99,5 +100,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "packageManager": "pnpm@7.30.1"
 }
