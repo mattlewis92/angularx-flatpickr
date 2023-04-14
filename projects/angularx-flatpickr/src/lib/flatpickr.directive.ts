@@ -375,6 +375,8 @@ export class FlatpickrDirective
       inline: this.inline,
       maxDate: this.maxDate,
       minDate: this.minDate,
+      maxTime: this.maxTime,
+      minTime: this.minTime,
       minuteIncrement: this.minuteIncrement,
       mode: this.mode,
       nextArrow: this.nextArrow,
