@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.2.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.1.0...v7.2.0) (2023-04-14)
+
+
+### Features
+
+* add minTime and maxTime inputs ([#51](https://github.com/mattlewis92/angularx-flatpickr/issues/51)) ([0c92a9b](https://github.com/mattlewis92/angularx-flatpickr/commit/0c92a9b869490892a9fd763a6591a826f485a9b5))
+
 ## [7.1.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.0.0...v7.1.0) (2023-03-23)
 
 
