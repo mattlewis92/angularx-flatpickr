@@ -112,6 +112,16 @@ export interface FlatpickrDefaultsInterface {
   minDate?: string | Date;
 
   /**
+   * The maximum time that a user can pick to (inclusive).
+   */
+  maxTime?: string;
+
+  /**
+   * The minimum time that a user can start picking from (inclusive).
+   */
+  minTime?: string;
+
+  /**
    * Adjusts the step for the minute input (incl. scrolling).
    */
   minuteIncrement?: number;
@@ -324,6 +334,16 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * The minimum date that a user can start picking from (inclusive).
    */
   minDate: string | Date | undefined = undefined;
+
+  /**
+   * The maximum time that a user can pick to (inclusive).
+   */
+  maxTime: string | undefined = undefined;
+
+  /**
+   * The minimum time that a user can start picking from (inclusive).
+   */
+  minTime: string | undefined = undefined;
 
   /**
    * Adjusts the step for the minute input (incl. scrolling).
