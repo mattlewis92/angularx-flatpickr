@@ -29,6 +29,11 @@ export interface FlatpickrDefaultsInterface {
   allowInput?: boolean;
 
   /**
+   * Allows the preloading of an invalid date. When disabled, the field will be cleared if the provided date is invalid
+   */
+  allowInvalidPreload?: boolean;
+
+  /**
    * Instead of `body`, appends the calendar to the specified node instead.
    */
   appendTo?: HTMLElement;
@@ -246,6 +251,11 @@ export class FlatpickrDefaults implements FlatpickrDefaultsInterface {
    * Allows the user to enter a date directly input the input field. By default, direct entry is disabled.
    */
   allowInput: boolean = false;
+
+  /**
+   * Allows the preloading of an invalid date. When disabled, the field will be cleared if the provided date is invalid
+   */
+  allowInvalidPreload: boolean = false;
 
   /**
    * Instead of `body`, appends the calendar to the specified node instead.

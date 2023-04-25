@@ -87,6 +87,12 @@ export class FlatpickrDirective
    */
   @Input() allowInput: boolean;
 
+
+  /**
+   * Allows the preloading of an invalid date. When disabled, the field will be cleared if the provided date is invalid
+   */
+  @Input() allowInvalidPreload: boolean;
+
   /**
    * Instead of `body`, appends the calendar to the specified node instead.
    */
@@ -357,6 +363,7 @@ export class FlatpickrDirective
       altInput: this.altInput,
       altInputClass: this.altInputClass,
       allowInput: this.allowInput,
+      allowInvalidPreload: this.allowInvalidPreload,
       appendTo: this.appendTo,
       ariaDateFormat: this.ariaDateFormat,
       clickOpens: this.clickOpens,
