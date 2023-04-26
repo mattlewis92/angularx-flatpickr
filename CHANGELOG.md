@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.3.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.2.0...v7.3.0) (2023-04-26)
+
+
+### Features
+
+* add allowInvalidPreload input ([#52](https://github.com/mattlewis92/angularx-flatpickr/issues/52)) ([33d5d24](https://github.com/mattlewis92/angularx-flatpickr/commit/33d5d24dbac221a924779e1963012e9bf4aaf3c3))
+
 ## [7.2.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.1.0...v7.2.0) (2023-04-14)
 
 
