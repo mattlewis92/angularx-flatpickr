@@ -1,7 +1,7 @@
 {
   "name": "angularx-flatpickr",
-  "version": "8.0.0",
-  "description": "An angular 14.0+ wrapper for flatpickr",
+  "version": "7.3.0",
+  "description": "An angular 15.0+ wrapper for flatpickr",
   "scripts": {
     "start": "concurrently --raw \"ng serve --open\" \"pnpm test:watch\"",
     "build:demo": "ng build --configuration production",
@@ -92,6 +92,8 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
+    "@angular/core": ">=15.0.0",
+    "@angular/forms": ">=15.0.0",
     "flatpickr": "^4.5.0"
   },
   "commitlint": {
