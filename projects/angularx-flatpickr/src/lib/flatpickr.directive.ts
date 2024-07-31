@@ -10,7 +10,7 @@ import {
   OnDestroy,
   forwardRef,
   HostListener,
-  Renderer2,
+  Renderer2, PLATFORM_ID, Inject
 } from '@angular/core';
 import {
   FlatpickrDefaults,
@@ -19,6 +19,7 @@ import {
 } from './flatpickr-defaults.service';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import flatpickr from 'flatpickr';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -345,6 +346,7 @@ export class FlatpickrDirective
 
   private isDisabled = false;
   private initialValue: any;
+  private isBrowser: boolean;
 
   onChangeFn: (value: any) => void = () => {};
 
@@ -354,8 +356,11 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    private renderer: Renderer2
-  ) {}
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngAfterViewInit(): void {
     const options: any = {
@@ -472,15 +477,17 @@ export class FlatpickrDirective
       delete options.enable;
     }
 
-    this.instance = flatpickr(
-      this.elm.nativeElement,
-      options
-    ) as flatpickr.Instance;
-    this.setDisabledState(this.isDisabled);
+    if (this.isBrowser) {
+      this.instance = flatpickr(
+        this.elm.nativeElement,
+        options
+      ) as flatpickr.Instance;
+      this.setDisabledState(this.isDisabled);
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.instance) {
+    if (this.instance && this.isBrowser) {
       Object.keys(changes).forEach((inputKey) => {
         this.instance.set(inputKey as any, (this as any)[inputKey]);
       });
@@ -488,7 +495,7 @@ export class FlatpickrDirective
   }
 
   ngOnDestroy(): void {
-    if (this.instance) {
+    if (this.instance && this.isBrowser) {
       this.instance.destroy();
     }
   }
@@ -499,7 +506,7 @@ export class FlatpickrDirective
       convertedValue = [value.from, value.to];
     }
 
-    if (this.instance) {
+    if (this.instance && this.isBrowser) {
       this.instance.setDate(convertedValue);
     } else {
       // flatpickr hasn't been initialised yet, store the value for later use
