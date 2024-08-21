@@ -11,6 +11,8 @@ import {
   forwardRef,
   HostListener,
   Renderer2,
+  PLATFORM_ID,
+  Inject,
 } from '@angular/core';
 import {
   FlatpickrDefaults,
@@ -19,6 +21,7 @@ import {
 } from './flatpickr-defaults.service';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import flatpickr from 'flatpickr';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface FlatPickrOutputOptions {
   selectedDates: Date[];
@@ -86,7 +89,6 @@ export class FlatpickrDirective
    * Allows the user to enter a date directly input the input field. By default, direct entry is disabled.
    */
   @Input() allowInput: boolean;
-
 
   /**
    * Allows the preloading of an invalid date. When disabled, the field will be cleared if the provided date is invalid
@@ -354,7 +356,8 @@ export class FlatpickrDirective
   constructor(
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngAfterViewInit(): void {
@@ -472,11 +475,13 @@ export class FlatpickrDirective
       delete options.enable;
     }
 
-    this.instance = flatpickr(
-      this.elm.nativeElement,
-      options
-    ) as flatpickr.Instance;
-    this.setDisabledState(this.isDisabled);
+    if (isPlatformBrowser(this.platformId)) {
+      this.instance = flatpickr(
+        this.elm.nativeElement,
+        options
+      ) as flatpickr.Instance;
+      this.setDisabledState(this.isDisabled);
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
