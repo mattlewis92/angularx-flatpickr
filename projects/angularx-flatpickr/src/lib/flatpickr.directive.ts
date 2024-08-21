@@ -357,7 +357,7 @@ export class FlatpickrDirective
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
     private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngAfterViewInit(): void {
@@ -417,14 +417,14 @@ export class FlatpickrDirective
       onMonthChange: (
         selectedDates: Date[],
         dateString: string,
-        instance: any
+        instance: any,
       ) => {
         this.flatpickrMonthChange.emit({ selectedDates, dateString, instance });
       },
       onYearChange: (
         selectedDates: Date[],
         dateString: string,
-        instance: any
+        instance: any,
       ) => {
         this.flatpickrYearChange.emit({ selectedDates, dateString, instance });
       },
@@ -434,7 +434,7 @@ export class FlatpickrDirective
       onValueUpdate: (
         selectedDates: Date[],
         dateString: string,
-        instance: any
+        instance: any,
       ) => {
         this.flatpickrValueUpdate.emit({ selectedDates, dateString, instance });
       },
@@ -442,7 +442,7 @@ export class FlatpickrDirective
         selectedDates: Date[],
         dateString: string,
         instance: any,
-        dayElement: HTMLElement
+        dayElement: HTMLElement,
       ) => {
         this.flatpickrDayCreate.emit({
           selectedDates,
@@ -478,7 +478,7 @@ export class FlatpickrDirective
     if (isPlatformBrowser(this.platformId)) {
       this.instance = flatpickr(
         this.elm.nativeElement,
-        options
+        options,
       ) as flatpickr.Instance;
       this.setDisabledState(this.isDisabled);
     }
@@ -543,8 +543,8 @@ export class FlatpickrDirective
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
-                !this.instance.config.enableTime
-              )
+                !this.instance.config.enableTime,
+              ),
             );
           this.onChangeFn(dates);
           break;
@@ -556,8 +556,8 @@ export class FlatpickrDirective
               this.instance.parseDate(
                 str,
                 this.instance.config.dateFormat,
-                !this.instance.config.enableTime
-              )
+                !this.instance.config.enableTime,
+              ),
             );
           this.onChangeFn({ from, to });
           break;
@@ -568,8 +568,8 @@ export class FlatpickrDirective
             this.instance.parseDate(
               value,
               this.instance.config.dateFormat,
-              !this.instance.config.enableTime
-            )
+              !this.instance.config.enableTime,
+            ),
           );
       }
     } else {

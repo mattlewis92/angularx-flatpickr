@@ -51,15 +51,7 @@ Finally use in one of your apps components:
 import { Component } from '@angular/core';
 
 @Component({
-  template: `
-    <input
-      type="text"
-      mwlFlatpickr
-      [(ngModel)]="selectedDate"
-      [altInput]="true"
-      [convertModelValue]="true"
-    />
-  `,
+  template: ` <input type="text" mwlFlatpickr [(ngModel)]="selectedDate" [altInput]="true" [convertModelValue]="true" /> `,
 })
 export class MyComponent {}
 ```

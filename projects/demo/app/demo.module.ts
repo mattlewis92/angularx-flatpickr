@@ -7,6 +7,6 @@ import { FlatpickrModule } from 'angularx-flatpickr';
 @NgModule({
   declarations: [DemoComponent],
   imports: [BrowserModule, FormsModule, FlatpickrModule.forRoot()],
-  bootstrap: [DemoComponent]
+  bootstrap: [DemoComponent],
 })
 export class DemoModule {}

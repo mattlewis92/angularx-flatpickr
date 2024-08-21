@@ -15,7 +15,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 class="form-control"
                 type="text"
                 mwlFlatpickr
-                [(ngModel)]="basicDemoValue">
+                [(ngModel)]="basicDemoValue"
+              />
               NgModel value: {{ basicDemoValue }}
             </div>
           </div>
@@ -32,7 +33,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 mwlFlatpickr
                 [(ngModel)]="modelValueAsDate"
                 [altInput]="true"
-                [convertModelValue]="true">
+                [convertModelValue]="true"
+              />
               NgModel value: {{ modelValueAsDate }}
             </div>
           </div>
@@ -51,7 +53,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 [altInput]="true"
                 [convertModelValue]="true"
                 [enableTime]="true"
-                dateFormat="Y-m-dTH:i">
+                dateFormat="Y-m-dTH:i"
+              />
               NgModel value: {{ dateTimeValue }}
             </div>
           </div>
@@ -71,7 +74,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 [(ngModel)]="multiDates"
                 [altInput]="true"
                 [convertModelValue]="true"
-                mode="multiple">
+                mode="multiple"
+              />
               NgModel value: {{ multiDates }}
             </div>
           </div>
@@ -89,7 +93,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 [(ngModel)]="rangeValue"
                 [altInput]="true"
                 [convertModelValue]="true"
-                mode="range">
+                mode="range"
+              />
               NgModel value: {{ rangeValue | json }}
             </div>
           </div>
@@ -108,7 +113,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 [noCalendar]="true"
                 [enableTime]="true"
                 [dateFormat]="'H:i'"
-              >
+              />
               NgModel value: {{ timePicker }}
             </div>
           </div>
@@ -128,7 +133,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
                 [(ngModel)]="inlineDatePicker"
                 [altInput]="true"
                 [convertModelValue]="true"
-                [inline]="true">
+                [inline]="true"
+              />
               NgModel value: {{ inlineDatePicker }}
             </div>
           </div>
@@ -144,8 +150,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
       .flatpickr-calendar.arrowTop:after {
         display: none;
       }
-    `
-  ]
+    `,
+  ],
 })
 export class DemoComponent {
   basicDemoValue = '2017-01-01';
@@ -154,7 +160,7 @@ export class DemoComponent {
   multiDates: Date[] = [new Date(), (new Date() as any)['fp_incr'](10)];
   rangeValue: { from: Date; to: Date } = {
     from: new Date(),
-    to: (new Date() as any)['fp_incr'](10)
+    to: (new Date() as any)['fp_incr'](10),
   };
   inlineDatePicker: Date = new Date();
   timePicker: Date | null = null;
