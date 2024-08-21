@@ -12,10 +12,61 @@
         <link rel="stylesheet" href="./styles/dark.css">
     </head>
     <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="./" class="navbar-brand">angularx-flatpickr documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="./" class="navbar-brand">angularx-flatpickr documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
@@ -24,157 +75,170 @@
 
         <div class="container-fluid main">
            <div class="row main">
-               <div class="hidden-xs menu">
+               <div class="d-none d-md-block menu">
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="changelog">Changelog</h1>
+<h1>Changelog</h1>
 <p>All notable changes to this project will be documented in this file. See <a href="https://github.com/conventional-changelog/standard-version">standard-version</a> for commit guidelines.</p>
-<h2 id="730-2023-04-26"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.2.0...v7.3.0">7.3.0</a> (2023-04-26)</h2>
-<h3 id="features">Features</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.3.0...v8.0.0">8.0.0</a> (2024-08-21)</h2>
+<h3>⚠ BREAKING CHANGES</h3>
+<ul>
+<li>support for angular 16 has been removed. Please use this package with angular 17 or higher</li>
+<li>support for angular 15 has been removed. Please use this package with angular 16 or higher</li>
+<li>support for angular 14 has been removed. Please use this package with angular 15 or higher</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li>upgrade angular v16 (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/54">#54</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/ece59d44bc0e07f2fe4e413e955725a4b5b4c937">ece59d4</a>)</li>
+<li>upgrade angular v17 (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/55">#55</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/0ef86743567b009c1b078a4ecd798f2df693292f">0ef8674</a>)</li>
+<li>upgrade to Angular 15 (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/53">#53</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/e15af4a7342365ac27c2868162ccd9490b1a8958">e15af4a</a>)</li>
+</ul>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.2.0...v7.3.0">7.3.0</a> (2023-04-26)</h2>
+<h3>Features</h3>
 <ul>
 <li>add allowInvalidPreload input (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/52">#52</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/33d5d24dbac221a924779e1963012e9bf4aaf3c3">33d5d24</a>)</li>
 </ul>
-<h2 id="720-2023-04-14"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.1.0...v7.2.0">7.2.0</a> (2023-04-14)</h2>
-<h3 id="features-1">Features</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.1.0...v7.2.0">7.2.0</a> (2023-04-14)</h2>
+<h3>Features</h3>
 <ul>
 <li>add minTime and maxTime inputs (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/51">#51</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/0c92a9b869490892a9fd763a6591a826f485a9b5">0c92a9b</a>)</li>
 </ul>
-<h2 id="710-2023-03-23"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.0.0...v7.1.0">7.1.0</a> (2023-03-23)</h2>
-<h3 id="features-2">Features</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v7.0.0...v7.1.0">7.1.0</a> (2023-03-23)</h2>
+<h3>Features</h3>
 <ul>
 <li>add ignoredFocusElements input (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/50">#50</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/da1544235c06037e6cffdd7e2178c6f18debc8bf">da15442</a>)</li>
 </ul>
-<h2 id="700-2022-08-15"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.6.0...v7.0.0">7.0.0</a> (2022-08-15)</h2>
-<h3 id="⚠-breaking-changes">⚠ BREAKING CHANGES</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.6.0...v7.0.0">7.0.0</a> (2022-08-15)</h2>
+<h3>⚠ BREAKING CHANGES</h3>
 <ul>
 <li>angular 14 or higher is now required to use this package</li>
 </ul>
-<h3 id="build">build</h3>
+<h3>build</h3>
 <ul>
 <li>upgrade to angular 14 (<a href="https://github.com/mattlewis92/angularx-flatpickr/issues/49">#49</a>) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/bd5419fecbcb187f6643dfbf388a3732f68b7e8b">bd5419f</a>)</li>
 </ul>
 <p><a name="6.6.0"></a></p>
-<h1 id="660-2021-07-06"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.3...v6.6.0">6.6.0</a> (2021-07-06)</h1>
-<h3 id="features-3">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.3...v6.6.0">6.6.0</a> (2021-07-06)</h1>
+<h3>Features</h3>
 <ul>
 <li>expose the flatpickr instance so you can call its methods (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/7270193">7270193</a>)</li>
 </ul>
 <p><a name="6.5.3"></a></p>
-<h2 id="653-2021-07-05"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.2...v6.5.3">6.5.3</a> (2021-07-05)</h2>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.2...v6.5.3">6.5.3</a> (2021-07-05)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>fix being able to select dates (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/fe324c8">fe324c8</a>)</li>
 </ul>
 <p><a name="6.5.2"></a></p>
-<h2 id="652-2021-02-02"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.1...v6.5.2">6.5.2</a> (2021-02-02)</h2>
-<h3 id="bug-fixes-1">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.1...v6.5.2">6.5.2</a> (2021-02-02)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>export FlatpickrDirective (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/1ca2abf">1ca2abf</a>)</li>
 </ul>
 <p><a name="6.5.1"></a></p>
-<h2 id="651-2020-09-18"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.0...v6.5.1">6.5.1</a> (2020-09-18)</h2>
-<h3 id="bug-fixes-2">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.5.0...v6.5.1">6.5.1</a> (2020-09-18)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>handle directive being destroyed before the view is created   (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/0fe12a3">0fe12a3</a>)</li>
 </ul>
 <p><a name="6.5.0"></a></p>
-<h1 id="650-2020-09-12"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.4.0...v6.5.0">6.5.0</a> (2020-09-12)</h1>
-<h3 id="features-4">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.4.0...v6.5.0">6.5.0</a> (2020-09-12)</h1>
+<h3>Features</h3>
 <ul>
 <li>add monthSelectorType option (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/e12ee40">e12ee40</a>)</li>
 </ul>
 <p><a name="6.4.0"></a></p>
-<h1 id="640-2020-08-21"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.1...v6.4.0">6.4.0</a> (2020-08-21)</h1>
-<h3 id="features-5">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.1...v6.4.0">6.4.0</a> (2020-08-21)</h1>
+<h3>Features</h3>
 <ul>
 <li>add common options attribute (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/7731a7b">7731a7b</a>)</li>
 </ul>
 <p><a name="6.3.1"></a></p>
-<h2 id="631-2020-03-01"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.0...v6.3.1">6.3.1</a> (2020-03-01)</h2>
-<h3 id="bug-fixes-3">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.3.0...v6.3.1">6.3.1</a> (2020-03-01)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>workaround bug in flatpickr where the alt input class wouldn&#39;t be set (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/519caf3">519caf3</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/40">#40</a></li>
 </ul>
 <p><a name="6.3.0"></a></p>
-<h1 id="630-2020-02-15"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.2.0...v6.3.0">6.3.0</a> (2020-02-15)</h1>
-<h3 id="features-6">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.2.0...v6.3.0">6.3.0</a> (2020-02-15)</h1>
+<h3>Features</h3>
 <ul>
 <li>add defaultSeconds option (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/74c6ef6">74c6ef6</a>)</li>
 </ul>
 <p><a name="6.2.0"></a></p>
-<h1 id="620-2019-12-30"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.1...v6.2.0">6.2.0</a> (2019-12-30)</h1>
-<h3 id="features-7">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.1...v6.2.0">6.2.0</a> (2019-12-30)</h1>
+<h3>Features</h3>
 <ul>
 <li>add showMonths option (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/2e64c2d">2e64c2d</a>)</li>
 </ul>
 <p><a name="6.1.1"></a></p>
-<h2 id="611-2019-09-17"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.0...v6.1.1">6.1.1</a> (2019-09-17)</h2>
-<h3 id="bug-fixes-4">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.1.0...v6.1.1">6.1.1</a> (2019-09-17)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>set default locale (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/2f35353">2f35353</a>)</li>
 </ul>
 <p><a name="6.1.0"></a></p>
-<h1 id="610-2018-09-18"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.0.0...v6.1.0">6.1.0</a> (2018-09-18)</h1>
-<h3 id="features-8">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v6.0.0...v6.1.0">6.1.0</a> (2018-09-18)</h1>
+<h3>Features</h3>
 <ul>
 <li>support for an alternate &#39;now&#39; date (e.g. non-localtime for different TZ) (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/d4c3866">d4c3866</a>)</li>
 </ul>
 <p><a name="6.0.0"></a></p>
-<h1 id="600-2018-07-02"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.2...v6.0.0">6.0.0</a> (2018-07-02)</h1>
-<h3 id="features-9">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.2...v6.0.0">6.0.0</a> (2018-07-02)</h1>
+<h3>Features</h3>
 <ul>
 <li>update flatpickr to latest version (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/c407b3e">c407b3e</a>)</li>
 </ul>
-<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<h3>BREAKING CHANGES</h3>
 <ul>
 <li><code>flatpickrFactory</code> and <code>FLATPICKR</code> injection token are no longer needed and were removed. To migrate just remove the first argument you pass to <code>FlatpickrModule.forRoot</code></li>
 </ul>
 <p>A minimum version of flatpickr 4.5.0 or higher is now required to use this library</p>
 <p><a name="5.0.2"></a></p>
-<h2 id="502-2018-06-20"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2">5.0.2</a> (2018-06-20)</h2>
-<h3 id="bug-fixes-5">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.1...v5.0.2">5.0.2</a> (2018-06-20)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>parse date in same way as flatpickr does it (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/9e38827">9e38827</a>)</li>
 <li><strong>directive:</strong> fix setDisabledState behaviour (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/eac1055">eac1055</a>)</li>
 </ul>
 <p><a name="5.0.1"></a></p>
-<h2 id="501-2018-05-16"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.0...v5.0.1">5.0.1</a> (2018-05-16)</h2>
-<h3 id="bug-fixes-6">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v5.0.0...v5.0.1">5.0.1</a> (2018-05-16)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>mark the form control when touched (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/d3c783e">d3c783e</a>)</li>
 <li>mark the input as disabled when used with reactive forms (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/2c1122c">2c1122c</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/15">#15</a></li>
 </ul>
 <p><a name="5.0.0"></a></p>
-<h1 id="500-2017-12-24"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.1...v5.0.0">5.0.0</a> (2017-12-24)</h1>
-<h3 id="features-10">Features</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.1...v5.0.0">5.0.0</a> (2017-12-24)</h1>
+<h3>Features</h3>
 <ul>
 <li>upgrade to angular 5 (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/d764610">d764610</a>)</li>
 </ul>
-<h3 id="breaking-changes-1">BREAKING CHANGES</h3>
+<h3>BREAKING CHANGES</h3>
 <ul>
 <li>Angular 5 or higher is now required to use this package</li>
 </ul>
 <p><a name="4.0.1"></a></p>
-<h2 id="401-2017-11-08"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.0...v4.0.1">4.0.1</a> (2017-11-08)</h2>
-<h3 id="bug-fixes-7">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v4.0.0...v4.0.1">4.0.1</a> (2017-11-08)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>allow angular 5 peer dependency (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/684395e">684395e</a>)</li>
 </ul>
 <p><a name="4.0.0"></a></p>
-<h1 id="400-2017-10-22"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0">4.0.0</a> (2017-10-22)</h1>
-<h3 id="bug-fixes-8">Bug Fixes</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v3.0.0...v4.0.0">4.0.0</a> (2017-10-22)</h1>
+<h3>Bug Fixes</h3>
 <ul>
 <li><strong>aot:</strong> allow the lib to compile with aot (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/12c76e8">12c76e8</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/7">#7</a></li>
 </ul>
-<h3 id="breaking-changes-2">BREAKING CHANGES</h3>
+<h3>BREAKING CHANGES</h3>
 <ul>
 <li><strong>aot:</strong> the value you pass to the forRoot method for flatpickr has changed. The new signature is:</li>
 </ul>
-<div><pre class="line-numbers"><code class="language-none">import { NgModule } from &#39;&#64;angular/core&#39;;
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">import { NgModule } from &#39;&#64;angular/core&#39;;
 import * as flatpickr from &#39;flatpickr&#39;;
 import { FlatpickrModule, FLATPICKR } from &#39;angularx-flatpickr&#39;;
 
@@ -191,46 +255,46 @@ export function flatpickrFactory() {
   ]
 })
 class MyModule {}</code></pre></div><p><a name="3.0.0"></a></p>
-<h1 id="300-2017-10-18"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0">3.0.0</a> (2017-10-18)</h1>
-<h3 id="bug-fixes-9">Bug Fixes</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.1...v3.0.0">3.0.0</a> (2017-10-18)</h1>
+<h3>Bug Fixes</h3>
 <ul>
 <li>support latest flatpickr (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/b66000d">b66000d</a>)</li>
 </ul>
-<h3 id="features-11">Features</h3>
+<h3>Features</h3>
 <ul>
 <li>upgrade flatpickr to v4 (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/0fa4335">0fa4335</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/4">#4</a> <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/5">#5</a></li>
 </ul>
-<h3 id="breaking-changes-3">BREAKING CHANGES</h3>
+<h3>BREAKING CHANGES</h3>
 <ul>
 <li>flatpickr is now a peer dependency of this module. You must now add it as an
 explicit dependency, import it and pass it to the first argument of <code>FlatpickrModule.forRoot</code></li>
 </ul>
 <p><a name="2.0.1"></a></p>
-<h2 id="201-2017-08-17"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.0...v2.0.1">2.0.1</a> (2017-08-17)</h2>
-<h3 id="bug-fixes-10">Bug Fixes</h3>
+<h2><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v2.0.0...v2.0.1">2.0.1</a> (2017-08-17)</h2>
+<h3>Bug Fixes</h3>
 <ul>
 <li>update model value even if convertModelValue is false (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/cd5374a">cd5374a</a>)</li>
 <li>use input event instead of change event to detect flatpicker changes (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/fc6f751">fc6f751</a>)</li>
 </ul>
 <p><a name="2.0.0"></a></p>
-<h1 id="200-2017-08-11"><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v1.0.0...v2.0.0">2.0.0</a> (2017-08-11)</h1>
-<h3 id="bug-fixes-11">Bug Fixes</h3>
+<h1><a href="https://github.com/mattlewis92/angularx-flatpickr/compare/v1.0.0...v2.0.0">2.0.0</a> (2017-08-11)</h1>
+<h3>Bug Fixes</h3>
 <ul>
 <li>make the directive to work with reactive forms (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/e619706">e619706</a>), closes <a href="https://github.com/mattlewis92/angularx-flatpickr/issues/1">#1</a></li>
 </ul>
-<h3 id="features-12">Features</h3>
+<h3>Features</h3>
 <ul>
 <li>upgrade flatpickr to v3 (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/ea73c66">ea73c66</a>)</li>
 </ul>
-<h3 id="breaking-changes-4">BREAKING CHANGES</h3>
+<h3>BREAKING CHANGES</h3>
 <ul>
 <li>flatpickr has been upgraded to v3. The <code>utc</code> was removed from this lib as it was
 removed from flatpickr</li>
 <li>the forms module is now required to use this component</li>
 </ul>
 <p><a name="1.0.0"></a></p>
-<h1 id="100-2017-04-07">1.0.0 (2017-04-07)</h1>
-<h3 id="features-13">Features</h3>
+<h1>1.0.0 (2017-04-07)</h1>
+<h3>Features</h3>
 <ul>
 <li>initial implementation (<a href="https://github.com/mattlewis92/angularx-flatpickr/commit/acbd9ac">acbd9ac</a>)</li>
 </ul>
@@ -284,6 +348,19 @@ removed from flatpickr</li>
             var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
