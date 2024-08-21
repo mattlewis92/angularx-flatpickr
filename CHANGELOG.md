@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.3.0...v8.0.0) (2024-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* support for angular 16 has been removed. Please use this package with angular 17 or higher
+* support for angular 15 has been removed. Please use this package with angular 16 or higher
+* support for angular 14 has been removed. Please use this package with angular 15 or higher
+
+### Features
+
+* upgrade angular v16 ([#54](https://github.com/mattlewis92/angularx-flatpickr/issues/54)) ([ece59d4](https://github.com/mattlewis92/angularx-flatpickr/commit/ece59d44bc0e07f2fe4e413e955725a4b5b4c937))
+* upgrade angular v17 ([#55](https://github.com/mattlewis92/angularx-flatpickr/issues/55)) ([0ef8674](https://github.com/mattlewis92/angularx-flatpickr/commit/0ef86743567b009c1b078a4ecd798f2df693292f))
+* upgrade to Angular 15 ([#53](https://github.com/mattlewis92/angularx-flatpickr/issues/53)) ([e15af4a](https://github.com/mattlewis92/angularx-flatpickr/commit/e15af4a7342365ac27c2868162ccd9490b1a8958))
+
 ## [7.3.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.2.0...v7.3.0) (2023-04-26)
 
 
