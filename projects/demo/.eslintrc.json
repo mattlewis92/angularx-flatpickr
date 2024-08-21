@@ -1,7 +1,8 @@
 {
   "extends": "../../.eslintrc.json",
   "ignorePatterns": [
-    "!**/*"
+    "!**/*",
+    "environments/environment.prod.ts"
   ],
   "overrides": [
     {
