@@ -10,7 +10,9 @@ import {
   OnDestroy,
   forwardRef,
   HostListener,
-  Renderer2, PLATFORM_ID, Inject
+  Renderer2,
+  PLATFORM_ID,
+  Inject,
 } from '@angular/core';
 import {
   FlatpickrDefaults,
@@ -87,7 +89,6 @@ export class FlatpickrDirective
    * Allows the user to enter a date directly input the input field. By default, direct entry is disabled.
    */
   @Input() allowInput: boolean;
-
 
   /**
    * Allows the preloading of an invalid date. When disabled, the field will be cleared if the provided date is invalid
@@ -346,7 +347,6 @@ export class FlatpickrDirective
 
   private isDisabled = false;
   private initialValue: any;
-  private isBrowser: boolean;
 
   onChangeFn: (value: any) => void = () => {};
 
@@ -357,10 +357,8 @@ export class FlatpickrDirective
     private elm: ElementRef,
     private defaults: FlatpickrDefaults,
     private renderer: Renderer2,
-    @Inject(PLATFORM_ID) platformId: Object
-  ) {
-    this.isBrowser = isPlatformBrowser(platformId);
-  }
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngAfterViewInit(): void {
     const options: any = {
@@ -477,7 +475,7 @@ export class FlatpickrDirective
       delete options.enable;
     }
 
-    if (this.isBrowser) {
+    if (isPlatformBrowser(this.platformId)) {
       this.instance = flatpickr(
         this.elm.nativeElement,
         options
@@ -487,7 +485,7 @@ export class FlatpickrDirective
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.instance && this.isBrowser) {
+    if (this.instance) {
       Object.keys(changes).forEach((inputKey) => {
         this.instance.set(inputKey as any, (this as any)[inputKey]);
       });
@@ -495,7 +493,7 @@ export class FlatpickrDirective
   }
 
   ngOnDestroy(): void {
-    if (this.instance && this.isBrowser) {
+    if (this.instance) {
       this.instance.destroy();
     }
   }
@@ -506,7 +504,7 @@ export class FlatpickrDirective
       convertedValue = [value.from, value.to];
     }
 
-    if (this.instance && this.isBrowser) {
+    if (this.instance) {
       this.instance.setDate(convertedValue);
     } else {
       // flatpickr hasn't been initialised yet, store the value for later use
