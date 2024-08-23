@@ -1,0 +1,44 @@
+name: \U0001F41BBug report
+
+description: Please search Github for a similar issue or PR before submitting
+
+labels: ['bug']
+
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: |
+        Please describe the bug you're experiencing here.
+        Please search existing issues first before opening a new one
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Minimal reproduction of the problem with instructions
+      description: |
+        Please explain clearly how to reproduce your problem
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: |
+        If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: '@angular/core version'
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: angularx-flatpickr version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Browser name and version
+    validations:
+      required: true
