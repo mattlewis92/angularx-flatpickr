@@ -103,19 +103,16 @@
 <h2>Installation</h2>
 <p>Install through npm:</p>
 <b>Example :</b><div><pre class="line-numbers"><code class="language-none">npm install flatpickr angularx-flatpickr</code></pre></div><p>Next, in your <code>angular.json</code> add <code>&quot;node_modules/flatpickr/dist/flatpickr.css&quot;</code> to the <code>styles</code> array of your application</p>
-<p>Then include in your apps module:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">import { NgModule } from &#39;&#64;angular/core&#39;;
-import { FormsModule } from &#39;&#64;angular/forms&#39;;
-import { FlatpickrModule } from &#39;angularx-flatpickr&#39;;
-
-&#64;NgModule({
-  imports: [FormsModule, FlatpickrModule.forRoot()],
-})
-export class MyModule {}</code></pre></div><p>Finally use in one of your apps components:</p>
+<p>Then use in one of your apps components:</p>
 <b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+import { FlatpickrDirective, provideFlatpickrDefaults } from &#39;angularx-flatpickr&#39;;
 
 &#64;Component({
-  template: ` &lt;input type=&quot;text&quot; mwlFlatpickr [(ngModel)]=&quot;selectedDate&quot; [altInput]=&quot;true&quot; [convertModelValue]=&quot;true&quot; /&gt; `,
+  imports: [FlatpickrDirective],
+  providers: [provideFlatpickrDefaults()],
+  template: `&lt;input type=&quot;text&quot; mwlFlatpickr [(ngModel)]=&quot;selectedDate&quot; [altInput]=&quot;true&quot; [convertModelValue]=&quot;true&quot; /&gt;`,
+  standalone: true,
+  selector: &#39;my-component&#39;,
 })
 export class MyComponent {}</code></pre></div><p>You may also find it useful to view the <a href="https://github.com/mattlewis92/angularx-flatpickr/blob/main/projects/demo/app/demo.component.ts">demo source</a>.</p>
 <h2>Documentation</h2>

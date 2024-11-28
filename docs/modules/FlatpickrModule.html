@@ -86,7 +86,9 @@
 
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Modules</li>
-    <li class="breadcrumb-item" >FlatpickrModule</li>
+    <li class="breadcrumb-item" 
+        class="breadcrumb-item deprecated-name"
+    >FlatpickrModule</li>
 </ol>
 
 
@@ -116,17 +118,24 @@
         </p>
 
 
+            <p class="comment">
+                <h3 class="deprecated">Deprecated</h3>
+            </p>
+            <p class="comment">
+                Will be removed in the next major version. Please use the standalone `FlatpickrDirective` and `provideFlatpickrDefaults()` instead.
+            </p>
 
 
 
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" rel="noopener noreferrer"
-                            title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
+                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" rel="noopener noreferrer"
+                            title="Official documentation about module imports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../directives/FlatpickrDirective.html">FlatpickrDirective</a>
+                            <a href="../modules/FlatpickrDirective.html">FlatpickrDirective</a>
                         </li>
                     </ul>
                 </div>
@@ -170,8 +179,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="28"
-                                    class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.module.ts:28</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">projects/angularx-flatpickr/src/lib/flatpickr.module.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -240,16 +249,31 @@ import {
 
 export const USER_DEFAULTS &#x3D; new InjectionToken(&#x27;flatpickr defaults&#x27;);
 
-export function defaultsFactory(
-  userDefaults: FlatpickrDefaultsInterface,
-): FlatpickrDefaults {
-  const defaults: FlatpickrDefaults &#x3D; new FlatpickrDefaults();
-  Object.assign(defaults, userDefaults);
-  return defaults;
+export function provideFlatpickrDefaults(
+  userDefaults: FlatpickrDefaultsInterface &#x3D; {},
+): Provider[] {
+  return [
+    {
+      provide: USER_DEFAULTS,
+      useValue: userDefaults,
+    },
+    {
+      provide: FlatpickrDefaults,
+      useFactory() {
+        const defaults: FlatpickrDefaults &#x3D; new FlatpickrDefaults();
+        Object.assign(defaults, userDefaults);
+        return defaults;
+      },
+      deps: [USER_DEFAULTS],
+    },
+  ];
 }
 
+/**
+ * @deprecated Will be removed in the next major version. Please use the standalone &#x60;FlatpickrDirective&#x60; and &#x60;provideFlatpickrDefaults()&#x60; instead.
+ */
 @NgModule({
-  declarations: [FlatpickrDirective],
+  imports: [FlatpickrDirective],
   exports: [FlatpickrDirective],
 })
 export class FlatpickrModule {
@@ -258,17 +282,7 @@ export class FlatpickrModule {
   ): ModuleWithProviders&lt;FlatpickrModule&gt; {
     return {
       ngModule: FlatpickrModule,
-      providers: [
-        {
-          provide: USER_DEFAULTS,
-          useValue: userDefaults,
-        },
-        {
-          provide: FlatpickrDefaults,
-          useFactory: defaultsFactory,
-          deps: [USER_DEFAULTS],
-        },
-      ],
+      providers: provideFlatpickrDefaults(userDefaults),
     };
   }
 }

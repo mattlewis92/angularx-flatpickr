@@ -66,16 +66,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/FlatpickrModule.html" data-type="entity-link" >FlatpickrModule</a>
+                                <a href="modules/FlatpickrModule.html" data-type="entity-link" class="deprecated-name">FlatpickrModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                        'data-bs-target="#directives-links-module-FlatpickrModule-eb39194aeb1df2f63badbbbcb16737d08c4f56923f52ce533686375553429f07b35d223694505720a96817a439e0aa8c40c8ee7b292862fce9ecd68bd630b4cb"' : 'data-bs-target="#xs-directives-links-module-FlatpickrModule-eb39194aeb1df2f63badbbbcb16737d08c4f56923f52ce533686375553429f07b35d223694505720a96817a439e0aa8c40c8ee7b292862fce9ecd68bd630b4cb"' }>
+                                        'data-bs-target="#directives-links-module-FlatpickrModule-810ecf051c0689b93ecbd4f3e3a31f98a2c4ea043231e3fb12e33ba622ad4d25d606645caaaed66bdd1739d7801dcf46162c80fa68fb740dc92383e255ff6e70"' : 'data-bs-target="#xs-directives-links-module-FlatpickrModule-810ecf051c0689b93ecbd4f3e3a31f98a2c4ea043231e3fb12e33ba622ad4d25d606645caaaed66bdd1739d7801dcf46162c80fa68fb740dc92383e255ff6e70"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-FlatpickrModule-eb39194aeb1df2f63badbbbcb16737d08c4f56923f52ce533686375553429f07b35d223694505720a96817a439e0aa8c40c8ee7b292862fce9ecd68bd630b4cb"' :
-                                        'id="xs-directives-links-module-FlatpickrModule-eb39194aeb1df2f63badbbbcb16737d08c4f56923f52ce533686375553429f07b35d223694505720a96817a439e0aa8c40c8ee7b292862fce9ecd68bd630b4cb"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-FlatpickrModule-810ecf051c0689b93ecbd4f3e3a31f98a2c4ea043231e3fb12e33ba622ad4d25d606645caaaed66bdd1739d7801dcf46162c80fa68fb740dc92383e255ff6e70"' :
+                                        'id="xs-directives-links-module-FlatpickrModule-810ecf051c0689b93ecbd4f3e3a31f98a2c4ea043231e3fb12e33ba622ad4d25d606645caaaed66bdd1739d7801dcf46162c80fa68fb740dc92383e255ff6e70"' }>
                                         <li class="link">
                                             <a href="directives/FlatpickrDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FlatpickrDirective</a>
                                         </li>
@@ -84,6 +84,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                        <li class="chapter">
+                            <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#directives-links"' :
+                                'data-bs-target="#xs-directives-links"' }>
+                                <span class="icon ion-md-code-working"></span>
+                                <span>Directives</span>
+                                <span class="icon ion-ios-arrow-down"></span>
+                            </div>
+                            <ul class="links collapse " ${ isNormalMode ? 'id="directives-links"' : 'id="xs-directives-links"' }>
+                                <li class="link">
+                                    <a href="directives/FlatpickrDirective.html" data-type="entity-link" >FlatpickrDirective</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#injectables-links"' :
                                 'data-bs-target="#xs-injectables-links"' }>
