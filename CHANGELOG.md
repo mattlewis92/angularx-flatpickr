@@ -9,6 +9,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 * convert to standalone ([73d51bc](https://github.com/mattlewis92/angularx-flatpickr/commit/73d51bce7f565f86790c77fb4b261ec4bdf86649)), closes [#57](https://github.com/mattlewis92/angularx-flatpickr/issues/57) [#56](https://github.com/mattlewis92/angularx-flatpickr/issues/56)
 
+You can now use this library inside a standalone Component or an NgModule like so:
+```
+imports: [FlatpickrDirective],
+providers: [provideFlatpickrDefaults()],
+```
+
+The `FlatpickrModule` NgModule was marked as deprecated and will be removed in v9
+
+
 ## [8.0.0](https://github.com/mattlewis92/angularx-flatpickr/compare/v7.3.0...v8.0.0) (2024-08-21)
 
 
