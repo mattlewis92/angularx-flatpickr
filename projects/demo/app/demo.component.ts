@@ -1,7 +1,16 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  FlatpickrDirective,
+  provideFlatpickrDefaults,
+} from 'angularx-flatpickr';
+import { FormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'mwl-demo-app',
+  standalone: true,
+  imports: [FlatpickrDirective, FormsModule, JsonPipe],
+  providers: [provideFlatpickrDefaults()],
   template: `
     <div class="container-fluid">
       <div class="row">

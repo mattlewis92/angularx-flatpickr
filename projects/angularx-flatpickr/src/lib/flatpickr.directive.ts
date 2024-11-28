@@ -44,6 +44,7 @@ export const FLATPICKR_CONTROL_VALUE_ACCESSOR: any = {
   selector: '[mwlFlatpickr]',
   providers: [FLATPICKR_CONTROL_VALUE_ACCESSOR],
   exportAs: 'mwlFlatpickr',
+  standalone: true,
 })
 export class FlatpickrDirective
   implements AfterViewInit, OnChanges, OnDestroy, ControlValueAccessor

@@ -12,16 +12,31 @@ import {
 
 export const USER_DEFAULTS = new InjectionToken('flatpickr defaults');
 
-export function defaultsFactory(
-  userDefaults: FlatpickrDefaultsInterface,
-): FlatpickrDefaults {
-  const defaults: FlatpickrDefaults = new FlatpickrDefaults();
-  Object.assign(defaults, userDefaults);
-  return defaults;
+export function provideFlatpickrDefaults(
+  userDefaults: FlatpickrDefaultsInterface = {},
+): Provider[] {
+  return [
+    {
+      provide: USER_DEFAULTS,
+      useValue: userDefaults,
+    },
+    {
+      provide: FlatpickrDefaults,
+      useFactory() {
+        const defaults: FlatpickrDefaults = new FlatpickrDefaults();
+        Object.assign(defaults, userDefaults);
+        return defaults;
+      },
+      deps: [USER_DEFAULTS],
+    },
+  ];
 }
 
+/**
+ * @deprecated Will be removed in the next major version. Please use the standalone `FlatpickrDirective` and `provideFlatpickrDefaults()` instead.
+ */
 @NgModule({
-  declarations: [FlatpickrDirective],
+  imports: [FlatpickrDirective],
   exports: [FlatpickrDirective],
 })
 export class FlatpickrModule {
@@ -30,17 +45,7 @@ export class FlatpickrModule {
   ): ModuleWithProviders<FlatpickrModule> {
     return {
       ngModule: FlatpickrModule,
-      providers: [
-        {
-          provide: USER_DEFAULTS,
-          useValue: userDefaults,
-        },
-        {
-          provide: FlatpickrDefaults,
-          useFactory: defaultsFactory,
-          deps: [USER_DEFAULTS],
-        },
-      ],
+      providers: provideFlatpickrDefaults(userDefaults),
     };
   }
 }

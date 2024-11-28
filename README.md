@@ -32,26 +32,18 @@ npm install flatpickr angularx-flatpickr
 
 Next, in your `angular.json` add `"node_modules/flatpickr/dist/flatpickr.css"` to the `styles` array of your application
 
-Then include in your apps module:
-
-```typescript
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { FlatpickrModule } from 'angularx-flatpickr';
-
-@NgModule({
-  imports: [FormsModule, FlatpickrModule.forRoot()],
-})
-export class MyModule {}
-```
-
-Finally use in one of your apps components:
+Then use in one of your apps components:
 
 ```typescript
 import { Component } from '@angular/core';
+import { FlatpickrDirective, provideFlatpickrDefaults } from 'angularx-flatpickr';
 
 @Component({
-  template: ` <input type="text" mwlFlatpickr [(ngModel)]="selectedDate" [altInput]="true" [convertModelValue]="true" /> `,
+  imports: [FlatpickrDirective],
+  providers: [provideFlatpickrDefaults()],
+  template: `<input type="text" mwlFlatpickr [(ngModel)]="selectedDate" [altInput]="true" [convertModelValue]="true" />`,
+  standalone: true,
+  selector: 'my-component',
 })
 export class MyComponent {}
 ```
